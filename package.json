@@ -1,0 +1,26 @@
+{
+  "name": "redyar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/E-Shangeraev/Redyar.git"
+  },
+  "keywords": [
+    "MERN",
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js"
+  ],
+  "author": "E-Shangeraev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/E-Shangeraev/Redyar/issues"
+  },
+  "homepage": "https://github.com/E-Shangeraev/Redyar#readme"
+}
