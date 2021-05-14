@@ -1,0 +1,18 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import './mixins.scss';
+@import './globals.scss';
+
+// ==== Библиотеки ====
+@import '~normalize.css/normalize.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+// ==== Компоненты ====
+@import '../../components/generic/Button/Button.scss';
+
+@import '../../components/Header/Header.scss';
+@import '../../components/Promo/Promo.scss';
+@import '../../components/Record/Record.scss';
+@import '../../components/Features/Features.scss';
+@import '../../components/Founder/Founder.scss';

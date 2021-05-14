@@ -3,8 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Main from './pages/Main'
 import Competitions from './pages/Competitions'
 
-import 'normalize.css'
-import './App.scss'
+// import 'normalize.css'
+import './assets/scss/App.scss'
 
 const App = () => (
   <BrowserRouter>

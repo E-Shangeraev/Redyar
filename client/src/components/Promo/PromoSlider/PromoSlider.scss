@@ -1,0 +1,30 @@
+.slide {
+  height: 100vh;
+}
+.slide__content {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20% 0;
+  padding-left: 35%;
+  padding-right: 35%;
+
+  p {
+    @include text;
+    position: relative;
+    padding: 20px;
+    font-size: 18px;
+  }
+  p::before {
+    position: absolute;
+    content: '+';
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    color: $orange;
+  }
+}
+.slide__title {
+  width: 30%;
+}

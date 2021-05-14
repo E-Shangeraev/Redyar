@@ -1,0 +1,52 @@
+// ==== Глобальные стили ====
+body {
+  background-color: $d-gray;
+  overflow-x: hidden;
+
+  * {
+    font-family: $formular-r;
+    box-sizing: border-box;
+    color: #fff;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+
+// ==== Общие классы ====
+.title {
+  margin: 0;
+  font-family: $druk;
+  font-size: 44px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.subtitle {
+  margin: 0;
+  font-family: $druk;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+.wrapper {
+  padding: 160px 260px;
+}
+.pl {
+  padding-left: 260px;
+}
+.pr {
+  padding-right: 260px;
+}
