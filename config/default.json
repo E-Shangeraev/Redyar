@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "mongoURI": "mongodb+srv://CrossfitRedyar:CFredyar-2014@cluster0.wymnn.mongodb.net/redyar?retryWrites=true&w=majority",
+  "emailTo": "redyar.aforce@yandex.ru",
+  "password": "gang1234509876"
+}

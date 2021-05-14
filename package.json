@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/E-Shangeraev/Redyar.git"
@@ -17,10 +20,19 @@
     "React",
     "Node.js"
   ],
-  "author": "E-Shangeraev",
+  "author": "E-Shangeraev <e.shangeraev@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/E-Shangeraev/Redyar/issues"
   },
-  "homepage": "https://github.com/E-Shangeraev/Redyar#readme"
+  "homepage": "https://github.com/E-Shangeraev/Redyar#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.8"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  }
 }
