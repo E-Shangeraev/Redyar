@@ -1,0 +1,85 @@
+.workers--dust {
+  // z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/img/dust-2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    z-index: -1;
+  }
+}
+.workers__wrapper {
+  padding-bottom: 0;
+}
+.workers__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.workers__arrows {
+  display: flex;
+  gap: 15px;
+}
+.workers__slider {
+  margin-bottom: 165px;
+  width: 110%;
+}
+.workers__slide {
+  display: flex;
+  height: 100%;
+  padding: 45px;
+  margin: 0 12px;
+  max-height: 350px;
+  padding-left: 0;
+  background-color: #2a2e30;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.workers__photo {
+  max-width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+.workers__name {
+  display: block;
+  margin-bottom: 5px;
+  font-family: $formular-m;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f2f2f2;
+}
+.workers__post {
+  font-family: $formular-r;
+  font-size: 14px;
+  line-height: 17px;
+  color: $orange;
+}
+.workers__achievements {
+  @include text;
+  font-size: 14px;
+  opacity: 0.5;
+}
+.workers__addition {
+  @include text;
+  font-size: 14px;
+}
+.workers__socials {
+  display: flex;
+  gap: 15px;
+
+  li {
+    max-width: 30px;
+  }
+}

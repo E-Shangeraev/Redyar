@@ -1,0 +1,30 @@
+.video {
+  position: relative;
+  margin-bottom: 60px;
+
+  img {
+    width: 100%;
+  }
+}
+.video__play-button {
+  position: absolute;
+  left: calc(50% - 152px / 2);
+  bottom: -73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  button {
+    padding: 0;
+    width: 152px;
+    height: 152px;
+    cursor: pointer;
+  }
+  span {
+    font-family: $druk;
+    font-size: 30px;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+}

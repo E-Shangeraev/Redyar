@@ -7,12 +7,19 @@
 @import '~normalize.css/normalize.css';
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
+@import '~react-modal-video/scss/modal-video.scss';
 
 // ==== Компоненты ====
 @import '../../components/generic/Button/Button.scss';
+@import '../../components/generic/Video/Video.scss';
+@import '../../components/generic/WorkersSlider/WorkersSlider.scss';
+@import '../../components/generic/SliderArrow/SliderArrow.scss';
 
 @import '../../components/Header/Header.scss';
 @import '../../components/Promo/Promo.scss';
 @import '../../components/Record/Record.scss';
 @import '../../components/Features/Features.scss';
 @import '../../components/Founder/Founder.scss';
+@import '../../components/Why/Why.scss';
+@import '../../components/Athletes/Athletes.scss';
+@import '../../components/Schedule/Schedule.scss';

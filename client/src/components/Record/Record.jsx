@@ -8,11 +8,8 @@ const Record = () => (
         <div>
           <h2 className="title">
             <span>Запись</span>
-            <br />
             <span>на первое</span>
-            <br />
             <span>занятие</span>
-            <br />
           </h2>
           <p>
             Запишитесь на первое бесплатное занятие, заполнив форму и получите

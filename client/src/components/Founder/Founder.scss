@@ -6,3 +6,23 @@
 .founder__wrapper {
   padding-right: 0;
 }
+.founder__name {
+  display: block;
+  font-family: $formular-m;
+  font-size: 22px;
+  line-height: 120%;
+  color: #f2f2f2;
+}
+.founder__post {
+  display: block;
+  margin-bottom: 20px;
+  font-family: $formular-m;
+  font-size: 18px;
+  line-height: 120%;
+  color: $orange;
+}
+.founder__description p {
+  @include text;
+  column-count: 2;
+  color: #f2f2f2;
+}
