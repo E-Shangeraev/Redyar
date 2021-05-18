@@ -1,0 +1,14 @@
+.double-slider__wrapper {
+  padding-bottom: 0;
+}
+.double-slider {
+  .slick-slide {
+    margin: 0 5px;
+  }
+}
+.double-slider__component:nth-last-child(2) {
+  margin-bottom: 5px;
+}
+.double-slider__component:nth-last-child(1) {
+  margin-bottom: 165px;
+}

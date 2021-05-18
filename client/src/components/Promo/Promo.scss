@@ -1,13 +1,13 @@
 .promo__slider {
   .slide {
-    max-height: 100vh;
+    min-height: 100vh;
   }
   .slide__content {
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 20% 0;
+    padding: 15% 0;
     padding-left: 35%;
     padding-right: 35%;
 

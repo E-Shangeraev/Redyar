@@ -1,5 +1,4 @@
 .why {
-  height: 100vh;
   z-index: 0;
 
   &::before {
@@ -25,10 +24,10 @@
     width: 50%;
 
     span:nth-of-type(2) {
-      margin-left: 15%;
+      margin-left: 10%;
     }
     span:nth-of-type(3) {
-      margin-left: 50%;
+      margin-left: 30%;
     }
   }
   div {

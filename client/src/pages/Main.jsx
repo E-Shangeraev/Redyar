@@ -10,6 +10,11 @@ import Athletes from '../components/Athletes/Athletes'
 import Schedule from '../components/Schedule/Schedule'
 
 import { MainPromoPhotos, MainAthletesPhotos } from '../assets/img/Main'
+import MerchSlider from '../components/MerchSlider'
+import DoubleSlider from '../components/generic/DoubleSlider/DoubleSlider'
+import Location from '../components/Location/Location'
+import RedyarHome from '../components/RedyarHome/RedyarHome'
+import Footer from '../components/Footer/Footer'
 
 const Main = () => (
   <>
@@ -23,7 +28,12 @@ const Main = () => (
       <WorkersSlider dust />
       <Athletes images={MainAthletesPhotos} />
       <Schedule />
+      <MerchSlider />
+      <DoubleSlider title="фото с тренировок" />
+      <Location />
+      <RedyarHome />
     </main>
+    <Footer />
   </>
 )
 

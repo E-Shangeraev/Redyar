@@ -1,6 +1,6 @@
 .button {
   @include text;
-  padding: 13px 0;
+  padding: 13px 80px;
   text-align: center;
   border: 1px solid $orange;
   border-radius: 40px;
@@ -11,5 +11,11 @@
   &:hover {
     background-color: #fff;
     color: $orange;
+    border: 1px solid $orange;
+  }
+  &--gray {
+    color: $orange;
+    background-color: $l-gray;
+    border: 1px solid $l-gray;
   }
 }

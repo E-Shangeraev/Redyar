@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Why = () => (
-  <section className="why">
+  <section className="why mb5">
     <div className="wrapper">
       <div className="why__flex">
         <h2 className="title">
@@ -10,7 +10,7 @@ const Why = () => (
           <span>к нам</span>
         </h2>
         <div>
-          <p>
+          <p className="mb2">
             CrossFit - не просто тренировки и фитнес. Для нас - это образ жизни.
             Мы любим менять людей и помогаем им становится лучше.
           </p>
