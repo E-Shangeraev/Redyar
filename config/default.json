@@ -2,5 +2,10 @@
   "port": 5000,
   "mongoURI": "mongodb+srv://CrossfitRedyar:CFredyar-2014@cluster0.wymnn.mongodb.net/redyar?retryWrites=true&w=majority",
   "emailTo": "redyar.aforce@yandex.ru",
-  "password": "gang1234509876"
+  "password": "gang1234509876",
+  "cloudinaryName": "gang",
+  "cloudinaryAPIKey": "391139275147723",
+  "cloudinaryAPISecret": "HKNh637RVwdPOGIAfEM0qarnShY",
+  "AWSAccessKeyID": "AKIA4WPPSBETYUV6YFXO",
+  "AWSSecretAccessKey": "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"
 }

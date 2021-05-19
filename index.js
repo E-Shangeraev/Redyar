@@ -4,11 +4,11 @@ const config = require('config')
 const mongoose = require('mongoose')
 
 // ==== Роуты ====
-const { mainRouter } = require('./routes')
+const { uploadFileRouter } = require('./routes')
 
 const app = express()
 
-app.use('/', mainRouter)
+app.use('/api/files', uploadFileRouter)
 
 const PORT = config.get('port') || 5000
 
