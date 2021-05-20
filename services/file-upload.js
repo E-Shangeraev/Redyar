@@ -6,7 +6,7 @@ const config = require('config')
 aws.config.update({
   secretAccessKey: config.get('AWSSecretAccessKey'),
   accessKeyId: config.get('AWSAccessKeyID'),
-  region: 'us-east-2',
+  region: 'eu-west-1',
 })
 
 const s3 = new aws.S3()
@@ -20,10 +20,11 @@ const fileFilter = (req, file, cb) => {
 }
 
 const upload = multer({
+  fileFilter,
   storage: multerS3({
     s3: s3,
     acl: 'public-read',
-    bucket: 'redyar-images',
+    bucket: 'redyar-images/merch',
     metadata: function (req, file, cb) {
       cb(null, { fieldName: 'images' })
     },

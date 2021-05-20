@@ -1,4 +1,5 @@
+const buildAdminRouter = require('./admin')
 const mainRouter = require('./main')
-const uploadFileRouter = require('./file-upload')
+const FileUploadRouter = require('./file-upload')
 
-module.exports = { mainRouter, uploadFileRouter }
+module.exports = { mainRouter, FileUploadRouter, buildAdminRouter }

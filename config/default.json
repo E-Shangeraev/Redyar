@@ -7,5 +7,7 @@
   "cloudinaryAPIKey": "391139275147723",
   "cloudinaryAPISecret": "HKNh637RVwdPOGIAfEM0qarnShY",
   "AWSAccessKeyID": "AKIA4WPPSBETYUV6YFXO",
-  "AWSSecretAccessKey": "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"
+  "AWSSecretAccessKey": "8FwGoTlFaWB5vO3tSPu/i8SLWpFwgIu7PeiXRP1I",
+  "AWSRegion": "eu-west-1",
+  "AWSBucket": "redyar-images"
 }
