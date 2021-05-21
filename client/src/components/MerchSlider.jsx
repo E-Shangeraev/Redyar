@@ -1,74 +1,47 @@
-import React, { useRef } from 'react'
-import Slider from 'react-slick'
-import SliderArrow from './generic/SliderArrow/SliderArrow'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid'
+import { getMerch } from '../redux/actions/merch'
+import useHttp from '../hooks/http.hook'
 import Merch from './Merch/Merch'
-
-// import React from 'react'
-// eslint-disable-next-line max-len
-// eslint-disable-next-line import/no-cycle
-// import CustomSliderWrapper from '../generic/CustomSlider/CustomSlider'
-
-import img1 from '../assets/img/Merch/1.png'
-import img2 from '../assets/img/Merch/2.png'
-import img3 from '../assets/img/Merch/3.png'
-import img4 from '../assets/img/Merch/4.png'
+import CustomSlider from './generic/CustomSlider/CustomSlider'
 
 const MerchSlider = () => {
-  const sliderRef = useRef()
+  const dispatch = useDispatch()
+  const { request } = useHttp()
+  const items = useSelector(({ merch }) => merch.items)
+  const isLoaded = useSelector(({ merch }) => merch.isLoaded)
 
-  const next = () => {
-    sliderRef.current.slickNext()
-  }
-  const prev = () => {
-    sliderRef.current.slickPrev()
-  }
+  useEffect(() => {
+    dispatch(getMerch(request))
+  }, [])
 
-  const defaultSettings = {
-    dots: false,
+  const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    accessibility: true,
-    arrows: false,
   }
 
   return (
-    <section className="slider">
-      <div className="wrapper slider__wrapper">
-        <div className="flex space-between align-center mb5">
-          <h2 className="title">Мерч</h2>
-          <div className="flex align-center gap1">
-            <SliderArrow type="prev" onClickHandle={prev} />
-            <SliderArrow type="next" onClickHandle={next} />
-          </div>
-        </div>
-      </div>
-      <Slider
-        ref={sliderRef}
-        className="slider__component pl"
-        {...defaultSettings}>
-        <Merch img={img1} name="Фирменная футболка REDYAR" price={1000} />
-        <Merch img={img2} name="Фирменная футболка REDYAR" price={1500} />
-        <Merch img={img3} name="Фирменная футболка REDYAR" price={1050} />
-        <Merch img={img4} name="Фирменная футболка REDYAR" price={2000} />
-        <Merch img={img1} name="Фирменная футболка REDYAR" price={1000} />
-        <Merch img={img2} name="Фирменная футболка REDYAR" price={1500} />
-        <Merch img={img3} name="Фирменная футболка REDYAR" price={1050} />
-        <Merch img={img4} name="Фирменная футболка REDYAR" price={2000} />
-      </Slider>
-    </section>
+    <CustomSlider
+      title="Мерч"
+      settings={settings}
+      items={
+        isLoaded &&
+        items.map(item => (
+          <Merch
+            key={uuidv4()}
+            // eslint-disable-next-line max-len
+            img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+            name={item.name}
+            price={item.price}
+            sizes={item.sizes}
+          />
+        ))
+      }
+    />
   )
 }
-
-// const MerchSlider = CustomSliderWrapper(MerchList, {
-//   title: 'Мерч',
-//   settings: {
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 4,
-//     slidesToScroll: 1,
-//   },
-// })
 
 export default MerchSlider

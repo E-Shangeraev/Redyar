@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from './logo.png'
 import social1 from '../../assets/icons/vk.png'
 import social2 from '../../assets/icons/instagram.png'
@@ -8,21 +9,23 @@ const Footer = () => (
     <div className="wrapper footer__wrapper">
       <div className="flex">
         <div className="footer__column">
-          <img
-            className="footer__logo"
-            src={logo}
-            alt="Логотип Crossfit Redyar"
-          />
+          <Link to="/">
+            <img
+              className="footer__logo"
+              src={logo}
+              alt="Логотип Crossfit Redyar"
+            />
+          </Link>
           <nav className="footer__nav">
-            <a href="/">О нас</a>
-            <a href="/">Расписание</a>
-            <a href="/">Галерея</a>
-            <a href="/">Заслуги</a>
-            <a href="/">Команда</a>
-            <a href="/">Контакты</a>
-            <a href="/">Новичкам</a>
-            <a href="/">Лагерь</a>
-            <a href="/">Соревнования</a>
+            <Link to="/">О нас</Link>
+            <Link to="/">Расписание</Link>
+            <Link to="/">Галерея</Link>
+            <Link to="/">Заслуги</Link>
+            <Link to="/">Команда</Link>
+            <Link to="/">Контакты</Link>
+            <Link to="/">Новичкам</Link>
+            <Link to="/">Лагерь</Link>
+            <Link to="/competitions">Соревнования</Link>
           </nav>
           <span className="footer__copyright">
             CrossFit RedYar 2021. Все права защищены.

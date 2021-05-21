@@ -3,22 +3,22 @@ const express = require('express')
 const config = require('config')
 const mongoose = require('mongoose')
 const { default: AdminBro } = require('admin-bro')
-const AdminBroExpress = require('@admin-bro/express')
+// const AdminBroExpress = require('@admin-bro/express')
 const options = require('./admin/admin.options')
 
 // ==== Роуты ====
-const { FileUploadRouter, buildAdminRouter } = require('./routes')
+const { buildAdminRouter, merchRouter } = require('./routes')
 
 const app = express()
 const admin = new AdminBro(options)
-const router = buildAdminRouter(admin)
+const adminRouter = buildAdminRouter(admin)
 
-app.use(admin.options.rootPath, router)
-app.use('/api/files', FileUploadRouter)
+app.use(admin.options.rootPath, adminRouter)
+app.use('/api/merch', merchRouter)
 
 const PORT = config.get('port') || 5000
 
-async function start() {
+const start = async () => {
   try {
     await mongoose.connect(config.get('mongoURI'), {
       useNewUrlParser: true,

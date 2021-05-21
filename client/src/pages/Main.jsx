@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import useHttp from '../hooks/http.hook'
+import React from 'react'
 import Header from '../components/Header/Header'
 import Promo from '../components/Promo/Promo'
 import Record from '../components/Record/Record'
@@ -17,35 +16,25 @@ import Location from '../components/Location/Location'
 import RedyarHome from '../components/RedyarHome/RedyarHome'
 import Footer from '../components/Footer/Footer'
 
-const Main = () => {
-  const { loading, error, request } = useHttp()
-
-  const getItems = async () => {
-    const data = await request('/api/files')
-    console.log(data)
-  }
-
-  useEffect(() => getItems(), [])
-  return (
-    <>
-      <Header />
-      <main>
-        <Promo images={MainPromoPhotos} />
-        <Record />
-        <Features />
-        <Founder />
-        <Why />
-        <WorkersSlider dust />
-        <Athletes images={MainAthletesPhotos} />
-        <Schedule />
-        <MerchSlider />
-        <DoubleSlider title="фото с тренировок" />
-        <Location />
-        <RedyarHome />
-      </main>
-      <Footer />
-    </>
-  )
-}
+const Main = () => (
+  <>
+    <Header />
+    <main>
+      <Promo images={MainPromoPhotos} />
+      <Record />
+      <Features />
+      <Founder />
+      <Why />
+      <WorkersSlider dust />
+      <Athletes images={MainAthletesPhotos} />
+      <Schedule />
+      <MerchSlider />
+      <DoubleSlider title="фото с тренировок" />
+      <Location />
+      <RedyarHome />
+    </main>
+    <Footer />
+  </>
+)
 
 export default Main

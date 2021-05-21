@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose')
+const { Schema } = require('mongoose')
 
 const FileUpload = new Schema({
   path: String,
@@ -9,5 +9,3 @@ const FileUpload = new Schema({
 })
 
 module.exports = FileUpload
-
-// module.exports = model('Uploads', FileUpload)

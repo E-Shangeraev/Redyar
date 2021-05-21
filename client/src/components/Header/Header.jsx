@@ -1,16 +1,18 @@
 import React from 'react'
-// import './Header.scss'
+import { Link } from 'react-router-dom'
 import logo from './logo.png'
 
 const Header = () => (
   <header className="header">
-    <img className="header__logo" src={logo} alt="Логотип Crossfit Redyar" />
+    <Link to="/">
+      <img className="header__logo" src={logo} alt="Логотип Crossfit Redyar" />
+    </Link>
     <div>
       <nav className="header__nav">
-        <a href="/">О нас</a>
-        <a href="/">Расписание</a>
-        <a href="/">Галерея</a>
-        <a href="/">Контакты</a>
+        <Link to="/">О нас</Link>
+        <Link to="/">Расписание</Link>
+        <Link to="/">Галерея</Link>
+        <Link to="/">Контакты</Link>
       </nav>
       <a className="header__phone" href="tel:+7 (999) 898-99-99">
         +7 (999) 898-99-99

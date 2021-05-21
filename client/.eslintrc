@@ -6,6 +6,10 @@
     "no-alert": "warn",
     "no-unused-vars": "warn",
     "no-plusplus": "off",
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }
+    ],
     "max-len": ["error", 80],
     "vars-on-top": "off",
     "linebreak-style": "off",
