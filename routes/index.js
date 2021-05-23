@@ -1,3 +1,4 @@
-const mainRouter = require('./main')
+const buildAdminRouter = require('./admin')
+const merchRouter = require('./merch')
 
-module.exports = { mainRouter }
+module.exports = { buildAdminRouter, merchRouter }
