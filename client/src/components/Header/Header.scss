@@ -1,6 +1,56 @@
-header {
+.header {
+  position: absolute;
+  top: 0;
+  padding: 50px 60px 50px 35%;
+  width: 100%;
+  z-index: 9999;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+  }
+}
+.header__logo {
+  position: absolute;
+  left: 50px;
+}
+.header__nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 50px 60px;
+  width: 50%;
+
+  a {
+    font-family: $formular-r;
+  }
+}
+.header__phone {
+  white-space: nowrap;
+  color: $orange;
+}
+.header__menu-button {
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
 }

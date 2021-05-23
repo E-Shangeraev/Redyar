@@ -1,0 +1,100 @@
+.promo__slider {
+  .slide {
+    min-height: 100vh;
+  }
+  .slide__content {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15% 0;
+    padding-left: 35%;
+    padding-right: 35%;
+
+    p {
+      @include text;
+      position: relative;
+      padding: 20px;
+      font-size: 18px;
+    }
+    p::before {
+      position: absolute;
+      content: '+';
+      top: 0;
+      left: 0;
+      font-size: 30px;
+      color: $orange;
+    }
+  }
+  .slide__title {
+    width: 30%;
+  }
+}
+.promo__bottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 60px 50px 35%;
+
+  div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.promo__mouse {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 30px;
+  }
+}
+.promo__schedule {
+  @include text;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+.promo__button-modal {
+  @include text;
+  padding: 0;
+  line-height: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.promo__arrows {
+  margin-right: 30px;
+  gap: 15px;
+}
+.promo__arrow {
+  cursor: pointer;
+
+  svg {
+    vertical-align: middle;
+  }
+  svg path {
+    transition: ease 0.15s;
+  }
+  &:hover svg path {
+    fill: $orange;
+  }
+}

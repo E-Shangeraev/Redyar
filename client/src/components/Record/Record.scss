@@ -1,0 +1,45 @@
+@import './RecordForm/RecordForm.scss';
+
+.record {
+  background-image: url('../../assets/img/dust.png');
+  background-size: 60%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.record .wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.record .title {
+  span:nth-of-type(2) {
+    margin-left: 20%;
+  }
+  span:nth-of-type(3) {
+    margin-left: 10%;
+  }
+}
+.record__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-column-gap: 30px;
+
+  li {
+    padding: 20px 60px;
+    background-color: $gray;
+
+    span:nth-of-type(1) {
+      display: block;
+      font-family: $druk;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 140%;
+      color: $orange;
+      text-transform: uppercase;
+    }
+    span:nth-of-type(2) {
+      @include text;
+    }
+  }
+}

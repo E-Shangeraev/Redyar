@@ -1,0 +1,26 @@
+.location {
+  background-image: url('../../assets/img/bg-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.location__address {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  span {
+    padding: 12px 20px;
+    @include text;
+    border: 1px solid $orange;
+    border-radius: 40px;
+  }
+}
+.location__map {
+  margin-bottom: 70px;
+  min-height: 400px;
+  background-image: url('../../assets/img/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}

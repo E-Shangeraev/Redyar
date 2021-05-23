@@ -1,0 +1,44 @@
+.athletes__wrapper {
+  padding-bottom: 0;
+}
+.athletes__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+
+  .title {
+    margin: 0;
+  }
+}
+.athletes__arrows {
+  display: flex;
+  gap: 15px;
+}
+.athletes__slider {
+  margin-bottom: 165px;
+  width: 110%;
+}
+.athletes__slide {
+  margin: 0 12px;
+}
+.athletes__photo {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.athletes__name {
+  display: block;
+  margin-bottom: 13px;
+  font-family: $formular-m;
+  font-size: 20px;
+  line-height: 120%;
+  color: #f2f2f2;
+}
+.athletes__achievements {
+  font-family: $formular-r;
+  font-size: 14px;
+  line-height: 150%;
+  opacity: 0.5;
+}

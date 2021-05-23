@@ -1,0 +1,21 @@
+// ==== Шрифты ====
+@font-face {
+  font-family: 'Druk Wide Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Druk Wide Medium'),
+    url('../fonts/Druk Wide Medium.otf') format('otf');
+}
+@font-face {
+  font-family: 'Formular-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local(''), url('../fonts/Formular-Medium.otf') format('otf');
+}
+@font-face {
+  font-family: 'Formular-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Formular-Regular.ttf'),
+    url('../fonts/Formular-Regular.ttf') format('ttf');
+}
