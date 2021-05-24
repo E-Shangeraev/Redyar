@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
-import { getMerch } from '../redux/actions/merch'
-import useHttp from '../hooks/http.hook'
-import Merch from './Merch/Merch'
-import CustomSlider from './generic/CustomSlider/CustomSlider'
+import { getMerch } from '@redux/actions/merch'
+import useHttp from '@hooks/http.hook'
+import CustomSlider from '@generic/CustomSlider/CustomSlider'
+import Merch from '@components/Merch/Merch'
 
 const MerchSlider = () => {
   const dispatch = useDispatch()

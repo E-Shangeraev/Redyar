@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Main from './pages/Main'
 import Competitions from './pages/Competitions'
 
-import './assets/scss/App.scss'
+import '@assets/scss/App.scss'
 
 const App = () => (
   <div className="App">

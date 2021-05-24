@@ -3,13 +3,13 @@ import Slider from 'react-slick'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-import img1 from '../../../assets/img/WorkersSlider/1.png'
-import img2 from '../../../assets/img/WorkersSlider/2.png'
-import img3 from '../../../assets/img/WorkersSlider/3.png'
+import img1 from '@assets/img/WorkersSlider/1.png'
+import img2 from '@assets/img/WorkersSlider/2.png'
+import img3 from '@assets/img/WorkersSlider/3.png'
 
-import social1 from '../../../assets/icons/vk.png'
-import social2 from '../../../assets/icons/instagram.png'
-import SliderArrow from '../SliderArrow/SliderArrow'
+import social1 from '@assets/icons/vk.png'
+import social2 from '@assets/icons/instagram.png'
+import SliderArrow from '@generic/SliderArrow/SliderArrow'
 
 const WorkersSlider = ({ dust }) => {
   const workersSliderRef = useRef()

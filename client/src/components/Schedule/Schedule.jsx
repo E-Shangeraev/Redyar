@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Schedule = () => (
-  <section className="schedule">
+  <section className="schedule" id="schedule">
     <div className="wrapper">
       <div className="flex space-between align-center mb5">
         <h2 className="title">Расписание</h2>

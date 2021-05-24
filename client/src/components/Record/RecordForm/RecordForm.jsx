@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../generic/Button/Button'
+import Button from '@generic/Button/Button'
 
 const RecordForm = () => (
   <form className="record__form">

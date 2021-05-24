@@ -1,6 +1,6 @@
 import React from 'react'
-import locationMark from '../../assets/icons/location.png'
-import Reviews from '../Reviews/Reviews'
+import Reviews from '@components/Reviews/Reviews'
+import locationMark from '@assets/icons/location.png'
 
 const Location = () => (
   <section className="location">

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 as uuidv4 } from 'uuid'
-import Button from '../generic/Button/Button'
+import Button from '@generic/Button/Button'
 
 const Merch = ({ img, name, price, sizes }) => {
   const availableSizes = sizes.length ? (

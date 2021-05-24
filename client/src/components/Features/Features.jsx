@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../assets/img/Main/1.jpg'
+import img1 from '@assets/img/Main/1.jpg'
 
 const Features = () => (
   <section className="features">
