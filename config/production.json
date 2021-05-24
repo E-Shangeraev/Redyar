@@ -1,0 +1,11 @@
+{
+  "port": 5000,
+  "mongoURI": "mongodb+srv://CrossfitRedyar:CFredyar-2014@cluster0.wymnn.mongodb.net/redyar?retryWrites=true&w=majority",
+  "emailTo": "redyar.aforce@yandex.ru",
+  "password": "gang1234509876",
+  "AWSAccessKeyID": "AKIA4WPPSBETYUV6YFXO",
+  "AWSSecretAccessKey": "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",
+  "AWSRegion": "eu-west-1",
+  "AWSBucket": "redyar-images",
+  "AWSURL": "https://redyar-images.s3.eu-west-1.amazonaws.com/"
+}
