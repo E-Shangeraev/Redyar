@@ -10,7 +10,8 @@ const accessKeyId = config.get('AWSAccessKeyID')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['name', 'price', 'sizes'],
+  listProperties: ['name', 'price', 'uploadedFile', 'mimeType'],
+  editProperties: ['name', 'price', 'sizes', 'uploadedFile'],
   parent: {
     name: 'Главная',
     icon: 'Home',
@@ -19,8 +20,8 @@ const options = {
     icon: 'ShoppingCart',
   },
   properties: {
-    mimeType: { isVisible: true },
-    uploadedFile: { isVisible: true },
+    // mimeType: { isVisible: true },
+    //   uploadedFile: { isVisible: true },
   },
 }
 
@@ -35,7 +36,7 @@ const features = [
       key: 'uploadedFile.path',
       bucket: 'uploadedFile.folder',
       size: 'uploadedFile.size',
-      mimeType: 'uploadedFile.type',
+      mimeType: 'mimeType',
     },
     validation: {
       mimeTypes: ['image/png', 'image/jpg', 'image/jpeg'],

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import social1 from '@assets/icons/vk.png'
+import social2 from '@assets/icons/instagram.png'
 import logo from './logo.png'
-import social1 from '../../assets/icons/vk.png'
-import social2 from '../../assets/icons/instagram.png'
 
 const Footer = () => (
   <footer className="footer">

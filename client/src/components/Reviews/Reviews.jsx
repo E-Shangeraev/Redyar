@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React from 'react'
-import Button from '../generic/Button/Button'
+import Button from '@generic/Button/Button'
 
-import reviewer1 from '../../assets/img/reviewer-1.png'
-import reviewer2 from '../../assets/img/reviewer-2.png'
+import reviewer1 from '@assets/img/reviewer-1.png'
+import reviewer2 from '@assets/img/reviewer-2.png'
 
 const Reviews = () => (
   <div className="reviews">

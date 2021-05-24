@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react'
-import Video from '../generic/Video/Video'
+import Video from '@generic/Video/Video'
 
-import preview from '../../assets/img/Main/2.jpg'
+import preview from '@assets/img/Main/2.jpg'
 
 const Founder = () => (
   <section className="founder">

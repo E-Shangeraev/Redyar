@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
-import SliderArrow from '../generic/SliderArrow/SliderArrow'
+import SliderArrow from '@generic/SliderArrow/SliderArrow'
 
 const Athletes = ({ images }) => {
   const athletesSliderRef = useRef()

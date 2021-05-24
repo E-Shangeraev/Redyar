@@ -10,24 +10,23 @@
 @import '~react-modal-video/scss/modal-video.scss';
 
 // ==== Компоненты ====
-@import '../../components/generic/Button/Button.scss';
-@import '../../components/generic/Video/Video.scss';
-@import '../../components/generic/WorkersSlider/WorkersSlider.scss';
-@import '../../components/generic/SliderArrow/SliderArrow.scss';
-@import '../../components/generic/CustomSlider/CustomSlider.scss';
-@import '../../components/generic/DoubleSlider/DoubleSlider.scss';
+@import '@generic/Button/Button.scss';
+@import '@generic/Video/Video.scss';
+@import '@generic/WorkersSlider/WorkersSlider.scss';
+@import '@generic/SliderArrow/SliderArrow.scss';
+@import '@generic/CustomSlider/CustomSlider.scss';
+@import '@generic/DoubleSlider/DoubleSlider.scss';
 
-@import '../../components/Header/Header.scss';
-@import '../../components/Promo/Promo.scss';
-@import '../../components/Record/Record.scss';
-@import '../../components/Features/Features.scss';
-@import '../../components/Founder/Founder.scss';
-@import '../../components/Why/Why.scss';
-@import '../../components/Athletes/Athletes.scss';
-@import '../../components/Schedule/Schedule.scss';
-@import '../../components/Location/Location.scss';
-@import '../../components/Reviews/Reviews.scss';
-@import '../../components/RedyarHome/RedyarHome.scss';
-@import '../../components/Footer/Footer.scss';
-
-@import '../../components/Merch/Merch.scss';
+@import '@components/Header/Header.scss';
+@import '@components/Promo/Promo.scss';
+@import '@components/Record/Record.scss';
+@import '@components/Features/Features.scss';
+@import '@components/Founder/Founder.scss';
+@import '@components/Why/Why.scss';
+@import '@components/Athletes/Athletes.scss';
+@import '@components/Schedule/Schedule.scss';
+@import '@components/Location/Location.scss';
+@import '@components/Reviews/Reviews.scss';
+@import '@components/RedyarHome/RedyarHome.scss';
+@import '@components/Footer/Footer.scss';
+@import '@components/Merch/Merch.scss';

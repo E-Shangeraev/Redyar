@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
-import SliderArrow from '../SliderArrow/SliderArrow'
+import SliderArrow from '@generic/SliderArrow/SliderArrow'
 
 const CustomSlider = ({ title, settings, items }) => {
   const sliderRef = useRef()
