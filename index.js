@@ -1,6 +1,7 @@
 // ==== Библиотеки ====
 const express = require('express')
 const config = require('config')
+const path = require('path')
 const mongoose = require('mongoose')
 const { default: AdminBro } = require('admin-bro')
 // const AdminBroExpress = require('@admin-bro/express')
@@ -15,6 +16,14 @@ const adminRouter = buildAdminRouter(admin)
 
 app.use(admin.options.rootPath, adminRouter)
 app.use('/api/merch', merchRouter)
+
+if (proccess.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 const PORT = config.get('port') || 5000
 

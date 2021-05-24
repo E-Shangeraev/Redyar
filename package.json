@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "type": "commonjs",
   "repository": {
@@ -45,6 +48,7 @@
   "devDependencies": {
     "@rollup/plugin-replace": "^2.4.2",
     "concurrently": "^6.1.0",
+    "cross-env": "^7.0.3",
     "express-formidable": "^1.2.0",
     "nodemon": "^2.0.7"
   }
