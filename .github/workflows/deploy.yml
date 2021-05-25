@@ -23,5 +23,6 @@ jobs:
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
       - run: npm ci
+      # - run: npm run client:build
       # Deploy
       - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . root@cfry.ru:/var/www/cfry.ru/ && cd client/build --archive --compress --delete . root@cfry.ru:/var/www/cfry.ru/client/build
