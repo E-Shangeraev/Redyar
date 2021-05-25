@@ -9,7 +9,7 @@
 @import '~slick-carousel/slick/slick-theme.css';
 @import '~react-modal-video/scss/modal-video.scss';
 
-// ==== Компоненты ====
+// ==== Общие компоненты ====
 @import '@generic/Button/Button.scss';
 @import '@generic/Video/Video.scss';
 @import '@generic/WorkersSlider/WorkersSlider.scss';
@@ -17,6 +17,7 @@
 @import '@generic/CustomSlider/CustomSlider.scss';
 @import '@generic/DoubleSlider/DoubleSlider.scss';
 
+// ==== Компоненты ====
 @import '@components/Header/Header.scss';
 @import '@components/Promo/Promo.scss';
 @import '@components/Record/Record.scss';
@@ -30,3 +31,4 @@
 @import '@components/RedyarHome/RedyarHome.scss';
 @import '@components/Footer/Footer.scss';
 @import '@components/Merch/Merch.scss';
+@import '@components/Competition/Competition.scss';

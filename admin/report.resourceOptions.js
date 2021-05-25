@@ -1,7 +1,7 @@
 const AdminBro = require('admin-bro')
 const uploadFeature = require('@admin-bro/upload')
 const config = require('config')
-const Merch = require('../models/Merch')
+const Report = require('../models/Report')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -10,8 +10,8 @@ const accessKeyId = config.get('AWSAccessKeyID')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['name', 'price', 'uploadedFile', 'mimeType'],
-  editProperties: ['name', 'price', 'sizes', 'uploadedFile'],
+  listProperties: ['name', 'uploadedFile', 'mimeType'],
+  editProperties: ['uploadedFile'],
   parent: {
     name: 'Главная',
     icon: 'Home',
@@ -21,7 +21,6 @@ const options = {
   },
   properties: {
     mimeType: { isVisible: true },
-    //   uploadedFile: { isVisible: true },
   },
 }
 
@@ -47,5 +46,5 @@ const features = [
 module.exports = {
   options,
   features,
-  resource: Merch,
+  resource: Report,
 }

@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const FileUpload = new Schema({
+const FileUpload = Schema({
   path: String,
   type: String,
   size: Number,

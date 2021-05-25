@@ -43,9 +43,8 @@ const CustomSlider = ({ title, settings, items }) => {
 
 CustomSlider.propTypes = {
   title: PropTypes.string.isRequired,
-  settings: PropTypes.objectOf(
-    PropTypes.oneOfType[(PropTypes.string, PropTypes.number, PropTypes.bool)]
-  ).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),
 }
 

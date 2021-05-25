@@ -1,7 +1,7 @@
 const AdminBro = require('admin-bro')
 const uploadFeature = require('@admin-bro/upload')
 const config = require('config')
-const Merch = require('../models/Merch')
+const Competition = require('../models/Competition')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -10,18 +10,14 @@ const accessKeyId = config.get('AWSAccessKeyID')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['name', 'price', 'uploadedFile', 'mimeType'],
-  editProperties: ['name', 'price', 'sizes', 'uploadedFile'],
-  parent: {
-    name: 'Главная',
-    icon: 'Home',
-  },
+  listProperties: ['name', 'text', 'complexity', 'image', 'mimeType'],
+  editProperties: ['name', 'text', 'complexity', 'image'],
+
   navigation: {
     icon: 'ShoppingCart',
   },
   properties: {
     mimeType: { isVisible: true },
-    //   uploadedFile: { isVisible: true },
   },
 }
 
@@ -31,12 +27,13 @@ const features = [
       aws: { region, bucket, secretAccessKey, accessKeyId, expires: 0 },
     },
     properties: {
-      filename: 'uploadedFile.filename',
-      file: 'uploadedFile',
-      key: 'uploadedFile.path',
-      bucket: 'uploadedFile.folder',
-      size: 'uploadedFile.size',
-      mimeType: 'mimeType',
+      file: 'image',
+      filename: 'image.filename',
+      filesToDelete: 'image.delete',
+      key: 'image.path',
+      bucket: 'image.folder',
+      size: 'image.size',
+      mimeType: 'image.mimeType',
     },
     validation: {
       mimeTypes: ['image/png', 'image/jpg', 'image/jpeg'],
@@ -47,5 +44,5 @@ const features = [
 module.exports = {
   options,
   features,
-  resource: Merch,
+  resource: Competition,
 }

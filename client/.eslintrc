@@ -14,7 +14,7 @@
     "vars-on-top": "off",
     "linebreak-style": "off",
     "prefer-destructuring": "off",
-    "indent": ["error", 2],
+    "indent": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
 import mouseSvg from './mouse.svg'
 
-const Promo = ({ images }) => {
+const Promo = ({ slides, schedule }) => {
   const promoSliderRef = useRef()
 
   const next = () => {
@@ -28,18 +28,14 @@ const Promo = ({ images }) => {
   return (
     <section className="promo">
       <Slider ref={promoSliderRef} className="promo__slider" {...settings}>
-        {images &&
-          images.map((img) => (
+        {slides &&
+          slides.map(slide => (
             <div className="slide" key={uuidv4()}>
               <div
                 className="slide__content"
-                style={{ backgroundImage: `url(${img})` }}>
-                <h2 className="title slide__title">первое занятие бесплатно</h2>
-                <p>
-                  В RedYar Crossfit ты забудешь, что такое обычный фитнес-клуб.
-                  Здесь ты сам себя вызываешь на бой, и мы проследим, чтобы он
-                  был честным.
-                </p>
+                style={{ backgroundImage: `url(${slide.img})` }}>
+                <h2 className="title slide__title">{slide.title}</h2>
+                <p>{slide.text}</p>
               </div>
             </div>
           ))}
@@ -51,7 +47,7 @@ const Promo = ({ images }) => {
         </div>
         <div>
           <a className="promo__schedule" href="#schedule">
-            Смотреть расписание тренировок
+            {schedule}
           </a>
           <div>
             <div className="promo__arrows">
