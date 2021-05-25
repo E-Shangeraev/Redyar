@@ -17,7 +17,7 @@ const adminRouter = buildAdminRouter(admin)
 app.use(admin.options.rootPath, adminRouter)
 app.use('/api/merch', merchRouter)
 
-if (proccess.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 
   app.get('*', (req, res) => {

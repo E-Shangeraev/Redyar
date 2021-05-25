@@ -9,7 +9,7 @@ export const setMerch = items => ({
 })
 
 export const getMerch = request => async dispatch => {
-  const data = await request('http://localhost:3000/api/merch')
+  const data = await request('/api/merch')
   dispatch(setLoaded(false))
   dispatch(setMerch(data))
 }
