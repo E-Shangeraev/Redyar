@@ -3,37 +3,36 @@ const AdminBroMongoose = require('@admin-bro/mongoose')
 const uploadFeature = require('@admin-bro/upload')
 const config = require('config')
 const Admin = require('./admin.resourceOptions')
-const Merch = require('./merch.resourceOptions')
-const Competition = require('./competition.resourceOptions')
-const Report = require('./report.resourceOptions')
+const Merch = require('../models/Merch')
+const MerchOptions = require('./merch.resourceOptions')
+const Competition = require('../models/Competition')
+const CompetitionOptions = require('./competition.resourceOptions')
+const Report = require('../models/Report')
+const ReportOptions = require('./report.resourceOptions')
 
-// const FileUpload = require('../models/FileUpload')
+const region = config.get('AWSRegion')
+const bucket = config.get('AWSBucket')
+const secretAccessKey = config.get('AWSSecretAccessKey')
+const accessKeyId = config.get('AWSAccessKeyID')
 
-// const region = config.get('AWSRegion')
-// const bucket = config.get('AWSBucket')
-// const secretAccessKey = config.get('AWSSecretAccessKey')
-// const accessKeyId = config.get('AWSAccessKeyID')
-
-// const features = [
-//   uploadFeature({
-//     provider: {
-//       aws: { region, bucket, secretAccessKey, accessKeyId, expires: 0 },
-//     },
-//     properties: {
-//       filename: 'uploadedFile.filename',
-//       file: 'uploadedFile',
-//       key: 'uploadedFile.path',
-//       bucket: 'uploadedFile.folder',
-//       size: 'uploadedFile.size',
-//       mimeType: 'mimeType',
-//     },
-//     validation: {
-//       mimeTypes: ['image/png', 'image/jpg', 'image/jpeg'],
-//     },
-//   }),
-// ]
-
-// Merch.features = features
+const features = [
+  uploadFeature({
+    provider: {
+      aws: { region, bucket, secretAccessKey, accessKeyId, expires: 0 },
+    },
+    properties: {
+      filename: 'uploadedFile.filename',
+      file: 'uploadedFile',
+      key: 'uploadedFile.path',
+      bucket: 'uploadedFile.folder',
+      size: 'uploadedFile.size',
+      mimeType: 'mimeType',
+    },
+    validation: {
+      mimeTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+    },
+  }),
+]
 
 AdminBro.registerAdapter(AdminBroMongoose)
 
@@ -85,7 +84,24 @@ const options = {
       },
     },
   },
-  resources: [Admin, Merch, Competition, Report],
+  resources: [
+    Admin,
+    {
+      resource: Merch,
+      options: MerchOptions,
+      features,
+    },
+    {
+      resource: Competition,
+      options: CompetitionOptions,
+      features,
+    },
+    {
+      resource: Report,
+      options: ReportOptions,
+      features,
+    },
+  ],
   branding: {
     companyName: 'Crossfit Redyar',
     logo: '',

@@ -1,14 +1,7 @@
 const { Schema, model } = require('mongoose')
 
 const Competition = new Schema({
-  image: {
-    filename: String,
-    delete: String,
-    path: String,
-    folder: String,
-    size: String,
-    mimeType: String,
-  },
+  uploadedFile: JSON,
   name: {
     type: String,
     required: true,
