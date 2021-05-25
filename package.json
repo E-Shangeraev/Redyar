@@ -9,7 +9,8 @@
     "client": "npm run start --prefix client",
     "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "rsync --archive --compress --delete . root@cfry.ru:/var/www/cfry.ru/ && cd client/build rsync --archive --compress --delete . root@cfry.ru:/var/www/cfry.ru/client/build"
   },
   "type": "commonjs",
   "repository": {
