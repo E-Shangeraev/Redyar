@@ -12,7 +12,6 @@
 // ==== Общие компоненты ====
 @import '@generic/Button/Button.scss';
 @import '@generic/Video/Video.scss';
-@import '@generic/WorkersSlider/WorkersSlider.scss';
 @import '@generic/SliderArrow/SliderArrow.scss';
 @import '@generic/CustomSlider/CustomSlider.scss';
 @import '@generic/DoubleSlider/DoubleSlider.scss';
@@ -24,7 +23,8 @@
 @import '@components/Features/Features.scss';
 @import '@components/Founder/Founder.scss';
 @import '@components/Why/Why.scss';
-@import '@components/Athletes/Athletes.scss';
+@import '@components/Worker/Worker.scss';
+@import '@components/Athlete/Athlete.scss';
 @import '@components/Schedule/Schedule.scss';
 @import '@components/Location/Location.scss';
 @import '@components/Reviews/Reviews.scss';

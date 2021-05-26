@@ -15,27 +15,26 @@
     z-index: -1;
   }
 }
-.schedule__today {
+.select {
+  position: relative;
+}
+.select__label {
   display: flex;
+  align-items: center;
   gap: 1em;
   font-family: $formular-r;
   font-size: 22px;
   line-height: 120%;
 
-  & > span {
+  & > b {
     opacity: 0.5;
   }
-}
-.schedule__button {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  cursor: pointer;
 
-  span {
+  button {
     position: relative;
     color: $orange;
     transition: ease 0.15s;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -49,6 +48,21 @@
   }
   &:hover span {
     color: #f2f2f2;
+  }
+}
+.select__popup {
+  position: absolute;
+  padding: 30px;
+  right: 0;
+  left: 0;
+  background-color: $d-gray;
+  text-align: center;
+  z-index: 999;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
   }
 }
 .schedule__container {

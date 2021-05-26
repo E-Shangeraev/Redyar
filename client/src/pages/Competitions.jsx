@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import CompetitionSlider from '@components/CompetitionSlider'
+import ReportSlider from '@components/ReportSlider'
+import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/2.jpg'
 import img2 from '@assets/img/Main/Promo/3.jpg'
@@ -39,7 +41,9 @@ const Competitions = () => {
           schedule="Смотреть расписание соревнований"
         />
         <CompetitionSlider />
+        <ReportSlider />
       </main>
+      <Footer />
     </>
   )
 }

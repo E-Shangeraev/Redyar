@@ -36,7 +36,14 @@ const MerchSlider = () => {
       ))
     : []
 
-  return <CustomSlider title="Мерч" settings={settings} items={merch} />
+  return (
+    <CustomSlider
+      title="Мерч"
+      settings={settings}
+      items={[...merch, ...merch]}
+      outerRight
+    />
+  )
 }
 
 export default MerchSlider

@@ -28,7 +28,7 @@ const CompetitionSlider = () => {
         <Competition
           key={uuidv4()}
           // eslint-disable-next-line max-len
-          img=""
+          img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
           name={item.name}
           text={item.text}
           complexity={item.complexity}
@@ -40,7 +40,7 @@ const CompetitionSlider = () => {
     <CustomSlider
       title="Виды соревнований"
       settings={settings}
-      items={competitions}
+      items={[...competitions, ...competitions]}
     />
   )
 }

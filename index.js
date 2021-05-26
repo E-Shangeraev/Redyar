@@ -8,7 +8,15 @@ const AdminBroExpress = require('@admin-bro/express')
 const options = require('./admin/admin.options')
 
 // ==== Роуты ====
-const { buildAdminRouter, merchRouter, competitionRouter } = require('./routes')
+const {
+  buildAdminRouter,
+  merchRouter,
+  competitionRouter,
+  reportRouter,
+  workerRouter,
+  athletesRouter,
+  scheduleRouter,
+} = require('./routes')
 
 const app = express()
 const admin = new AdminBro(options)
@@ -16,7 +24,11 @@ const adminRouter = buildAdminRouter(admin)
 
 app.use(admin.options.rootPath, adminRouter)
 app.use('/api/merch', merchRouter)
-// app.use('/api/competitions', competitionRouter)
+app.use('/api/competitions', competitionRouter)
+app.use('/api/report', reportRouter)
+app.use('/api/workers', workerRouter)
+app.use('/api/athletes', athletesRouter)
+app.use('/api/schedule', scheduleRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))

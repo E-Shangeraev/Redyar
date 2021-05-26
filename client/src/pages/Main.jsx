@@ -5,13 +5,12 @@ import Record from '@components/Record/Record'
 import Features from '@components/Features/Features'
 import Founder from '@components/Founder/Founder'
 import Why from '@components/Why/Why'
-import WorkersSlider from '@generic/WorkersSlider/WorkersSlider'
-import Athletes from '@components/Athletes/Athletes'
+import TeamSlider from '@components/TeamSlider'
+import AthletesSlider from '@components/AthletesSlider'
 import Schedule from '@components/Schedule/Schedule'
 
-import { MainAthletesPhotos } from '@assets/img/Main'
 import MerchSlider from '@components/MerchSlider'
-import DoubleSlider from '@components/generic/DoubleSlider/DoubleSlider'
+import ReportSlider from '@components/ReportSlider'
 import Location from '@components/Location/Location'
 import RedyarHome from '@components/RedyarHome/RedyarHome'
 import Footer from '@components/Footer/Footer'
@@ -52,11 +51,11 @@ const Main = () => {
         <Features />
         <Founder />
         <Why />
-        <WorkersSlider dust />
-        <Athletes images={MainAthletesPhotos} />
+        <TeamSlider />
+        <AthletesSlider />
         <Schedule />
         <MerchSlider />
-        <DoubleSlider title="фото с тренировок" />
+        <ReportSlider />
         <Location />
         <RedyarHome />
       </main>

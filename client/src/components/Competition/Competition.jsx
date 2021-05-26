@@ -7,9 +7,11 @@ const Competition = ({ img, name, text, complexity }) => (
     <div className="competition">
       <img src={img} alt={name} className="competition__photo" />
       <div className="flex column">
-        <span>{name}</span>
-        <p>{text}</p>
-        <b>Сложность: {complexity}</b>
+        <span className="competition__name">{name}</span>
+        <p className="competition__text">{text}</p>
+        <span className="competition__complexity">
+          Сложность: <b>{complexity}</b>
+        </span>
         <Button>Участвовать</Button>
       </div>
     </div>
