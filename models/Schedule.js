@@ -1,6 +1,11 @@
 const { Schema, model } = require('mongoose')
 
 const Schedule = new Schema({
+  index: {
+    type: Number,
+    unique: true,
+    required: true,
+  },
   weekDay: {
     type: String,
     required: true,

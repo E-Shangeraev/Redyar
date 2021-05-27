@@ -12,6 +12,16 @@ class Request {
       throw err
     }
   }
+  getItemByIndex = param => async (req, res) => {
+    try {
+      const item = await this.model.findOne({ index: req.params[param] })
+      res.status(200)
+      res.json(item)
+    } catch (err) {
+      res.status(500)
+      throw err
+    }
+  }
 }
 
 module.exports = Request

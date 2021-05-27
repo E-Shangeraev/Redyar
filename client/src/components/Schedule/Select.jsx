@@ -1,37 +1,38 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import PropTypes from 'prop-types'
 
-const weekDays = [
-  'Понедельник',
-  'Вторник',
-  'Среда',
-  'Четверг',
-  'Пятница',
-  'Суббота',
-  'Воскресенье',
-]
-
-const Select = ({ onClickSortType, today }) => {
+const Select = ({ activeDayIndex, onClickDay, items }) => {
   const selectRef = useRef()
   const [visiblePopup, setVisiblePopup] = useState(false)
 
   const toggleVisiblePopup = () => setVisiblePopup(!visiblePopup)
 
-  const onSelectItem = index => {
-    onClickSortType(index)
+  const onSelectItem = day => {
+    onClickDay(day)
     setVisiblePopup(false)
   }
+
+  const handleOutsideClick = e => {
+    const path = e.path || (e.composedPath && e.composedPath())
+    if (!path.includes(selectRef.current)) {
+      setVisiblePopup(false)
+    }
+  }
+
+  useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick)
+  }, [])
 
   return (
     <div ref={selectRef} className="select">
       <div className="select__label">
-        <b>Сегодня:</b>
+        <b>День недели:</b>
         <button type="button" onClick={toggleVisiblePopup}>
-          понедельник
+          {items[activeDayIndex]}
         </button>
         <svg
+          className={visiblePopup ? 'rotated' : ''}
           width="15"
           height="9"
           viewBox="0 0 15 9"
@@ -43,12 +44,11 @@ const Select = ({ onClickSortType, today }) => {
       {visiblePopup && (
         <div className="select__popup">
           <ul>
-            {weekDays.map((day, index) => (
-              // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+            {items.map((day, index) => (
               <li key={uuidv4()}>
                 <button
                   type="button"
-                  className={today === day ? 'active' : ''}
+                  className={activeDayIndex === index ? 'active' : ''}
                   onClick={() => onSelectItem(index)}>
                   {day}
                 </button>
@@ -62,8 +62,9 @@ const Select = ({ onClickSortType, today }) => {
 }
 
 Select.propTypes = {
-  today: PropTypes.string.isRequired,
-  onClickSortType: PropTypes.func.isRequired,
+  activeDayIndex: PropTypes.number.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onClickDay: PropTypes.func.isRequired,
 }
 
 export default Select

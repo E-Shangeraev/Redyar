@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import TeamSlider from '@components/TeamSlider'
-import DoubleSlider from '@components/generic/DoubleSlider/DoubleSlider'
+import TeamPhotoSlider from '@components/TeamPhotoSlider'
 import Record from '@components/Record/Record'
 import Footer from '@components/Footer/Footer'
 
@@ -39,6 +39,7 @@ const Main = () => {
         <h1 className="visually-hidden">Команда</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
         <TeamSlider />
+        <TeamPhotoSlider />
         <Record />
       </main>
       <Footer />
