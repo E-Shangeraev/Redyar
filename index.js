@@ -17,6 +17,7 @@ const {
   athletesRouter,
   scheduleRouter,
   teamPhotoRouter,
+  campPhotoRouter,
 } = require('./routes')
 
 const app = express()
@@ -31,6 +32,7 @@ app.use('/api/workers', workerRouter)
 app.use('/api/athletes', athletesRouter)
 app.use('/api/schedule', scheduleRouter)
 app.use('/api/team-photo', teamPhotoRouter)
+app.use('/api/camp-photo', campPhotoRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))

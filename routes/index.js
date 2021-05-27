@@ -6,6 +6,7 @@ const workerRouter = require('./worker')
 const athletesRouter = require('./athletes')
 const scheduleRouter = require('./schedule')
 const teamPhotoRouter = require('./teamPhoto')
+const campPhotoRouter = require('./campPhoto')
 
 module.exports = {
   buildAdminRouter,
@@ -16,4 +17,5 @@ module.exports = {
   athletesRouter,
   scheduleRouter,
   teamPhotoRouter,
+  campPhotoRouter,
 }

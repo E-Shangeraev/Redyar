@@ -24,7 +24,7 @@ const Footer = () => (
             <Link to="/team">Команда</Link>
             <Link to="/">Контакты</Link>
             <Link to="/">Новичкам</Link>
-            <Link to="/">Лагерь</Link>
+            <Link to="/camp">Лагерь</Link>
             <Link to="/competitions">Соревнования</Link>
           </nav>
           <span className="footer__copyright">

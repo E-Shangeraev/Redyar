@@ -3,12 +3,12 @@ import { v4 as uuidv4 } from 'uuid'
 import useHttp from '@hooks/http.hook'
 import DoubleSlider from '@generic/DoubleSlider/DoubleSlider'
 
-const TeamPhotoSlider = () => {
+const CampPhotoSlider = () => {
   const [photos, setPhotos] = useState([])
   const { request } = useHttp()
 
   useEffect(async () => {
-    const items = await request('/api/team-photo')
+    const items = await request('/api/camp-photo')
     setPhotos(items)
   }, [])
 
@@ -20,20 +20,24 @@ const TeamPhotoSlider = () => {
     variableWidth: true,
   }
 
-  const teamPhotos = photos.length
+  const campPhotos = photos.length
     ? photos.map(item => (
         <img
           // eslint-disable-next-line max-len
           src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-          alt="Фото команды"
+          alt="фото с “лагеря”"
           key={uuidv4()}
         />
       ))
     : []
 
   return (
-    <DoubleSlider title="Фото команды" settings={settings} items={teamPhotos} />
+    <DoubleSlider
+      title="фото с “лагеря”"
+      settings={settings}
+      items={campPhotos}
+    />
   )
 }
 
-export default TeamPhotoSlider
+export default CampPhotoSlider

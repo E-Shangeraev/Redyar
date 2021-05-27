@@ -18,6 +18,8 @@ const Schedule = require('../models/Schedule')
 const ScheduleOptions = require('./schedule.resourceOptions')
 const TeamPhoto = require('../models/TeamPhoto')
 const TeamPhotoOptions = require('./teamPhoto.resourceOptions')
+const CampPhoto = require('../models/CampPhoto')
+const CampPhotoOptions = require('./campPhoto.resourceOptions')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -68,6 +70,7 @@ const options = {
         Athletes: 'Известные атлеты',
         Schedule: 'Расписание занятий',
         TeamPhoto: 'Фото команды',
+        CampPhoto: 'Фото с "лагеря"',
       },
       buttons: {
         filter: 'Фильтр',
@@ -130,6 +133,11 @@ const options = {
             uploadedFile: 'Фото',
           },
         },
+        CampPhoto: {
+          properties: {
+            uploadedFile: 'Фото',
+          },
+        },
       },
     },
   },
@@ -167,6 +175,11 @@ const options = {
     {
       resource: TeamPhoto,
       options: TeamPhotoOptions,
+      features,
+    },
+    {
+      resource: CampPhoto,
+      options: CampPhotoOptions,
       features,
     },
   ],

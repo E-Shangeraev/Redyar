@@ -2,13 +2,10 @@ const AdminBro = require('admin-bro')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['uploadedFile', 'mimeType'],
+  listProperties: ['uploadedFile'],
   editProperties: ['uploadedFile'],
   parent: {
-    name: 'Главная',
-    icon: 'Home',
-  },
-  navigation: {
+    name: 'Фото',
     icon: 'Camera',
   },
   properties: {

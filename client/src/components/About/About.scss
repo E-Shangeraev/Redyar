@@ -1,0 +1,37 @@
+.about {
+  background-image: url('../../assets/img/Camp/bg.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  .wrapper > div {
+    width: 50%;
+  }
+  .flex {
+    gap: 5%;
+  }
+  &::after {
+    position: absolute;
+    content: url('../../assets/img/dust-5.png');
+    right: 0;
+    bottom: -50%;
+  }
+}
+.about__text {
+  font-size: 18px;
+  line-height: 160%;
+}
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  row-gap: 1.5em;
+
+  li {
+    font-family: $druk;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 140%;
+    color: $orange;
+    text-transform: uppercase;
+  }
+}
