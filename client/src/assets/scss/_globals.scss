@@ -12,7 +12,8 @@ body {
 // html {
 //   scroll-behavior: smooth;
 // }
-section {
+section,
+footer {
   position: relative;
   z-index: 1;
 }
@@ -66,6 +67,12 @@ p {
 .wrapper {
   padding: 160px 260px;
 }
+.wrapper-w100 {
+  padding: 160px 0;
+}
+.wrapper-w100-pl {
+  padding: 160px 0 160px 260px;
+}
 .pl {
   padding-left: 260px;
 }
@@ -83,51 +90,51 @@ p {
   }
 }
 .flex {
-  display: flex;
+  display: flex !important;
 
   * {
     margin: 0;
   }
 }
 .row {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 .column {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 .space-between {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 .align-center {
-  align-items: center;
+  align-items: center !important;
 }
 .mb1 {
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
 }
 .mb2 {
-  margin-bottom: 2em;
+  margin-bottom: 2em !important;
 }
 .mb3 {
-  margin-bottom: 3em;
+  margin-bottom: 3em !important;
 }
 .mb4 {
-  margin-bottom: 4em;
+  margin-bottom: 4em !important;
 }
 .mb5 {
-  margin-bottom: 5em;
+  margin-bottom: 5em !important;
 }
 .gap1 {
-  gap: 1em;
+  gap: 1em !important;
 }
 .gap2 {
-  gap: 2em;
+  gap: 2em !important;
 }
 .gap3 {
-  gap: 3em;
+  gap: 3em !important;
 }
 .gap4 {
-  gap: 4em;
+  gap: 4em !important;
 }
 .gap5 {
-  gap: 5em;
+  gap: 5em !important;
 }

@@ -20,6 +20,8 @@ const TeamPhoto = require('../models/TeamPhoto')
 const TeamPhotoOptions = require('./teamPhoto.resourceOptions')
 const CampPhoto = require('../models/CampPhoto')
 const CampPhotoOptions = require('./campPhoto.resourceOptions')
+const Reviews = require('../models/Review')
+const ReviewsOptions = require('./reviews.resourceOptions')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -71,6 +73,7 @@ const options = {
         Schedule: 'Расписание занятий',
         TeamPhoto: 'Фото команды',
         CampPhoto: 'Фото с "лагеря"',
+        Reviews: 'Отзывы',
       },
       buttons: {
         filter: 'Фильтр',
@@ -138,6 +141,14 @@ const options = {
             uploadedFile: 'Фото',
           },
         },
+        Reviews: {
+          properties: {
+            uploadedFile: 'Фото',
+            name: 'Имя',
+            review: 'Отзыв',
+            rating: 'Оценка',
+          },
+        },
       },
     },
   },
@@ -180,6 +191,11 @@ const options = {
     {
       resource: CampPhoto,
       options: CampPhotoOptions,
+      features,
+    },
+    {
+      resource: Reviews,
+      options: ReviewsOptions,
       features,
     },
   ],

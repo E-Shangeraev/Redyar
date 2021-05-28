@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import PropTypes from 'prop-types'
 
 const About = ({ image, alt, text, items }) => (
@@ -18,7 +19,7 @@ const About = ({ image, alt, text, items }) => (
         <p className="about__text mb5">{text}</p>
         <ul className="about__list">
           {items.map(item => (
-            <li>{item}</li>
+            <li key={uuidv4()}>{item}</li>
           ))}
         </ul>
       </div>

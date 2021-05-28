@@ -7,6 +7,7 @@ const athletesRouter = require('./athletes')
 const scheduleRouter = require('./schedule')
 const teamPhotoRouter = require('./teamPhoto')
 const campPhotoRouter = require('./campPhoto')
+const reviewsRouter = require('./reviews')
 
 module.exports = {
   buildAdminRouter,
@@ -18,4 +19,5 @@ module.exports = {
   scheduleRouter,
   teamPhotoRouter,
   campPhotoRouter,
+  reviewsRouter,
 }

@@ -1,0 +1,21 @@
+.video-report {
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 200%;
+    background-image: url('../../assets/img/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    z-index: -1;
+  }
+
+  .video {
+    margin-bottom: 120px;
+  }
+}

@@ -4,6 +4,9 @@ import Promo from '@components/Promo/Promo'
 import Record from '@components/Record/Record'
 import About from '@components/About/About'
 import CampPhotoSlider from '@components/CampPhotoSlider'
+import DailyRoutine from '@components/DailyRoutine/DailyRoutine'
+import Besides from '@components/Besides/Besides'
+import VideoReport from '@components/VideoReport/VideoReport'
 import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/3.jpg'
@@ -58,6 +61,9 @@ const Main = () => {
           items={['21 тренер', '2 недели', '40 человек', '29 испытаний']}
         />
         <CampPhotoSlider />
+        <DailyRoutine />
+        <Besides />
+        <VideoReport />
       </main>
       <Footer />
     </>
