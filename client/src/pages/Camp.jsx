@@ -7,6 +7,8 @@ import CampPhotoSlider from '@components/CampPhotoSlider'
 import DailyRoutine from '@components/DailyRoutine/DailyRoutine'
 import Besides from '@components/Besides/Besides'
 import VideoReport from '@components/VideoReport/VideoReport'
+import FAQ from '@components/FAQ/FAQ'
+import WayToCamp from '@components/WayToCamp'
 import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/3.jpg'
@@ -18,7 +20,7 @@ import aboutImageWebp from '@assets/img/Camp/1.webp'
 import aboutImageJpgSmall from '@assets/img/Camp/1_small.jpg'
 import aboutImageWebpSmall from '@assets/img/Camp/1_small.webp'
 
-const Main = () => {
+const Camp = () => {
   const promoSlides = [
     {
       img: img1,
@@ -64,10 +66,12 @@ const Main = () => {
         <DailyRoutine />
         <Besides />
         <VideoReport />
+        <FAQ title="вопрос-ответ" />
+        <WayToCamp />
       </main>
       <Footer />
     </>
   )
 }
 
-export default Main
+export default Camp
