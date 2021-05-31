@@ -1,4 +1,5 @@
 import React from 'react'
+import FeaturesBlocks from '@generic/FeaturesBlocks/FeaturesBlocks'
 import RecordForm from './RecordForm/RecordForm'
 
 const Record = () => (
@@ -18,20 +19,13 @@ const Record = () => (
         </div>
         <RecordForm />
       </div>
-      <ul className="record__features">
-        <li>
-          <span>01</span>
-          <span>Первый аффилированный CrossFit-зал в Красноярске</span>
-        </li>
-        <li>
-          <span>02</span>
-          <span>Сертифицированные L-2 и L-1 тренеры</span>
-        </li>
-        <li>
-          <span>03</span>
-          <span>Самый титулованный кроссфит-зал в городе</span>
-        </li>
-      </ul>
+      <FeaturesBlocks
+        items={[
+          'Первый аффилированный CrossFit-зал в Красноярске',
+          'Сертифицированные L-2 и L-1 тренеры',
+          'Самый титулованный кроссфит-зал в городе',
+        ]}
+      />
     </div>
   </section>
 )

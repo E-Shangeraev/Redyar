@@ -2,8 +2,9 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
+import classNames from 'classnames'
 
-const CustomSlider = ({ title, settings, items }) => {
+const CustomSlider = ({ title, settings, items, outerRight }) => {
   const sliderRef = useRef()
 
   const next = () => {
@@ -32,7 +33,9 @@ const CustomSlider = ({ title, settings, items }) => {
       </div>
       <Slider
         ref={sliderRef}
-        className="slider__component pl"
+        className={classNames('slider__component pl pr', {
+          'slider__component--outer-right': outerRight,
+        })}
         {...defaultSettings}
         {...settings}>
         {items}
@@ -43,14 +46,15 @@ const CustomSlider = ({ title, settings, items }) => {
 
 CustomSlider.propTypes = {
   title: PropTypes.string.isRequired,
-  settings: PropTypes.objectOf(
-    PropTypes.oneOfType[(PropTypes.string, PropTypes.number, PropTypes.bool)]
-  ).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),
+  outerRight: PropTypes.bool,
 }
 
 CustomSlider.defaultProps = {
   items: [],
+  outerRight: false,
 }
 
 export default CustomSlider

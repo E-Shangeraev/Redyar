@@ -1,8 +1,7 @@
 const { Schema, model, Types } = require('mongoose')
-const FileUpload = require('./FileUpload.js')
 
 const Merch = new Schema({
-  uploadedFile: FileUpload,
+  uploadedFile: new Schema({ path: String }),
   price: Number,
   name: {
     type: String,

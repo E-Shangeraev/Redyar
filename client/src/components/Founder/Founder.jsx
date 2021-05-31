@@ -1,12 +1,13 @@
 import React from 'react'
 import Video from '@generic/Video/Video'
+import PropTypes from 'prop-types'
 
 import preview from '@assets/img/Main/2.jpg'
 
-const Founder = () => (
+const Founder = ({ title }) => (
   <section className="founder">
     <div className="wrapper founder__wrapper">
-      <h2 className="title">Основатель</h2>
+      <h2 className="title">{title}</h2>
       <Video
         preview={preview}
         videoId="xgE37Jwo8OI"
@@ -18,17 +19,22 @@ const Founder = () => (
           Основатель и главный тренер CrossFit RedYar
         </span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit
-          auctor auctor dui nunc varius id enim magnis arcu. Amet aenean donec
-          venenatis et gravida maecenas ornare tincidunt. Sed sit massa donec
-          nam. Luctus purus placerat hendrerit cras tellus vel suspendisse
-          auctor. In justo, in vitae lacinia elit, elit tincidunt eget. Tellus a
-          semper orci vitae mi amet. In luctus sit rhoncus cras sed arcu ornare
-          lobortis.
+          Главное преимущество кроссфита закд\лючается в разнообразии. В отличие
+          от других круговых тренировок, кроссфит куда более интересен. Помимо
+          всего прочего, в нем есть элемент соревнования, который мотивирует и
+          придает вдохновения для новых свершений. Кроссфит подойдет тем, кто
+          любит спорт всей душой и телом и готов выкладываться на тренировках по
+          полной хоть каждый день. Помимо любителей, кроссфит подойдет и
+          профессионалам, которые хотят поддерживать свою форму в надлежащем
+          состоянии.
         </p>
       </div>
     </div>
   </section>
 )
+
+Founder.propTypes = {
+  title: PropTypes.string.isRequired,
+}
 
 export default Founder

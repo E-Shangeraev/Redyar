@@ -1,5 +1,5 @@
 import React from 'react'
-import Reviews from '@components/Reviews/Reviews'
+import Reviews from '@generic/Reviews/Reviews'
 import locationMark from '@assets/icons/location.png'
 
 const Location = () => (

@@ -1,16 +1,4 @@
 const Merch = require('../models/Merch')
+const Request = require('../core/Request')
 
-class MerchController {
-  getItems = async (req, res) => {
-    try {
-      const items = await Merch.find({})
-      res.status(200)
-      res.json(items)
-    } catch (err) {
-      res.status(500)
-      throw err
-    }
-  }
-}
-
-module.exports = new MerchController()
+module.exports = new Request(Merch)

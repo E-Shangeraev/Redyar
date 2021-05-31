@@ -1,0 +1,20 @@
+.record-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+
+  & * {
+    transition: ease 0.15s;
+  }
+  &:hover * {
+    color: #fff;
+    fill: #fff;
+  }
+  span {
+    @include text;
+    font-family: $druk;
+    text-transform: uppercase;
+    color: $orange;
+  }
+}

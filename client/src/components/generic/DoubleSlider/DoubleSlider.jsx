@@ -3,16 +3,7 @@ import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
 
-import img1 from '@assets/img/Workouts/1.jpg'
-import img2 from '@assets/img/Workouts/2.jpg'
-import img3 from '@assets/img/Workouts/3.jpg'
-import img4 from '@assets/img/Workouts/4.jpg'
-import img5 from '@assets/img/Workouts/5.jpg'
-import img6 from '@assets/img/Workouts/6.jpg'
-import img7 from '@assets/img/Workouts/7.jpg'
-import img8 from '@assets/img/Workouts/8.jpg'
-
-const DoubleSlider = ({ title }) => {
+const DoubleSlider = ({ title, settings, items }) => {
   const firstSliderRef = useRef()
   const secondSliderRef = useRef()
 
@@ -25,15 +16,10 @@ const DoubleSlider = ({ title }) => {
     secondSliderRef.current.slickNext()
   }
 
-  const settings = {
+  const defaultSettings = {
     dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
     accessibility: true,
     arrows: false,
-    variableWidth: true,
   }
 
   return (
@@ -50,28 +36,16 @@ const DoubleSlider = ({ title }) => {
       <Slider
         ref={firstSliderRef}
         className="double-slider__component"
+        {...defaultSettings}
         {...settings}>
-        <img src={img1} alt="" />
-        <img src={img2} alt="" />
-        <img src={img3} alt="" />
-        <img src={img4} alt="" />
-        <img src={img5} alt="" />
-        <img src={img6} alt="" />
-        <img src={img7} alt="" />
-        <img src={img8} alt="" />
+        {items}
       </Slider>
       <Slider
         ref={secondSliderRef}
         className="double-slider__component"
+        {...defaultSettings}
         {...settings}>
-        <img src={img8} alt="" />
-        <img src={img7} alt="" />
-        <img src={img6} alt="" />
-        <img src={img5} alt="" />
-        <img src={img4} alt="" />
-        <img src={img3} alt="" />
-        <img src={img2} alt="" />
-        <img src={img1} alt="" />
+        {[...items].reverse()}
       </Slider>
     </section>
   )
@@ -79,6 +53,13 @@ const DoubleSlider = ({ title }) => {
 
 DoubleSlider.propTypes = {
   title: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  settings: PropTypes.object.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object),
+}
+
+DoubleSlider.defaultProps = {
+  items: [],
 }
 
 export default DoubleSlider

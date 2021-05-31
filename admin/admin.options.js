@@ -1,7 +1,53 @@
 const { default: AdminBro } = require('admin-bro')
 const AdminBroMongoose = require('@admin-bro/mongoose')
+const uploadFeature = require('@admin-bro/upload')
+const config = require('config')
+
 const Admin = require('./admin.resourceOptions')
-const Merch = require('./merch.resourceOptions')
+const Merch = require('../models/Merch')
+const MerchOptions = require('./merch.resourceOptions')
+const Competition = require('../models/Competition')
+const CompetitionOptions = require('./competition.resourceOptions')
+const Report = require('../models/Report')
+const ReportOptions = require('./report.resourceOptions')
+const Worker = require('../models/Worker')
+const WorkerOptions = require('./worker.resourceOptions')
+const Athletes = require('../models/Athletes')
+const AthletesOptions = require('./athletes.resourceOptions')
+const Schedule = require('../models/Schedule')
+const ScheduleOptions = require('./schedule.resourceOptions')
+const TeamPhoto = require('../models/TeamPhoto')
+const TeamPhotoOptions = require('./teamPhoto.resourceOptions')
+const CampPhoto = require('../models/CampPhoto')
+const CampPhotoOptions = require('./campPhoto.resourceOptions')
+const Reviews = require('../models/Review')
+const ReviewsOptions = require('./reviews.resourceOptions')
+const { FAQCamp, FAQBeginners } = require('../models/FAQ')
+const FAQOptions = require('./faq.resourceOptions')
+
+const region = config.get('AWSRegion')
+const bucket = config.get('AWSBucket')
+const secretAccessKey = config.get('AWSSecretAccessKey')
+const accessKeyId = config.get('AWSAccessKeyID')
+
+const features = [
+  uploadFeature({
+    provider: {
+      aws: { region, bucket, secretAccessKey, accessKeyId, expires: 0 },
+    },
+    properties: {
+      filename: 'uploadedFile.filename',
+      file: 'uploadedFile',
+      key: 'uploadedFile.path',
+      bucket: 'uploadedFile.folder',
+      size: 'uploadedFile.size',
+      mimeType: 'mimeType',
+    },
+    validation: {
+      mimeTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+    },
+  }),
+]
 
 AdminBro.registerAdapter(AdminBroMongoose)
 
@@ -17,11 +63,21 @@ const options = {
         delete: 'Удалить',
         list: 'Записи',
         search: 'Искать',
-        add: 'Добавить',
+        addNewItem: 'Добавить',
       },
       labels: {
         Admin: 'Администраторы',
         Merch: 'Мерч',
+        Competition: 'Виды соревнований',
+        Report: 'Фотоотчет',
+        Worker: 'Команда',
+        Athletes: 'Известные атлеты',
+        Schedule: 'Расписание занятий',
+        TeamPhoto: 'Фото команды',
+        CampPhoto: 'Фото с "лагеря"',
+        Reviews: 'Отзывы',
+        FAQCamp: 'Вопросы (Лагерь)',
+        FAQBeginners: 'Вопросы (Новичкам)',
       },
       buttons: {
         filter: 'Фильтр',
@@ -36,10 +92,137 @@ const options = {
             uploadedFile: 'Фото',
           },
         },
+        Competition: {
+          properties: {
+            name: 'Название',
+            text: 'Описание',
+            complexity: 'Сложность',
+            uploadedFile: 'Фото',
+          },
+        },
+        Report: {
+          properties: {
+            uploadedFile: 'Фото',
+          },
+        },
+        Worker: {
+          properties: {
+            uploadedFile: 'Фото',
+            name: 'Имя',
+            post: 'Должность',
+            achievements: 'Достижения',
+            addition: 'Дополнительные услуги',
+            socials: 'Соцсети',
+            'socials.vk': 'ВКонтакте',
+            'socials.telegram': 'Telegram',
+            'socials.instagram': 'Instagram',
+            'socials.youtube': 'YouTube',
+          },
+        },
+        Athletes: {
+          properties: {
+            uploadedFile: 'Фото',
+            name: 'Имя',
+            achievements: 'Достижения',
+          },
+        },
+        Schedule: {
+          properties: {
+            weekDay: 'День недели',
+            schedule: 'Расписание',
+            'schedule.time': 'Время',
+            'schedule.name': 'Название',
+            'schedule.description': 'Описание',
+          },
+        },
+        TeamPhoto: {
+          properties: {
+            uploadedFile: 'Фото',
+          },
+        },
+        CampPhoto: {
+          properties: {
+            uploadedFile: 'Фото',
+          },
+        },
+        Reviews: {
+          properties: {
+            uploadedFile: 'Фото',
+            name: 'Имя',
+            review: 'Отзыв',
+            rating: 'Оценка',
+          },
+        },
+        FAQCamp: {
+          properties: {
+            question: 'Вопрос',
+            answer: 'Ответ',
+          },
+        },
+        FAQBeginners: {
+          properties: {
+            question: 'Вопрос',
+            answer: 'Ответ',
+          },
+        },
       },
     },
   },
-  resources: [Admin, Merch],
+  resources: [
+    Admin,
+    {
+      resource: Merch,
+      options: MerchOptions,
+      features,
+    },
+    {
+      resource: Competition,
+      options: CompetitionOptions,
+      features,
+    },
+    {
+      resource: Report,
+      options: ReportOptions,
+      features,
+    },
+    {
+      resource: Worker,
+      options: WorkerOptions,
+      features,
+    },
+    {
+      resource: Athletes,
+      options: AthletesOptions,
+      features,
+    },
+    {
+      resource: Schedule,
+      options: ScheduleOptions,
+    },
+    {
+      resource: TeamPhoto,
+      options: TeamPhotoOptions,
+      features,
+    },
+    {
+      resource: CampPhoto,
+      options: CampPhotoOptions,
+      features,
+    },
+    {
+      resource: Reviews,
+      options: ReviewsOptions,
+      features,
+    },
+    {
+      resource: FAQCamp,
+      options: FAQOptions,
+    },
+    {
+      resource: FAQBeginners,
+      options: FAQOptions,
+    },
+  ],
   branding: {
     companyName: 'Crossfit Redyar',
     logo: '',
