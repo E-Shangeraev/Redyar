@@ -5,6 +5,7 @@ import Competitions from './pages/Competitions'
 import Team from './pages/Team'
 import Camp from './pages/Camp'
 import Beginners from './pages/Beginners'
+import Awards from './pages/Awards'
 
 import '@assets/scss/App.scss'
 
@@ -25,6 +26,9 @@ const App = () => (
       </Route>
       <Route path="/beginners" exact>
         <Beginners />
+      </Route>
+      <Route path="/awards" exact>
+        <Awards />
       </Route>
     </Switch>
   </div>

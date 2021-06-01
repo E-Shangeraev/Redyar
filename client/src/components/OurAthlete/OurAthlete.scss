@@ -1,0 +1,47 @@
+.our-athlete {
+  padding: 35px;
+  margin-right: 1.5em;
+  background-color: $gray;
+
+  // .flex div {
+  //   display: inline;
+  // }
+}
+.our-athlete__photo {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: $l-gray-2;
+}
+.our-athlete__name {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+
+  color: #f2f2f2;
+}
+.our-athlete__rank {
+  color: $orange;
+}
+.our-athlete__achivements {
+  column-count: 2;
+  column-width: 50%;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    color: $l-gray-2;
+  }
+  li::before {
+    position: absolute;
+    content: '•';
+    left: 0;
+    color: $orange;
+  }
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

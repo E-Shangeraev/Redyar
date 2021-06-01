@@ -1,0 +1,50 @@
+.awards {
+  @include background-before('../../assets/img/bg-2.jpg', -50%);
+  min-height: 100vh;
+
+  button {
+    cursor: pointer;
+  }
+  button.active .title,
+  button.active:hover .title {
+    color: $orange;
+  }
+  button:hover .title {
+    color: #fff;
+  }
+  .title {
+    color: $l-gray-2;
+    transition: ease 0.15s;
+  }
+}
+.awards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 1.5em;
+
+  li {
+    padding: 60px 80px;
+    background-color: $l-gray;
+
+    * {
+      display: block;
+    }
+  }
+}
+.awards__img {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.awards__title {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: #f2f2f2;
+}
+.awards__text {
+  @include text;
+  line-height: 120%;
+  color: $l-gray-2;
+}

@@ -2,11 +2,12 @@ const AdminBro = require('admin-bro')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['name', 'rank', 'achievements', 'uploadedFile', 'mimeType'],
-  editProperties: ['name', 'rank', 'achievements', 'uploadedFile'],
+  listProperties: ['title', 'text', 'uploadedFile', 'mimeType'],
+  editProperties: ['title', 'text', 'uploadedFile'],
 
-  navigation: {
-    icon: 'Fire',
+  parent: {
+    name: 'Награды',
+    icon: 'Badge',
   },
   properties: {
     mimeType: { isVisible: true },

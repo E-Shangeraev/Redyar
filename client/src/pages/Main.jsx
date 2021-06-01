@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import Record from '@components/Record/Record'
@@ -7,6 +8,7 @@ import Founder from '@components/Founder/Founder'
 import Why from '@components/Why/Why'
 import TeamSlider from '@components/TeamSlider'
 import AthletesSlider from '@components/AthletesSlider'
+import Athlete from '@components/Athlete/Athlete'
 import Schedule from '@components/Schedule/Schedule'
 
 import MerchSlider from '@components/MerchSlider'
@@ -41,6 +43,27 @@ const Main = () => {
     },
   ]
 
+  const renderAthletes = athletes =>
+    athletes.length
+      ? athletes.map(item => (
+          <Athlete
+            key={uuidv4()}
+            // eslint-disable-next-line max-len
+            photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+            name={item.name}
+            rank={item.rank}
+            outerRight
+          />
+        ))
+      : []
+
+  const athletesSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  }
+
   return (
     <>
       <Header />
@@ -52,7 +75,11 @@ const Main = () => {
         <Founder title="Основатель" />
         <Why />
         <TeamSlider />
-        <AthletesSlider />
+        <AthletesSlider
+          render={renderAthletes}
+          title="Известные атлеты"
+          settings={athletesSettings}
+        />
         <Schedule />
         <MerchSlider />
         <ReportSlider />

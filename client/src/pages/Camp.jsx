@@ -47,7 +47,7 @@ const Camp = () => {
     <>
       <Header />
       <main>
-        <h1 className="visually-hidden">Команда</h1>
+        <h1 className="visually-hidden">Лагерь</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
         <Record />
         <About

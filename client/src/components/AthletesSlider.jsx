@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
 import useHttp from '@hooks/http.hook'
 import CustomSlider from '@generic/CustomSlider/CustomSlider'
-import Athlete from '@components/Athlete/Athlete'
+import PropTypes from 'prop-types'
 
-const AthletesSlider = () => {
+const AthletesSlider = ({ title, settings, render, outerRight }) => {
   const [athletes, setAthletes] = useState([])
   const { request } = useHttp()
 
@@ -13,33 +12,25 @@ const AthletesSlider = () => {
     setAthletes(items)
   }, [])
 
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  }
-
-  const athletesArray = athletes.length
-    ? athletes.map(item => (
-        <Athlete
-          key={uuidv4()}
-          // eslint-disable-next-line max-len
-          photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-          name={item.name}
-          achievements={item.achievements}
-        />
-      ))
-    : []
+  const athletesArray = render(athletes)
 
   return (
     <CustomSlider
-      title="Известные атлеты"
+      title={title}
       settings={settings}
       items={athletesArray}
-      outerRight
+      outerRight={outerRight}
     />
   )
+}
+
+AthletesSlider.propTypes = {
+  render: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  settings: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.number, PropTypes.bool, PropTypes.string])
+  ).isRequired,
+  outerRight: PropTypes.bool.isRequired,
 }
 
 export default AthletesSlider

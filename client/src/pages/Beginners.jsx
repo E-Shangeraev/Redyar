@@ -46,7 +46,7 @@ const Beginners = () => {
     <>
       <Header />
       <main>
-        <h1 className="visually-hidden">Команда</h1>
+        <h1 className="visually-hidden">Новичкам</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
         <About
           image={{

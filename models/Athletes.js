@@ -6,7 +6,8 @@ const Athletes = new Schema({
     type: String,
     isRequired: true,
   },
-  achievements: {
+  achievements: Array,
+  rank: {
     type: String,
     isRequired: true,
   },

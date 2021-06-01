@@ -24,6 +24,8 @@ const Reviews = require('../models/Review')
 const ReviewsOptions = require('./reviews.resourceOptions')
 const { FAQCamp, FAQBeginners } = require('../models/FAQ')
 const FAQOptions = require('./faq.resourceOptions')
+const { ClubAwards, AthleteAwards } = require('../models/Awards')
+const AwardsOptions = require('./awards.resourceOptions')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -78,6 +80,8 @@ const options = {
         Reviews: 'Отзывы',
         FAQCamp: 'Вопросы (Лагерь)',
         FAQBeginners: 'Вопросы (Новичкам)',
+        ClubAwards: 'Награды клуба',
+        AthleteAwards: 'Награды атлетов',
       },
       buttons: {
         filter: 'Фильтр',
@@ -123,6 +127,7 @@ const options = {
           properties: {
             uploadedFile: 'Фото',
             name: 'Имя',
+            rank: 'Звание',
             achievements: 'Достижения',
           },
         },
@@ -163,6 +168,20 @@ const options = {
           properties: {
             question: 'Вопрос',
             answer: 'Ответ',
+          },
+        },
+        ClubAwards: {
+          properties: {
+            uploadedFile: 'Фото',
+            title: 'Заголовок',
+            text: 'Текст',
+          },
+        },
+        AthleteAwards: {
+          properties: {
+            uploadedFile: 'Фото',
+            title: 'Заголовок',
+            text: 'Текст',
           },
         },
       },
@@ -221,6 +240,16 @@ const options = {
     {
       resource: FAQBeginners,
       options: FAQOptions,
+    },
+    {
+      resource: ClubAwards,
+      options: AwardsOptions,
+      features,
+    },
+    {
+      resource: AthleteAwards,
+      options: AwardsOptions,
+      features,
     },
   ],
   branding: {

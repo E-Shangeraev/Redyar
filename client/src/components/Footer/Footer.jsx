@@ -20,7 +20,7 @@ const Footer = () => (
             <Link to="/">О нас</Link>
             <Link to="/">Расписание</Link>
             <Link to="/">Галерея</Link>
-            <Link to="/">Заслуги</Link>
+            <Link to="/awards">Заслуги</Link>
             <Link to="/team">Команда</Link>
             <Link to="/">Контакты</Link>
             <Link to="/beginners">Новичкам</Link>
