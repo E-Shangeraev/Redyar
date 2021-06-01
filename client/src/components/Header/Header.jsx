@@ -10,7 +10,7 @@ const Header = () => (
     <div>
       <nav className="header__nav">
         <Link to="/">О нас</Link>
-        <Link to="/">Расписание</Link>
+        <Link to="/price">Расписание</Link>
         <Link to="/">Галерея</Link>
         <Link to="/">Контакты</Link>
       </nav>

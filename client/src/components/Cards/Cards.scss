@@ -1,0 +1,15 @@
+.cards {
+  margin-top: 100px;
+}
+.cards--bg {
+  @include background-before($bg1, -50%, 300%);
+}
+.cards__footnote {
+  width: 50%;
+  color: $l-gray-2;
+}
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 30px;
+}

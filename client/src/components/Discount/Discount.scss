@@ -1,0 +1,24 @@
+.discount .flex {
+  border-bottom: 2px solid $l-gray;
+}
+.discount__title {
+  span {
+    position: relative;
+    line-height: 130%;
+  }
+  span:nth-of-type(2) {
+    left: 25%;
+    color: $orange;
+  }
+}
+.discount__for {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    max-width: 15%;
+    @include text;
+    line-height: 150%;
+    color: #f2f2f2;
+  }
+}

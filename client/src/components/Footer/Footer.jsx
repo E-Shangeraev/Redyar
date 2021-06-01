@@ -18,7 +18,7 @@ const Footer = () => (
           </Link>
           <nav className="footer__nav">
             <Link to="/">О нас</Link>
-            <Link to="/">Расписание</Link>
+            <Link to="/price">Расписание</Link>
             <Link to="/">Галерея</Link>
             <Link to="/awards">Заслуги</Link>
             <Link to="/team">Команда</Link>
