@@ -7,6 +7,7 @@ import Camp from './pages/Camp'
 import Beginners from './pages/Beginners'
 import Awards from './pages/Awards'
 import Price from './pages/Price'
+import Blog from './pages/Blog'
 
 import '@assets/scss/App.scss'
 
@@ -33,6 +34,9 @@ const App = () => (
       </Route>
       <Route path="/price" exact>
         <Price />
+      </Route>
+      <Route path="/blog" exact>
+        <Blog />
       </Route>
     </Switch>
   </div>

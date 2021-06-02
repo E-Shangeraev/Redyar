@@ -23,8 +23,7 @@ class Request {
 
       const items = await this.model.find().skip(skip).limit(limit)
 
-      res.status(200)
-      res.json(items)
+      res.status(200).json(items)
     } catch (err) {
       res.status(500)
       throw err
@@ -33,8 +32,7 @@ class Request {
   getItemByIndex = param => async (req, res) => {
     try {
       const item = await this.model.findOne({ index: req.params[param] })
-      res.status(200)
-      res.json(item)
+      res.status(200).json(item)
     } catch (err) {
       res.status(500)
       throw err
@@ -43,8 +41,7 @@ class Request {
   getItemsCount = async (req, res) => {
     try {
       await this.model.collection.stats((err, results) => {
-        res.status(200)
-        res.json(results.count)
+        res.status(200).json(results.count)
       })
     } catch (err) {
       res.status(500)

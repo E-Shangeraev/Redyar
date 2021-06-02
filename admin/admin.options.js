@@ -26,6 +26,10 @@ const { FAQCamp, FAQBeginners } = require('../models/FAQ')
 const FAQOptions = require('./faq.resourceOptions')
 const { ClubAwards, AthleteAwards } = require('../models/Awards')
 const AwardsOptions = require('./awards.resourceOptions')
+const { CardPrice, OneTimeVisitPrice } = require('../models/Price')
+const PriceOptions = require('./price.resourceOptions')
+const Article = require('../models/Article')
+const ArticleOptions = require('./article.resourceOptions')
 
 const region = config.get('AWSRegion')
 const bucket = config.get('AWSBucket')
@@ -82,6 +86,9 @@ const options = {
         FAQBeginners: 'Вопросы (Новичкам)',
         ClubAwards: 'Награды клуба',
         AthleteAwards: 'Награды атлетов',
+        CardPrice: 'Клубные карты',
+        OneTimeVisitPrice: 'Разовые посещения',
+        Articles: 'Блог',
       },
       buttons: {
         filter: 'Фильтр',
@@ -184,6 +191,36 @@ const options = {
             text: 'Текст',
           },
         },
+        CardPrice: {
+          properties: {
+            period: 'Период',
+            cost: 'Стоимость',
+            info: 'Доп. информация',
+            isHit: 'Хит',
+          },
+        },
+        OneTimeVisitPrice: {
+          properties: {
+            period: 'Период',
+            cost: 'Стоимость',
+            info: 'Доп. информация',
+            isHit: 'Хит',
+          },
+        },
+        Articles: {
+          properties: {
+            uploadedFile: 'Фото',
+            category: 'Категория',
+            'category.cat1': 'Питание',
+            'category.cat2': 'Соревнования',
+            'category.cat3': 'Лагерь',
+            'category.cat4': 'Растяжка',
+            'category.cat5': 'Тренировки',
+            title: 'Заголовок',
+            text: 'Текст',
+            publishedAt: 'Дата',
+          },
+        },
       },
     },
   },
@@ -249,6 +286,19 @@ const options = {
     {
       resource: AthleteAwards,
       options: AwardsOptions,
+      features,
+    },
+    {
+      resource: CardPrice,
+      options: PriceOptions,
+    },
+    {
+      resource: OneTimeVisitPrice,
+      options: PriceOptions,
+    },
+    {
+      resource: Article,
+      options: ArticleOptions,
       features,
     },
   ],

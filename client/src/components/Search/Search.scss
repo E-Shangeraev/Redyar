@@ -1,0 +1,12 @@
+.search {
+  padding: 15px 30px;
+  width: 50%;
+  border: 1px solid $gray;
+  border-radius: 40px;
+  outline: none;
+  background: url('../../assets/icons/search.svg') 96% no-repeat $gray;
+
+  &:focus {
+    border: 1px solid $orange;
+  }
+}

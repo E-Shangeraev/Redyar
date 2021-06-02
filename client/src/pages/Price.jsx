@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useHttp from '@hooks/http.hook'
 import Header from '@components/Header/Header'
 import Cards from '@components/Cards/Cards'
 import Discount from '@components/Discount/Discount'
@@ -11,39 +12,53 @@ import imageWebp from '@assets/img/Price/1.webp'
 import imageWebpSmall from '@assets/img/Price/1_small.webp'
 
 const Price = () => {
-  const clubCards = [
-    {
-      period: '1 месяц',
-      cost: '6500',
-      info: '5 500 атлетам CRFY Team',
-      isHit: false,
-    },
-    {
-      period: '1 месяц',
-      cost: '6500',
-      info: '5 500 атлетам CRFY Team',
-      isHit: false,
-    },
-    {
-      period: '1 месяц',
-      cost: '6500',
-      info: '5 500 атлетам CRFY Team',
-      isHit: true,
-    },
-  ]
+  const { request } = useHttp()
+  const [clubCards, setClubCards] = useState([])
+  const [oneTimeVisitCards, setOneTimeVisitCards] = useState([])
+
+  useEffect(async () => {
+    const clubItems = await request('/api/price/card')
+    const oneTimeVisitItems = await request('/api/price/one-time-visit')
+
+    setClubCards(clubItems)
+    setOneTimeVisitCards(oneTimeVisitItems)
+  }, [])
+  // const clubCards = [
+  //   {
+  //     period: '1 месяц',
+  //     cost: '6500',
+  //     info: '5 500 атлетам CRFY Team',
+  //     isHit: false,
+  //   },
+  //   {
+  //     period: '1 месяц',
+  //     cost: '6500',
+  //     info: '5 500 атлетам CRFY Team',
+  //     isHit: false,
+  //   },
+  //   {
+  //     period: '1 месяц',
+  //     cost: '6500',
+  //     info: '5 500 атлетам CRFY Team',
+  //     isHit: true,
+  //   },
+  // ]
 
   return (
     <>
       <Header />
       <main>
         <h1 className="visually-hidden">Расписание и стоимость</h1>
-        <Cards
-          title="клубные карты"
-          footnote="*Безлимитные (Владельцы могу помещать неограниченное
+        {clubCards && (
+          <Cards
+            title="клубные карты"
+            footnote="*Безлимитные (Владельцы могу помещать неограниченное
             кол-во занятий. Действует во всех клубах сети Crossfit RedYar)."
-          items={clubCards}
-          withBackground
-        />
+            items={clubCards}
+            withBackground
+          />
+        )}
+
         <div className="pl pr" style={{ position: 'relative', zIndex: '1' }}>
           <picture>
             <source
@@ -61,12 +76,14 @@ const Price = () => {
           </picture>
         </div>
         <Discount />
-        <Cards
-          title="разовые посещения"
-          footnote="Удобны тем, кто ходит в зал меньше 3-х раз в неделю.
+        {oneTimeVisitCards && (
+          <Cards
+            title="разовые посещения"
+            footnote="Удобны тем, кто ходит в зал меньше 3-х раз в неделю.
           Действует только в том клубе, в котором куплены)."
-          items={clubCards}
-        />
+            items={oneTimeVisitCards}
+          />
+        )}
         <Schedule />
       </main>
       <Footer />

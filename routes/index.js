@@ -10,6 +10,8 @@ const campPhotoRouter = require('./campPhoto')
 const reviewsRouter = require('./reviews')
 const faqRouter = require('./faq')
 const awardsRouter = require('./awards')
+const priceRouter = require('./price')
+const articleRouter = require('./articles')
 
 module.exports = {
   buildAdminRouter,
@@ -24,4 +26,6 @@ module.exports = {
   reviewsRouter,
   faqRouter,
   awardsRouter,
+  priceRouter,
+  articleRouter,
 }

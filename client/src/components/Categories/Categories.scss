@@ -1,0 +1,23 @@
+.categories {
+  display: flex;
+  column-gap: 2em;
+  margin-bottom: 70px;
+
+  button {
+    padding: 13px 27px;
+    min-width: 100px;
+    font-size: 16px;
+    line-height: 160%;
+    border: 1px solid $l-gray;
+    border-radius: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: ease 0.15s;
+
+    &:hover,
+    &.active {
+      background-color: $orange;
+      border: 1px solid $orange;
+    }
+  }
+}
