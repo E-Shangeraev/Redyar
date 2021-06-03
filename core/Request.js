@@ -32,6 +32,7 @@ class Request {
   getItemByIndex = param => async (req, res) => {
     try {
       const item = await this.model.findOne({ index: req.params[param] })
+      console.log(item)
       res.status(200).json(item)
     } catch (err) {
       res.status(500)

@@ -28,7 +28,7 @@ const { ClubAwards, AthleteAwards } = require('../models/Awards')
 const AwardsOptions = require('./awards.resourceOptions')
 const { CardPrice, OneTimeVisitPrice } = require('../models/Price')
 const PriceOptions = require('./price.resourceOptions')
-const Article = require('../models/Article')
+const Blog = require('../models/Blog')
 const ArticleOptions = require('./article.resourceOptions')
 
 const region = config.get('AWSRegion')
@@ -297,7 +297,7 @@ const options = {
       options: PriceOptions,
     },
     {
-      resource: Article,
+      resource: Blog,
       options: ArticleOptions,
       features,
     },

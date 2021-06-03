@@ -5,8 +5,8 @@ import Categories from '@components/Categories/Categories'
 import PreviewList from '@components/PreviewList/PreviewList'
 import Search from '@components/Search/Search'
 
-import setCategory from '../../redux/actions/filter'
-import { getArticles } from '../../redux/actions/articles'
+import setCategory from '@redux/actions/filter'
+import { getArticles } from '@redux/actions/blog'
 
 const categoryNames = [
   'Питание',

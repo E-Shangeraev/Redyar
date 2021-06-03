@@ -11,7 +11,7 @@ const reviewsRouter = require('./reviews')
 const faqRouter = require('./faq')
 const awardsRouter = require('./awards')
 const priceRouter = require('./price')
-const articleRouter = require('./articles')
+const blogRouter = require('./blog')
 
 module.exports = {
   buildAdminRouter,
@@ -27,5 +27,5 @@ module.exports = {
   faqRouter,
   awardsRouter,
   priceRouter,
-  articleRouter,
+  blogRouter,
 }

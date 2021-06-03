@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const Article = new Schema({
+const Blog = new Schema({
   uploadedFile: JSON,
   category: {
     type: new Schema({
@@ -24,4 +24,4 @@ const Article = new Schema({
   },
 })
 
-module.exports = model('Articles', Article)
+module.exports = model('Articles', Blog)

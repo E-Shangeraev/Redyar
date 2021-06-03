@@ -12,7 +12,7 @@ const PreviewList = ({ items }) => (
         key={uuidv4()}
         img={`${url}${item.uploadedFile.path}`}
         title={item.title}
-        category="Соревнования"
+        category={item.categoryName}
         date={item.publishedAt}
         // eslint-disable-next-line no-underscore-dangle
         id={item._id}

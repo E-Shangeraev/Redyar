@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Preview = ({ img, category, title, date, id }) => (
   <figure className="preview">
     <img src={img} alt={title} />
     <figcaption>
-      <b className="preview__category">{category}</b>
+      <b className="category">{category}</b>
       <span className="preview__title">{title}</span>
       <div className="flex space-between">
-        <a className="preview__link" href={`/api/articles/${id}`}>
+        <Link className="preview__link" to={`/blog/${id}`}>
           Читать дальше
-        </a>
+        </Link>
         <time className="preview__date" pubdate={date}>
           {new Intl.DateTimeFormat().format(new Date(date))}
         </time>

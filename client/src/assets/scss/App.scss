@@ -20,6 +20,7 @@
 @import '@generic/FeaturesBlocks/FeaturesBlocks.scss';
 @import '@generic/Card/Card.scss';
 @import '@generic/Preview/Preview.scss';
+@import '@generic/Back/Back.scss';
 
 // ==== Компоненты ====
 @import '@components/Header/Header.scss';
@@ -49,3 +50,5 @@
 @import '@components/PreviewList/PreviewList.scss';
 @import '@components/Search/Search.scss';
 @import '@components/Blog/Blog.scss';
+@import '@components/Article/Article.scss';
+@import '@components/ReadMore/ReadMore.scss';

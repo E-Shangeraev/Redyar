@@ -8,36 +8,22 @@ import Beginners from './pages/Beginners'
 import Awards from './pages/Awards'
 import Price from './pages/Price'
 import Blog from './pages/Blog'
+import Article from './pages/Article'
 
 import '@assets/scss/App.scss'
 
 const App = () => (
   <div className="App">
     <Switch>
-      <Route path="/" exact>
-        <Main />
-      </Route>
-      <Route path="/competitions" exact>
-        <Competitions />
-      </Route>
-      <Route path="/team" exact>
-        <Team />
-      </Route>
-      <Route path="/camp" exact>
-        <Camp />
-      </Route>
-      <Route path="/beginners" exact>
-        <Beginners />
-      </Route>
-      <Route path="/awards" exact>
-        <Awards />
-      </Route>
-      <Route path="/price" exact>
-        <Price />
-      </Route>
-      <Route path="/blog" exact>
-        <Blog />
-      </Route>
+      <Route path="/" exact component={Main} />
+      <Route path="/competitions" exact component={Competitions} />
+      <Route path="/team" exact component={Team} />
+      <Route path="/camp" exact component={Camp} />
+      <Route path="/beginners" exact component={Beginners} />
+      <Route path="/awards" exact component={Awards} />
+      <Route path="/price" exact component={Price} />
+      <Route path="/blog" exact component={Blog} />
+      <Route path="/blog/:id" exact component={Article} />
     </Switch>
   </div>
 )

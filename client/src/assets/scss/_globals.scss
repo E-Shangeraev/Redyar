@@ -46,6 +46,18 @@ figure {
   height: 1px;
   margin: -1px;
 }
+.category {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: lowercase;
+  line-height: 160%;
+  border-radius: 40px;
+  background-color: $orange;
+}
 .title {
   margin: 0;
   margin-bottom: 45px;
