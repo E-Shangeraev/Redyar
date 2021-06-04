@@ -11,6 +11,8 @@
 
 // ==== Общие компоненты ====
 @import '@generic/Button/Button.scss';
+@import '@generic/Form/Form.scss';
+@import '@generic/Input/Input.scss';
 @import '@generic/Video/Video.scss';
 @import '@generic/SliderArrow/SliderArrow.scss';
 @import '@generic/CustomSlider/CustomSlider.scss';
@@ -20,7 +22,6 @@
 @import '@generic/FeaturesBlocks/FeaturesBlocks.scss';
 @import '@generic/Card/Card.scss';
 @import '@generic/Preview/Preview.scss';
-@import '@generic/Back/Back.scss';
 @import '@generic/SocialLink/SocialLink.scss';
 @import '@generic/SocialIcon/SocialIcon.scss';
 
@@ -52,10 +53,12 @@
 @import '@components/PreviewList/PreviewList.scss';
 @import '@components/Search/Search.scss';
 @import '@components/Blog/Blog.scss';
+@import '@components/Back/Back.scss';
 @import '@components/Article/Article.scss';
 @import '@components/ReadMore/ReadMore.scss';
 @import '@components/Filters/Filters.scss';
 @import '@components/Goods/Goods.scss';
+@import '@components/CartButton/CartButton.scss';
 
 // ==== Страницы ====
 @import '@pages/Shop/Shop.scss';

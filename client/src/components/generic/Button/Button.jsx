@@ -1,10 +1,11 @@
+/* eslint-disable react/button-has-type */
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Button = ({ children, outlined, gray, onClickHandler }) => (
+const Button = ({ type, children, outlined, gray, onClickHandler }) => (
   <button
-    type="button"
+    type={type}
     onClick={onClickHandler}
     className={classNames('button', {
       'button--outlined': outlined,
@@ -19,6 +20,7 @@ Button.propTypes = {
   outlined: PropTypes.bool,
   gray: PropTypes.bool,
   onClickHandler: PropTypes.func,
+  type: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -26,6 +28,7 @@ Button.defaultProps = {
   outlined: false,
   gray: false,
   onClickHandler: null,
+  type: 'button',
 }
 
 export default Button

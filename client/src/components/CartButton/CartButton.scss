@@ -1,0 +1,24 @@
+.cart-button {
+  position: relative;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background: url('../../assets/icons/cart.png') center no-repeat $gray;
+  transition: ease 0.15s;
+
+  &:hover {
+    filter: brightness(1.5);
+  }
+}
+.cart-button__count {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  background-color: $orange;
+}

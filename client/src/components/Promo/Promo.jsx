@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
+import Modal from 'react-modal'
+import ModalFeedback from '@components/Modal/Modal'
 import { v4 as uuidv4 } from 'uuid'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
 import mouseSvg from './mouse.svg'
+
+Modal.setAppElement('#root')
 
 const Promo = ({ slides, schedule }) => {
   const promoSliderRef = useRef()
@@ -54,9 +58,7 @@ const Promo = ({ slides, schedule }) => {
               <PromoPrevArrow onClickHandle={prev} />
               <PromoNextArrow onClickHandle={next} />
             </div>
-            <button className="promo__button-modal" type="button">
-              Написать нам
-            </button>
+            <ModalFeedback />
           </div>
         </div>
       </div>

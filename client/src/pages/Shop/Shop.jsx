@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '@components/Header/Header'
+import CartButton from '@components/CartButton/CartButton'
 import Goods from '@components/Goods/Goods'
 import Filters from '@components/Filters/Filters'
 import Footer from '@components/Footer/Footer'
@@ -12,9 +13,7 @@ const Shop = () => (
         <div className="wrapper">
           <div className="flex space-between align-center mb5">
             <h1 className="title">наш мерч</h1>
-            <a href="/" className="cart-button">
-              Корзина
-            </a>
+            <CartButton count={2} />
           </div>
           <div className="flex space-between">
             <Filters />
