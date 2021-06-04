@@ -1,0 +1,10 @@
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  width: 80%;
+
+  .merch {
+    margin: 0;
+  }
+}
