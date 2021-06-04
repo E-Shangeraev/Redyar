@@ -1,9 +1,13 @@
+/* eslint-disable max-len */
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Markup } from 'interweave'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import useHttp from '@hooks/http.hook'
 import Back from '@generic/Back/Back'
+import SocialIcon from '@generic/SocialIcon/SocialIcon'
+import SocialLink from '@generic/SocialLink/SocialLink'
+import { VKShareButton, InstapaperShareButton } from 'react-share'
 
 import { getArticleById } from '@redux/actions/blog'
 
@@ -15,19 +19,20 @@ const Article = () => {
   const dispatch = useDispatch()
   const { request } = useHttp()
   const articleId = useParams().id
+  const location = useLocation()
   const item = useSelector(({ article }) => article.item)
   const isLoaded = useSelector(({ article }) => article.isLoaded)
 
   useEffect(async () => {
     dispatch(getArticleById(articleId, request))
-  }, [])
+  }, [articleId])
 
   return (
     <section className="article">
       <div className="wrapper">
+        <Back />
         {isLoaded && (
           <article className="article__container">
-            <Back />
             <h1 className="article__title">{item.title}</h1>
             <div className="flex align-center mb2">
               <b className="category article__category">{item.categoryName}</b>
@@ -47,10 +52,24 @@ const Article = () => {
                 </div>
                 <div className="article__share">
                   <span>Поделиться:</span>
-                  <div className="flex gap2">
-                    <button type="button">VK</button>
-                    <button type="button">Instagram</button>
-                  </div>
+                  <ul className="flex gap1">
+                    <li>
+                      <VKShareButton
+                        title={item.title}
+                        image={item.uploadedFile.path}
+                        url={location.pathname}
+                        noVkLinks>
+                        <SocialIcon name="vk" />
+                      </VKShareButton>
+                    </li>
+                    <li>
+                      <InstapaperShareButton
+                        title={item.title}
+                        url={location.pathname}>
+                        <SocialIcon name="instagram" />
+                      </InstapaperShareButton>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="subscribe">
@@ -63,10 +82,20 @@ const Article = () => {
                   Подписывайтесь на наши соцсети и следите за всеми нашими
                   новостями
                 </p>
-                <div className="flex gap2">
-                  <button type="button">VK</button>
-                  <button type="button">Instagram</button>
-                </div>
+                <ul className="flex gap1">
+                  <li>
+                    <SocialLink
+                      link="https://vk.com/crossfitredyar"
+                      name="vk"
+                    />
+                  </li>
+                  <li>
+                    <SocialLink
+                      link="https://www.instagram.com/crossfitredyar/"
+                      name="instagram"
+                    />
+                  </li>
+                </ul>
               </div>
             </div>
           </article>

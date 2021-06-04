@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useHistory } from 'react-router-dom'
 import icon from './back.svg'
 
-const Back = () => {
+const Back = memo(() => {
   const history = useHistory()
 
   return (
@@ -13,6 +13,6 @@ const Back = () => {
       Назад
     </button>
   )
-}
+})
 
 export default Back

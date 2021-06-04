@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import social1 from '@assets/icons/vk.png'
-import social2 from '@assets/icons/instagram.png'
+import SocialLink from '@generic/SocialLink/SocialLink'
 import logo from './logo.png'
 
 const Footer = () => (
@@ -34,14 +33,13 @@ const Footer = () => (
         <div className="footer__column">
           <ul className="footer__socials">
             <li>
-              <a href="/">
-                <img src={social1} alt="vk" />
-              </a>
+              <SocialLink link="https://vk.com/crossfitredyar" name="vk" />
             </li>
             <li>
-              <a href="/">
-                <img src={social2} alt="instagram" />
-              </a>
+              <SocialLink
+                link="https://www.instagram.com/crossfitredyar/"
+                name="instagram"
+              />
             </li>
           </ul>
           <p className="footer__phone">
