@@ -9,6 +9,7 @@ import Awards from './pages/Awards'
 import Price from './pages/Price'
 import Blog from './pages/Blog'
 import Article from './pages/Article'
+import Shop from './pages/Shop/Shop'
 
 import '@assets/scss/App.scss'
 
@@ -24,6 +25,8 @@ const App = () => (
       <Route path="/price" exact component={Price} />
       <Route path="/blog" exact component={Blog} />
       <Route path="/blog/:id" exact component={Article} />
+      <Route path="/merch" exact component={Shop} />
+      <Route path="/merch/:id" exact component={Shop} />
     </Switch>
   </div>
 )

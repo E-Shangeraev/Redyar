@@ -2,7 +2,7 @@
   margin-top: 100px;
 }
 .cards--bg {
-  @include background-before($bg1, -50%, 300%);
+  @include background-before('../../assets/img/bg-1.png', -50%, 300%);
 }
 .cards__footnote {
   width: 50%;
