@@ -79,6 +79,7 @@ const Main = () => {
           render={renderAthletes}
           title="Известные атлеты"
           settings={athletesSettings}
+          outerRight
         />
         <Schedule />
         <MerchSlider />

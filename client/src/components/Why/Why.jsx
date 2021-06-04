@@ -18,31 +18,31 @@ const Why = () => (
           <RecordButton>Записаться</RecordButton>
         </div>
       </div>
-      <div className="why__features">
-        <div>
+      <ul className="why__features">
+        <li>
           <span>8 лет</span>
           <p>преподаём кроссфит</p>
-        </div>
-        <div>
+        </li>
+        <li>
           <span>54</span>
           <p>
             обычных людей стали соревнующимися атлетами или кроссфит-тренерами
           </p>
-        </div>
-        <div>
+        </li>
+        <li>
           <span>7 кг</span>
           <p>
             жира теряют люди в среднем за 2 месяца, занимаясь в CrossFit Redyar
           </p>
-        </div>
-        <div>
+        </li>
+        <li>
           <span>40</span>
           <p>
             приседаний в минуту способен сделать каждый спустя 2 месяца
             тренировок
           </p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 )
