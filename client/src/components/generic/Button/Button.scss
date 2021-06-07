@@ -18,4 +18,8 @@
     background-color: $l-gray;
     border: 1px solid $l-gray;
   }
+  &:focus {
+    outline: none;
+    border-color: #fff;
+  }
 }

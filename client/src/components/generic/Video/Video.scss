@@ -20,11 +20,34 @@
     width: 152px;
     height: 152px;
     cursor: pointer;
+    transition: ease 0.5s;
+
+    circle,
+    path {
+      transition: ease-out 0.3s;
+      transform-origin: center;
+    }
   }
   span {
     font-family: $druk;
     font-size: 30px;
     line-height: 140%;
     text-transform: uppercase;
+  }
+  button:hover {
+    filter: drop-shadow(0 0 6px $orange);
+
+    #inside {
+      fill: #fff;
+      r: 40%;
+    }
+    #outside {
+      stroke: #fff;
+      r: 40%;
+    }
+    path {
+      transform: scale(1.4);
+      fill: $orange;
+    }
   }
 }
