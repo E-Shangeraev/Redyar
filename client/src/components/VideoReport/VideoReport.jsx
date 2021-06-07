@@ -9,6 +9,7 @@ const VideoReport = () => (
       <h2 className="title">Видеоотчет</h2>
       <Video
         preview={preview}
+        channel="youtube"
         videoId="90EwfyGRVN4"
         alt="Видео с основателем Crossfit Redyar"
       />

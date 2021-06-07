@@ -2,16 +2,17 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import ModalVideo from 'react-modal-video'
 
-const Video = ({ preview, alt, videoId }) => {
+const Video = ({ preview, alt, channel, url, videoId }) => {
   const [isOpen, setOpen] = useState(false)
   return (
     <div className="video">
       <img src={preview} alt={alt} />
       <ModalVideo
-        channel="youtube"
+        channel={channel}
         autoplay
         isOpen={isOpen}
-        videoId={videoId}
+        videoId={videoId || null}
+        url={url || null}
         onClose={() => setOpen(false)}
       />
       <div className="video__play-button">
@@ -37,8 +38,15 @@ const Video = ({ preview, alt, videoId }) => {
 
 Video.propTypes = {
   preview: PropTypes.string.isRequired,
-  videoId: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  videoId: PropTypes.string,
   alt: PropTypes.string.isRequired,
+}
+
+Video.defaultProps = {
+  url: '',
+  videoId: '',
 }
 
 export default Video

@@ -11,6 +11,7 @@ const RecordForm = () => (
       id="tel"
       placeholder="+7 (___)-___-__-__"
       label="Номер телефона"
+      mask="+7\ (999)-999-99-99"
     />
     <Input type="email" id="email" placeholder="iivan@mail.com" label="Email" />
     <Button type="submit">Записаться</Button>

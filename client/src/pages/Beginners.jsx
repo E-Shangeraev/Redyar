@@ -65,7 +65,7 @@ const Beginners = () => {
           background={aboutBg}>
           <FeaturesBlocks
             items={[
-              'Подходит лдя мужчин, женщин и подростков',
+              'Подходит для мужчин, женщин и подростков',
               'Помогает сбросить вес и нарастить мышцы',
               'Дает бонусы в виде силы, гибкости и выносливости',
             ]}
@@ -73,7 +73,11 @@ const Beginners = () => {
         </About>
 
         <ReportSlider />
-        <Founder title="Основатель о кроссфите" />
+        <Founder
+          title="Основатель о кроссфите"
+          channel="custom"
+          url="https://vk.com/video-59029020_456239162"
+        />
         <FAQ title="популярные вопросы" fetchUrl="/api/faq/beginners" />
         <Location />
         <Record />

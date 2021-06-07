@@ -4,13 +4,15 @@ import PropTypes from 'prop-types'
 
 import preview from '@assets/img/Main/2.jpg'
 
-const Founder = ({ title }) => (
+const Founder = ({ title, channel, url, videoId }) => (
   <section className="founder">
     <div className="wrapper founder__wrapper">
       <h2 className="title">{title}</h2>
       <Video
         preview={preview}
-        videoId="xgE37Jwo8OI"
+        channel={channel}
+        videoId={videoId || null}
+        url={url || null}
         alt="Видео с основателем Crossfit Redyar"
       />
       <div className="founder__description pr">
@@ -35,6 +37,14 @@ const Founder = ({ title }) => (
 
 Founder.propTypes = {
   title: PropTypes.string.isRequired,
+  channel: PropTypes.string.isRequired,
+  videoId: PropTypes.string,
+  url: PropTypes.string,
+}
+
+Founder.defaultProps = {
+  videoId: '',
+  url: '',
 }
 
 export default Founder

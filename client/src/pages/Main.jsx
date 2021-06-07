@@ -72,7 +72,11 @@ const Main = () => {
         <Promo slides={promoSlides} schedule="Смотреть расписание тренировок" />
         <Record />
         <Features />
-        <Founder title="Основатель" />
+        <Founder
+          title="Основатель"
+          url="https://vk.com/video-59029020_171154015"
+          channel="custom"
+        />
         <Why />
         <TeamSlider />
         <AthletesSlider
