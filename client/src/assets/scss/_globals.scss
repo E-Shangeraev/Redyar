@@ -42,8 +42,8 @@ fieldset {
 }
 
 // ==== Общие классы ====
-.ReactModal__Overlay--after-open {
-  background-color: #000;
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
   z-index: 99999;
 }
 .visually-hidden {

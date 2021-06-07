@@ -1,4 +1,6 @@
 .input {
+  display: flex;
+  align-items: center;
   @include text;
   padding: 13px 27px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -6,13 +8,18 @@
 
   span {
     margin-right: 2em;
+    flex-shrink: 0;
   }
-}
-input {
-  background-color: transparent;
-  border: none;
-}
-input:focus,
-input:active {
-  outline: none;
+  input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+  }
+  input:focus,
+  input:active {
+    outline: none;
+  }
+  &--focused {
+    border-color: $orange;
+  }
 }

@@ -1,0 +1,11 @@
+.modal__text {
+  width: 40%;
+}
+.form > .flex {
+  column-gap: 1.5em;
+
+  & > div,
+  & > textarea {
+    width: 50%;
+  }
+}

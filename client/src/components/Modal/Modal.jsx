@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import Modal from 'react-modal'
 import Form from '@generic/Form/Form'
 import Input from '@generic/Input/Input'
+import Textarea from '@generic/Textarea/Textarea'
 import Button from '@generic/Button/Button'
 
 const modalStyles = {
   content: {
     position: 'absolute',
-    padding: '40px',
+    padding: '80px 100px',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -15,7 +16,8 @@ const modalStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     borderRadius: '30px',
-    backgroundColor: '#888',
+    border: 'none',
+    backgroundColor: '#000',
     zIndex: '999999',
   },
 }
@@ -40,26 +42,38 @@ const ModalFeedback = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={modalStyles}>
-        <h3 className="modal__title">напишите нам</h3>
-        <p className="modal__text">
-          Вы можете задать нам интересующие Вас вопросы. Заполните форму ниже и
-          мы ответим Вам в ближайшее время
-        </p>
+        <div className="flex space-between align-center mb2">
+          <h3 className="title">напишите нам</h3>
+          <p className="modal__text">
+            Вы можете задать нам интересующие Вас вопросы. Заполните форму ниже
+            и мы ответим Вам в ближайшее время
+          </p>
+        </div>
         <Form>
-          <Input type="name" id="name" placeholder="Иван" label="Ваше имя" />
-          <Input
-            type="tel"
-            id="tel"
-            placeholder="+7 (___)-___-__-__"
-            label="Номер телефона"
-          />
-          <Input
-            type="email"
-            id="email"
-            placeholder="iivan@mail.com"
-            label="Email"
-          />
-          <Button type="submit">Записаться</Button>
+          <div className="flex">
+            <div className="flex column gap2">
+              <Input
+                type="name"
+                id="name"
+                placeholder="Иван"
+                label="Ваше имя"
+              />
+              <Input
+                type="tel"
+                id="tel"
+                placeholder="+7 (___)-___-__-__"
+                label="Номер телефона"
+              />
+              <Input
+                type="email"
+                id="email"
+                placeholder="iivan@mail.com"
+                label="Email"
+              />
+              <Button type="submit">Записаться</Button>
+            </div>
+            <Textarea name="text" id="text" placeholder="Введите ваш вопрос" />
+          </div>
         </Form>
       </Modal>
     </div>

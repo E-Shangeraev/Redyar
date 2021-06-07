@@ -1,0 +1,14 @@
+.textarea {
+  @include text;
+  padding: 13px 27px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  background-color: transparent;
+  resize: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $orange;
+  }
+}

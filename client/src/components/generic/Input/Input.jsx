@@ -1,15 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InputMask from 'react-input-mask'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-const Input = ({ type, id, label, placeholder, mask }) => (
-  <label className="input" htmlFor={id}>
-    <span>{label}</span>
-    <InputMask mask={mask}>
-      {() => <input type={type} id={id} placeholder={placeholder} />}
-    </InputMask>
-  </label>
-)
+const Input = ({ type, id, label, placeholder, mask }) => {
+  const [focus, setFocus] = useState(false)
+
+  const onFocusHandle = () => setFocus(true)
+  const onBlurHandle = () => setFocus(false)
+
+  return (
+    <label
+      className={classNames('input', { 'input--focused': focus })}
+      htmlFor={id}>
+      <span>{label}</span>
+      <InputMask mask={mask} onFocus={onFocusHandle} onBlur={onBlurHandle}>
+        {() => <input type={type} id={id} placeholder={placeholder} />}
+      </InputMask>
+    </label>
+  )
+}
 
 Input.propTypes = {
   type: PropTypes.string.isRequired,
