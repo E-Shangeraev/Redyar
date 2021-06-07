@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import SocialLink from '@generic/SocialLink/SocialLink'
 import logo from './logo.png'
 
+const year = new Date().getFullYear()
+
 const Footer = () => (
   <footer className="footer">
     <div className="wrapper footer__wrapper">
@@ -27,7 +29,7 @@ const Footer = () => (
             <Link to="/competitions">Соревнования</Link>
           </nav>
           <span className="footer__copyright">
-            CrossFit RedYar 2021. Все права защищены.
+            CrossFit RedYar {year}. Все права защищены.
           </span>
         </div>
         <div className="footer__column">

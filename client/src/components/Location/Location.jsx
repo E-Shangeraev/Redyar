@@ -1,5 +1,6 @@
 import React from 'react'
 import Reviews from '@generic/Reviews/Reviews'
+import MyMap from '@components/MyMap/MyMap'
 import locationMark from '@assets/icons/location.png'
 
 const Location = () => (
@@ -12,7 +13,7 @@ const Location = () => (
           <span>Красноярск, Белинского 8, ТЦ КОМСОМОЛЛ, 4 эт.</span>
         </p>
       </div>
-      <div className="location__map" />
+      <MyMap />
       <Reviews />
     </div>
   </section>

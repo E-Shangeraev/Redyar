@@ -22,18 +22,24 @@ const Worker = ({ photo, name, post, achievements, addition, socials }) => {
         </p>
         <p className="worker__achievements">{achievements}</p>
         {workerAddition}
-        <ul className="worker__socials">
-          <li>
-            <a href="/">
-              <img src={vkIcon} alt="vk" />
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <img src={instIcon} alt="instagram" />
-            </a>
-          </li>
-        </ul>
+        {socials && (
+          <ul className="worker__socials">
+            {socials.vk ? (
+              <li>
+                <a href={socials.vk} target="_blank" rel="noreferrer">
+                  <img src={vkIcon} alt="vk" />
+                </a>
+              </li>
+            ) : null}
+            {socials.instagram ? (
+              <li>
+                <a href={socials.instagram} target="_blank" rel="noreferrer">
+                  <img src={instIcon} alt="instagram" />
+                </a>
+              </li>
+            ) : null}
+          </ul>
+        )}
       </div>
     </div>
   )
