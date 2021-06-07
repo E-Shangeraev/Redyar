@@ -1,4 +1,30 @@
 <svg width="26" height="39" viewBox="0 0 26 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.75" y="0.75" width="24.5" height="37.5" rx="12.25" stroke="white" stroke-width="1.5"/>
-<circle cx="13" cy="12" r="2" fill="white"/>
+  <rect x="0.75" y="0.75" width="24.5" height="37.5" rx="12.25" stroke="white" stroke-width="1.5"/>
+  <circle id="circle" cx="13" cy="12" r="2" fill="white"/>
+
+  <style>
+    #circle {
+      position: relative;
+      fill: #f15c22;
+      animation-name: circle-animate;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes circle-animate {
+      0% {
+        cy: 12;
+      }
+      90% {
+        cy: 27;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
 </svg>
+
+

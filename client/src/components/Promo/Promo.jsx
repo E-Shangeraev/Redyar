@@ -46,7 +46,9 @@ const Promo = ({ slides, schedule }) => {
       </Slider>
       <div className="promo__bottom">
         <div className="promo__mouse">
-          <img src={mouseSvg} alt="Листайте вниз" />
+          <object type="image/svg+xml" data={mouseSvg}>
+            Your browser does not support SVG
+          </object>
           <span>Листайте вниз</span>
         </div>
         <div>
