@@ -1,23 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import FeaturesBlocks from '@generic/FeaturesBlocks/FeaturesBlocks'
 import RecordForm from './RecordForm/RecordForm'
 
-const Record = () => (
+const Record = ({ title, isCamp }) => (
   <section className="record">
     <div className="wrapper">
       <div>
         <div>
           <h2 className="title">
-            <span>Запись</span>
-            <span>на первое</span>
-            <span>занятие</span>
+            {title && title.map(item => <span key={item}>{item}</span>)}
           </h2>
           <p>
             Запишитесь на первое бесплатное занятие, заполнив форму и получите
             приветственный бонус от нас
           </p>
         </div>
-        <RecordForm />
+        <RecordForm {...{ isCamp }} />
       </div>
       <FeaturesBlocks
         items={[
@@ -29,5 +28,14 @@ const Record = () => (
     </div>
   </section>
 )
+
+Record.propTypes = {
+  title: PropTypes.arrayOf(PropTypes.string).isRequired,
+  isCamp: PropTypes.bool,
+}
+
+Record.defaultProps = {
+  isCamp: false,
+}
 
 export default Record

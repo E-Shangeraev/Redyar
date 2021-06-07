@@ -70,7 +70,7 @@ const Main = () => {
       <main>
         <h1 className="visually-hidden">Главная страница</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание тренировок" />
-        <Record />
+        <Record title={['запись', 'на первое', 'занятие']} />
         <Features />
         <Founder
           title="Основатель"

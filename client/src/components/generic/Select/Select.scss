@@ -1,0 +1,15 @@
+.select-input {
+  .select__label {
+    width: 100%;
+    @include text;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: $orange;
+    }
+  }
+  .select__popup {
+    border: 1px solid $gray;
+  }
+}

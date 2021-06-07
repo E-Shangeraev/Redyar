@@ -40,7 +40,7 @@ const Main = () => {
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
         <TeamSlider />
         <TeamPhotoSlider />
-        <Record />
+        <Record title={['запись', 'на первое', 'занятие']} />
       </main>
       <Footer />
     </>

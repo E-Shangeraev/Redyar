@@ -49,7 +49,7 @@ const Camp = () => {
       <main>
         <h1 className="visually-hidden">Лагерь</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
-        <Record />
+        <Record title={['запись', 'в лагерь', 'redyar']} isCamp />
         <About
           image={{
             jpg: aboutImageJpg,

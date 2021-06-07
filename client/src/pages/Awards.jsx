@@ -68,7 +68,7 @@ const Beginners = () => {
           settings={athletesSettings}
           outerRight={false}
         />
-        <Record />
+        <Record title={['запись', 'на первое', 'занятие']} />
       </main>
       <Footer />
     </>

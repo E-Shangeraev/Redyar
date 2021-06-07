@@ -80,7 +80,7 @@ const Beginners = () => {
         />
         <FAQ title="популярные вопросы" fetchUrl="/api/faq/beginners" />
         <Location />
-        <Record />
+        <Record title={['запись', 'на первое', 'занятие']} />
       </main>
       <Footer />
     </>
