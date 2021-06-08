@@ -23,42 +23,19 @@ const Price = () => {
     setClubCards(clubItems)
     setOneTimeVisitCards(oneTimeVisitItems)
   }, [])
-  // const clubCards = [
-  //   {
-  //     period: '1 месяц',
-  //     cost: '6500',
-  //     info: '5 500 атлетам CRFY Team',
-  //     isHit: false,
-  //   },
-  //   {
-  //     period: '1 месяц',
-  //     cost: '6500',
-  //     info: '5 500 атлетам CRFY Team',
-  //     isHit: false,
-  //   },
-  //   {
-  //     period: '1 месяц',
-  //     cost: '6500',
-  //     info: '5 500 атлетам CRFY Team',
-  //     isHit: true,
-  //   },
-  // ]
 
   return (
     <>
       <Header />
       <main>
         <h1 className="visually-hidden">Расписание и стоимость</h1>
-        {clubCards && (
-          <Cards
-            title="клубные карты"
-            footnote="*Безлимитные (Владельцы могу помещать неограниченное
+        <Cards
+          title="клубные карты"
+          footnote="*Безлимитные (Владельцы могу помещать неограниченное
             кол-во занятий. Действует во всех клубах сети Crossfit RedYar)."
-            items={clubCards}
-            withBackground
-          />
-        )}
-
+          items={clubCards}
+          withBackground
+        />
         <div className="pl pr" style={{ position: 'relative', zIndex: '1' }}>
           <picture>
             <source
