@@ -47,15 +47,9 @@ const ModalFeedback = () => {
         <Form>
           <div className="flex gap2">
             <div className="flex column gap2">
-              <Input
-                type="name"
-                id="name-modal-feedback"
-                placeholder="Иван"
-                label="Ваше имя"
-              />
+              <Input type="name" placeholder="Иван" label="Ваше имя" />
               <Input
                 type="tel"
-                id="tel-modal-feedback"
                 placeholder="+7 (___)-___-__-__"
                 label="Номер телефона"
                 mask="+7\ (999)-999-99-99"
@@ -65,16 +59,11 @@ const ModalFeedback = () => {
                 onClickItem={selectMessanger}
                 items={messangers}
                 label="Выберите мессенджер для связи"
-                id="select-messanger"
                 outline
               />
               <Button type="submit">Записаться</Button>
             </div>
-            <Textarea
-              name="text"
-              id="text-modal-feedback"
-              placeholder="Введите ваш вопрос"
-            />
+            <Textarea name="text" placeholder="Введите ваш вопрос" />
           </div>
         </Form>
       </Modal>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Modal from 'react-modal'
-import RecordButton from '@generic/RecordButton/RecordButton'
 import RecordBlock from '@components/Record/RecordBlock'
+import RecordButton from '@generic/RecordButton/RecordButton'
 
-const ModalRecord = () => {
+const ModalCompetition = () => {
   const [modalIsOpen, setIsOpen] = useState(false)
 
   const openModal = () => {
@@ -16,7 +16,7 @@ const ModalRecord = () => {
 
   return (
     <div>
-      <RecordButton onClickHandle={openModal}>Записаться</RecordButton>
+      <RecordButton onClickHandle={openModal}>забронировать место</RecordButton>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="modal">
         <button
           type="button"
@@ -25,13 +25,14 @@ const ModalRecord = () => {
           закрыть
         </button>
         <RecordBlock
-          title={['запись', 'на первое', 'занятие']}
-          text="Запишитесь на первое бесплатное занятие, заполнив
-          форму и получите приветственный бонус от нас"
+          title={['забронируйте', 'место в лагере', 'redyar']}
+          text="Чтобы продолжить, заполните форму и мы ответим
+          Вам в ближайшее время"
+          isCamp
         />
       </Modal>
     </div>
   )
 }
 
-export default ModalRecord
+export default ModalCompetition

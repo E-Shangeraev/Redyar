@@ -26,6 +26,10 @@
 }
 .modal__text {
   width: 50%;
+
+  span {
+    color: $orange;
+  }
 }
 .form > .flex {
   & > div,
