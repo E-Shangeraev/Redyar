@@ -3,10 +3,12 @@ import { v4 as uuidv4 } from 'uuid'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-const Select = ({ label, id, activeItem, onClickItem, items, outline }) => {
+const Select = ({ label, activeItem, onClickItem, items, outline }) => {
   const selectRef = useRef()
   const [visiblePopup, setVisiblePopup] = useState(false)
   const [focus, setFocus] = useState(false)
+
+  const id = uuidv4()
 
   const onFocusHandle = () => setFocus(true)
 
@@ -87,7 +89,6 @@ Select.propTypes = {
   activeItem: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClickItem: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   outline: PropTypes.bool,
 }

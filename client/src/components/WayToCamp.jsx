@@ -1,6 +1,5 @@
 import React from 'react'
-import RecordButton from '@generic/RecordButton/RecordButton'
-
+import ModalRecordCamp from '@components/Modal/ModalRecordCamp'
 import mapJpg from '@assets/img/Camp/8.jpg'
 
 const WayToCamp = () => (
@@ -13,7 +12,7 @@ const WayToCamp = () => (
             Вы можете добраться самостоятельно либо поехать с другими
             участниками клуба!
           </p>
-          <RecordButton>забронировать место</RecordButton>
+          <ModalRecordCamp />
         </div>
         <img src={mapJpg} alt="Карта" />
       </div>

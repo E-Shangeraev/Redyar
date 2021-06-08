@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '@generic/Button/Button'
 
-const Competition = ({ img, name, text, complexity }) => (
+const Competition = ({ img, name, text, complexity, openModalHandler }) => (
   <div>
     <div className="competition">
       <img src={img} alt={name} className="competition__photo" />
@@ -12,7 +12,7 @@ const Competition = ({ img, name, text, complexity }) => (
         <span className="competition__complexity">
           Сложность: <b>{complexity}</b>
         </span>
-        <Button>Участвовать</Button>
+        <Button onClickHandler={openModalHandler}>Участвовать</Button>
       </div>
     </div>
   </div>
@@ -23,6 +23,7 @@ Competition.propTypes = {
   name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   complexity: PropTypes.string.isRequired,
+  openModalHandler: PropTypes.func.isRequired,
 }
 
 export default Competition

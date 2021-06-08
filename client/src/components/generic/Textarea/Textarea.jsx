@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { v4 as uuidv4 } from 'uuid'
 
-const Textarea = ({ name, id, placeholder }) => (
+const Textarea = ({ name, placeholder }) => (
   <textarea
     className="textarea"
     name={name}
-    id={id}
+    id={uuidv4()}
     placeholder={placeholder}
   />
 )
 
 Textarea.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
 }
 

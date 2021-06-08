@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import InputMask from 'react-input-mask'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import { v4 as uuidv4 } from 'uuid'
 
-const Input = ({ type, id, label, placeholder, mask }) => {
+const Input = ({ type, label, placeholder, mask }) => {
   const [focus, setFocus] = useState(false)
 
   const onFocusHandle = () => setFocus(true)
   const onBlurHandle = () => setFocus(false)
+
+  const id = uuidv4()
 
   return (
     <label
@@ -23,7 +26,6 @@ const Input = ({ type, id, label, placeholder, mask }) => {
 
 Input.propTypes = {
   type: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   mask: PropTypes.string,

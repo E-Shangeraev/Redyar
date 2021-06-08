@@ -10,17 +10,15 @@ const RedyarHome = () => (
           и тренируйся с нами по нашей домашней программе!
         </p>
         <ul>
-          <li>
-            <a href="/">Тренировки в любое время</a>
-          </li>
-          <li>
-            <a href="/">Не выходя из дома</a>
-          </li>
-          <li>
-            <a href="/">Бесплатно</a>
-          </li>
+          <li>Тренировки в любое время</li>
+          <li>Не выходя из дома</li>
+          <li>Бесплатно</li>
         </ul>
-        <a href="/" className="button">
+        <a
+          href="https://www.instagram.com/crossfitredyar/"
+          className="button"
+          target="_blank"
+          rel="noreferrer">
           Подписаться
         </a>
       </div>
