@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import FeaturesBlocks from '@generic/FeaturesBlocks/FeaturesBlocks'
 import RecordBlock from './RecordBlock'
 
-const Record = ({ title, isCamp }) => (
+const Record = ({ title, text, isCamp }) => (
   <section className="record">
     <div className="wrapper">
-      <RecordBlock title={title} isCamp={isCamp} />
+      <RecordBlock title={title} text={text} isCamp={isCamp} />
       <FeaturesBlocks
         items={[
           'Первый аффилированный CrossFit-зал в Красноярске',
@@ -20,6 +20,7 @@ const Record = ({ title, isCamp }) => (
 
 Record.propTypes = {
   title: PropTypes.arrayOf(PropTypes.string).isRequired,
+  text: PropTypes.string.isRequired,
   isCamp: PropTypes.bool,
 }
 

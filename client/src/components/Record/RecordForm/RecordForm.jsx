@@ -1,13 +1,11 @@
 import React, { useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
-// import Select from 'react-select'
 import Form from '@generic/Form/Form'
 import Input from '@generic/Input/Input'
 import Select from '@generic/Select/Select'
 import Button from '@generic/Button/Button'
 
 const options = ['1-й поток с 01.06 по 07.06', '2-й поток с 08.06 по 15.06']
-
 const messangers = ['Telegram', 'Viber', 'WhatsUp']
 
 const RecordForm = ({ isCamp }) => {
@@ -25,10 +23,9 @@ const RecordForm = ({ isCamp }) => {
 
   return (
     <Form className="record__form">
-      <Input type="name" id="name" placeholder="Иван" label="Ваше имя" />
+      <Input type="name" placeholder="Иван" label="Ваше имя" />
       <Input
         type="tel"
-        id="tel"
         placeholder="+7 (___)-___-__-__"
         label="Номер телефона"
         mask="+7\ (999)-999-99-99"
@@ -38,7 +35,6 @@ const RecordForm = ({ isCamp }) => {
         onClickItem={selectMessanger}
         items={messangers}
         label="Выберите мессенджер для связи"
-        id="select-messanger"
         outline
       />
       {isCamp ? (
@@ -47,7 +43,6 @@ const RecordForm = ({ isCamp }) => {
           onClickItem={selectItem}
           items={options}
           label="Выберите поток"
-          id="select-stream"
           outline
         />
       ) : null}

@@ -68,7 +68,11 @@ const Beginners = () => {
           settings={athletesSettings}
           outerRight={false}
         />
-        <Record title={['запись', 'на первое', 'занятие']} />
+        <Record
+          title={['запись', 'на первое', 'занятие']}
+          text="Запишитесь на первое бесплатное занятие, заполнив
+          форму и получите приветственный бонус от нас"
+        />
       </main>
       <Footer />
     </>

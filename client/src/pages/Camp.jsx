@@ -49,7 +49,12 @@ const Camp = () => {
       <main>
         <h1 className="visually-hidden">Лагерь</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
-        <Record title={['запись', 'в лагерь', 'redyar']} isCamp />
+        <Record
+          title={['запись', 'в лагерь', 'redyar']}
+          text="Запишитесь в лагерь, заполнив форму и получите приветственный
+          бонус от нас. Не забудьте выбрать поток в фоме записи"
+          isCamp
+        />
         <About
           image={{
             jpg: aboutImageJpg,
