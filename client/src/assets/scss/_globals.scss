@@ -40,12 +40,16 @@ figure {
 fieldset {
   border: none;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #131718 inset !important;
+  -webkit-text-fill-color: $l-gray-2 !important;
+  -webkit-padding-start: 0 !important;
+}
 
 // ==== Общие классы ====
-.ReactModal__Overlay {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  z-index: 99999;
-}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);

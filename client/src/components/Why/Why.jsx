@@ -1,5 +1,5 @@
 import React from 'react'
-import RecordButton from '@generic/RecordButton/RecordButton'
+import ModalRecord from '@components/Modal/ModalRecord'
 
 const Why = () => (
   <section className="why mb5">
@@ -15,7 +15,7 @@ const Why = () => (
             CrossFit - не просто тренировки и фитнес. Для нас - это образ жизни.
             Мы любим менять людей и помогаем им становится лучше.
           </p>
-          <RecordButton>Записаться</RecordButton>
+          <ModalRecord />
         </div>
       </div>
       <ul className="why__features">

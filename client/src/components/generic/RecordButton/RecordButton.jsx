@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const RecordButton = ({ children }) => (
-  <button type="button" className="record-button">
+const RecordButton = ({ onClickHandle, children }) => (
+  <button type="button" className="record-button" onClick={onClickHandle}>
     <span>{children}</span>
     <svg
       width="19"
@@ -20,6 +20,7 @@ const RecordButton = ({ children }) => (
 )
 
 RecordButton.propTypes = {
+  onClickHandle: PropTypes.func.isRequired,
   children: PropTypes.string.isRequired,
 }
 

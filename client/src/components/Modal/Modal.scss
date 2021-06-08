@@ -1,9 +1,33 @@
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 99999;
+}
+.modal {
+  position: absolute;
+  padding: 80px 100px;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  border: none;
+  background-color: #131718;
+  z-index: 999999;
+
+  .title {
+    width: 50%;
+  }
+  & > .flex {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 .modal__text {
-  width: 40%;
+  width: 50%;
 }
 .form > .flex {
-  column-gap: 1.5em;
-
   & > div,
   & > textarea {
     width: 50%;

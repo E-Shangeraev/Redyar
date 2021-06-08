@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
 import Modal from 'react-modal'
-import ModalFeedback from '@components/Modal/Modal'
+import ModalFeedback from '@components/Modal/ModalFeedback'
 import { v4 as uuidv4 } from 'uuid'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
 import mouseSvg from './mouse.svg'

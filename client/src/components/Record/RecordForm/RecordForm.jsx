@@ -33,25 +33,23 @@ const RecordForm = ({ isCamp }) => {
         label="Номер телефона"
         mask="+7\ (999)-999-99-99"
       />
+      <Select
+        activeItem={selectedMessanger}
+        onClickItem={selectMessanger}
+        items={messangers}
+        label="Выберите мессенджер для связи"
+        id="select-messanger"
+        outline
+      />
       {isCamp ? (
-        <>
-          <Select
-            activeItem={selectedMessanger}
-            onClickItem={selectMessanger}
-            items={messangers}
-            label="Выберите мессенджер для связи"
-            id="select-messanger"
-            outline
-          />
-          <Select
-            activeItem={selectedOption}
-            onClickItem={selectItem}
-            items={options}
-            label="Выберите поток"
-            id="select-stream"
-            outline
-          />
-        </>
+        <Select
+          activeItem={selectedOption}
+          onClickItem={selectItem}
+          items={options}
+          label="Выберите поток"
+          id="select-stream"
+          outline
+        />
       ) : null}
       <Button type="submit">Записаться</Button>
     </Form>

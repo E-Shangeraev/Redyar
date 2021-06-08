@@ -81,6 +81,34 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
+  cursor: pointer;
+  transition: ease 0.15s;
+
+  &:hover {
+    color: $orange;
+  }
+}
+.promo__button-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 0;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
 }
 .promo__arrows {
   margin-right: 30px;
