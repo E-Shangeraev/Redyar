@@ -12,11 +12,13 @@
   }
   input {
     flex-grow: 1;
+    color: $l-gray-2;
     background-color: transparent;
     border: none;
   }
   input:focus,
   input:active {
+    color: #fff;
     outline: none;
   }
   &--focused {

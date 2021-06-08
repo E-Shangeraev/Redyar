@@ -7,9 +7,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.record .wrapper > div {
-  display: flex;
-  justify-content: space-between;
+.record .flex > div {
+  width: 40%;
 }
 .record .title {
   span:nth-of-type(2) {

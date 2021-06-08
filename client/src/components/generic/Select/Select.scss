@@ -1,15 +1,76 @@
-.select-input {
-  .select__label {
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 13px 27px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+
+  &--outline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &--focused {
+    border-color: $orange;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 10px;
+  }
+  svg.rotated {
+    transform: rotate(180deg);
+  }
+}
+.select__label {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  font-family: $formular-r;
+  font-size: 22px;
+  line-height: 120%;
+  cursor: pointer;
+
+  span {
+    @include text;
+    flex-shrink: 0;
+  }
+  input {
     width: 100%;
     @include text;
+    text-align: left;
+    color: $l-gray-2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
-    &:focus,
-    &:active {
+    &:focus {
+      color: #fff;
       outline: none;
-      border-color: $orange;
     }
   }
-  .select__popup {
-    border: 1px solid $gray;
+}
+.select__popup {
+  position: absolute;
+  padding: 30px;
+  right: 0;
+  left: 0;
+  top: 120%;
+  text-align: center;
+  background-color: $d-gray;
+  border: 1px solid $gray;
+  z-index: 999;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+  }
+  button {
+    cursor: pointer;
+    transition: ease 0.15s;
+  }
+  button.active,
+  button:hover {
+    color: $orange;
   }
 }

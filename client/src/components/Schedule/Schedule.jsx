@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import useHttp from '@hooks/http.hook'
-import Select from './Select'
+import Select from '@generic/Select/Select'
 
 const weekDays = [
   'Понедельник',
@@ -19,7 +19,7 @@ const dayIndex = date.getDay() - 1
 const Schedule = () => {
   const { request } = useHttp()
   const [scheduleItems, setScheduleItems] = useState([])
-  const [day, setDay] = useState(dayIndex)
+  const [day, setDay] = useState(weekDays[dayIndex])
 
   const selectDay = useCallback(selectedDay => setDay(selectedDay), [])
 
@@ -52,7 +52,8 @@ const Schedule = () => {
       .reduce((prev, cur) => [prev, ' / ', cur])
 
   useEffect(async () => {
-    const item = await request(`/api/schedule/${day}`)
+    const index = weekDays.indexOf(day)
+    const item = await request(`/api/schedule/${index}`)
     if (item) {
       setScheduleItems(item.schedule)
     }
@@ -64,9 +65,11 @@ const Schedule = () => {
         <div className="flex space-between align-center mb5">
           <h2 className="title">Расписание</h2>
           <Select
-            activeDayIndex={day}
-            onClickDay={selectDay}
+            activeItem={day}
+            onClickItem={selectDay}
             items={weekDays}
+            label="День недели:"
+            id="select-stream"
           />
         </div>
         <ul className="schedule__container">

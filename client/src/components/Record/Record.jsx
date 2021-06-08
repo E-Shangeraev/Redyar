@@ -6,8 +6,8 @@ import RecordForm from './RecordForm/RecordForm'
 const Record = ({ title, isCamp }) => (
   <section className="record">
     <div className="wrapper">
-      <div>
-        <div>
+      <div className="flex space-between">
+        <div className="flex column space-around">
           <h2 className="title">
             {title && title.map(item => <span key={item}>{item}</span>)}
           </h2>

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-const Select = ({ label, id, activeItem, onClickItem, items }) => {
+const Select = ({ label, id, activeItem, onClickItem, items, outline }) => {
   const selectRef = useRef()
   const [visiblePopup, setVisiblePopup] = useState(false)
   const [focus, setFocus] = useState(false)
@@ -19,8 +19,8 @@ const Select = ({ label, id, activeItem, onClickItem, items }) => {
   const toggleVisiblePopup = () => setVisiblePopup(!visiblePopup)
 
   const onSelectItem = item => {
-    setFocus(false)
     onClickItem(item)
+    setFocus(false)
     setVisiblePopup(false)
   }
 
@@ -39,16 +39,16 @@ const Select = ({ label, id, activeItem, onClickItem, items }) => {
   return (
     <div
       ref={selectRef}
-      className="select select-input"
+      className={classNames('select', {
+        'select--outline': outline,
+        'select--focused': focus,
+      })}
       onFocus={onFocusHandle}
       onBlur={e => onBlurHandle(e)}>
-      <label
-        className={classNames('input', { 'input--focused': focus })}
-        htmlFor={id}>
+      <label className="select__label" htmlFor={id}>
         <span>{label}</span>
         <input
           id={id}
-          className="select__label"
           type="button"
           onClick={toggleVisiblePopup}
           value={activeItem || ''}
@@ -89,10 +89,12 @@ Select.propTypes = {
   onClickItem: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  outline: PropTypes.bool,
 }
 
 Select.defaultProps = {
   activeItem: null,
+  outline: false,
 }
 
 export default Select
