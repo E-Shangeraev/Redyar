@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { v4 as uuidv4 } from 'uuid'
 import classNames from 'classnames'
 import Card from '@generic/Card/Card'
+import Button from '@generic/Button/Button'
 
-const Cards = ({ title, footnote, items, withBackground }) => (
+const Cards = ({ title, footnote, items, withBackground, description }) => (
   <section className={classNames('cards', { 'cards--bg': withBackground })}>
     <div className="wrapper">
       <div className="flex space-between align-center mb3">
@@ -12,7 +13,7 @@ const Cards = ({ title, footnote, items, withBackground }) => (
         <p className="cards__footnote">{footnote}</p>
       </div>
       <ul className="cards__list">
-        {items.length &&
+        {items &&
           items.map(item => (
             <Card
               key={uuidv4()}
@@ -23,6 +24,10 @@ const Cards = ({ title, footnote, items, withBackground }) => (
             />
           ))}
       </ul>
+      <div className="cards__description">
+        <p>{description}</p>
+        <Button>Оставить заявку</Button>
+      </div>
     </div>
   </section>
 )
@@ -39,6 +44,7 @@ Cards.propTypes = {
     ])
   ),
   withBackground: PropTypes.bool,
+  description: PropTypes.string.isRequired,
 }
 
 Cards.defaultProps = {

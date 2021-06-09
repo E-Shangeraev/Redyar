@@ -13,8 +13,8 @@ import imageWebpSmall from '@assets/img/Price/1_small.webp'
 
 const Price = () => {
   const { request } = useHttp()
-  const [clubCards, setClubCards] = useState([])
-  const [oneTimeVisitCards, setOneTimeVisitCards] = useState([])
+  const [clubCards, setClubCards] = useState(null)
+  const [oneTimeVisitCards, setOneTimeVisitCards] = useState(null)
 
   useEffect(async () => {
     const clubItems = await request('/api/price/card')
@@ -34,6 +34,8 @@ const Price = () => {
           footnote="*Безлимитные (Владельцы могу помещать неограниченное
             кол-во занятий. Действует во всех клубах сети Crossfit RedYar)."
           items={clubCards}
+          description="Оставьте заявку на клубную карту.
+          Наш менеджер свяжется с Вами в ближайшее время и уточнит все детали"
           withBackground
         />
         <div className="pl pr" style={{ position: 'relative', zIndex: '1' }}>
@@ -59,6 +61,8 @@ const Price = () => {
             footnote="Удобны тем, кто ходит в зал меньше 3-х раз в неделю.
           Действует только в том клубе, в котором куплены)."
             items={oneTimeVisitCards}
+            description="Оставьте заявку на разовое посещение. Наш менеджер
+            свяжется с Вами в ближайшее время и уточнит все детали"
           />
         )}
         <Schedule />

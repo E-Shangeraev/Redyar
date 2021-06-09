@@ -23,6 +23,10 @@
 
   a {
     font-family: $formular-r;
+    transition: ease 0.15s;
+  }
+  a:hover {
+    color: $orange;
   }
 }
 .header__phone {
