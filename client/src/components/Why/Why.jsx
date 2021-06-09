@@ -1,50 +1,71 @@
-import React from 'react'
-import ModalRecord from '@components/Modal/ModalRecord'
+import React, { useState } from 'react'
+import RecordButton from '@generic/RecordButton/RecordButton'
+import Modal from '@components/Modal/Modal'
 
-const Why = () => (
-  <section className="why mb5">
-    <div className="wrapper">
-      <div className="why__flex">
-        <h2 className="title">
-          <span>Зачем</span>
-          <span>приходить</span>
-          <span>к нам</span>
-        </h2>
-        <div>
-          <p className="mb2">
-            CrossFit - не просто тренировки и фитнес. Для нас - это образ жизни.
-            Мы любим менять людей и помогаем им становится лучше.
-          </p>
-          <ModalRecord />
+const Why = () => {
+  const [modalIsOpen, setIsOpen] = useState(false)
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
+
+  return (
+    <section className="why mb5">
+      <div className="wrapper">
+        <div className="why__flex">
+          <h2 className="title">
+            <span>Зачем</span>
+            <span>приходить</span>
+            <span>к нам</span>
+          </h2>
+          <div>
+            <p className="mb2">
+              CrossFit - не просто тренировки и фитнес. Для нас - это образ
+              жизни. Мы любим менять людей и помогаем им становится лучше.
+            </p>
+            <RecordButton onClickHandle={openModal}>Записаться</RecordButton>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              title={['запись', 'на первое', 'занятие']}
+              text="Запишитесь на первое бесплатное занятие.
+              Заполните форму и мы ответим Вам в ближайшее время"
+            />
+          </div>
         </div>
+        <ul className="why__features">
+          <li>
+            <span>8 лет</span>
+            <p>преподаём кроссфит</p>
+          </li>
+          <li>
+            <span>54</span>
+            <p>
+              обычных людей стали соревнующимися атлетами или кроссфит-тренерами
+            </p>
+          </li>
+          <li>
+            <span>7 кг</span>
+            <p>
+              жира теряют люди в среднем за 2 месяца, занимаясь в CrossFit
+              Redyar
+            </p>
+          </li>
+          <li>
+            <span>40</span>
+            <p>
+              приседаний в минуту способен сделать каждый спустя 2 месяца
+              тренировок
+            </p>
+          </li>
+        </ul>
       </div>
-      <ul className="why__features">
-        <li>
-          <span>8 лет</span>
-          <p>преподаём кроссфит</p>
-        </li>
-        <li>
-          <span>54</span>
-          <p>
-            обычных людей стали соревнующимися атлетами или кроссфит-тренерами
-          </p>
-        </li>
-        <li>
-          <span>7 кг</span>
-          <p>
-            жира теряют люди в среднем за 2 месяца, занимаясь в CrossFit Redyar
-          </p>
-        </li>
-        <li>
-          <span>40</span>
-          <p>
-            приседаний в минуту способен сделать каждый спустя 2 месяца
-            тренировок
-          </p>
-        </li>
-      </ul>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Why

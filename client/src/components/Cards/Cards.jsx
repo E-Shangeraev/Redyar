@@ -4,8 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import classNames from 'classnames'
 import Card from '@generic/Card/Card'
 import Button from '@generic/Button/Button'
-import Modal from 'react-modal'
-import RecordBlock from '@components/Record/RecordBlock'
+import Modal from '@components/Modal/Modal'
 
 const Cards = ({
   title,
@@ -50,12 +49,12 @@ const Cards = ({
           <Button onClickHandler={openModal}>Оставить заявку</Button>
         </div>
       </div>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} className="modal">
-        <button type="button" onClick={closeModal} className="modal__close">
-          закрыть
-        </button>
-        <RecordBlock title={modalTitle} text={modalText} />
-      </Modal>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        title={modalTitle}
+        text={modalText}
+      />
     </section>
   )
 }

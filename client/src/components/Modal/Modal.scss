@@ -11,6 +11,7 @@
   bottom: auto;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  max-width: 70vw;
   border-radius: 30px;
   border: none;
   background-color: #131718;
@@ -22,6 +23,11 @@
   & > .flex {
     width: 100%;
     box-sizing: border-box;
+    // gap: 30px;
+  }
+  & > .flex > div,
+  & > .flex > form {
+    width: 50%;
   }
 }
 .modal__text {
