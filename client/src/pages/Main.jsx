@@ -76,11 +76,7 @@ const Main = () => {
           форму и получите приветственный бонус от нас"
         />
         <Features />
-        <Founder
-          title="Основатель"
-          url="https://vk.com/video-59029020_171154015"
-          channel="custom"
-        />
+        <Founder title="Основатель" videoId="B0HNWZarxcc" channel="youtube" />
         <Why />
         <TeamSlider />
         <AthletesSlider

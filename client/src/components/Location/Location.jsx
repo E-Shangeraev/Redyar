@@ -13,7 +13,9 @@ const Location = () => (
           <span>Красноярск, Белинского 8, ТЦ КОМСОМОЛЛ, 4 эт.</span>
         </p>
       </div>
-      <MyMap />
+      <div className="location__map">
+        <MyMap latitude={56.020315} longitude={92.902046} zoom={15.16} />
+      </div>
       <Reviews />
     </div>
   </section>

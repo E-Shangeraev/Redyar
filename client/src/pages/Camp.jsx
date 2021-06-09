@@ -8,7 +8,7 @@ import DailyRoutine from '@components/DailyRoutine/DailyRoutine'
 import Besides from '@components/Besides/Besides'
 import VideoReport from '@components/VideoReport/VideoReport'
 import FAQ from '@components/FAQ/FAQ'
-import WayToCamp from '@components/WayToCamp'
+import CampLocation from '@components/CampLocation/CampLocation'
 import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/3.jpg'
@@ -74,7 +74,7 @@ const Camp = () => {
         <Besides />
         <VideoReport />
         <FAQ title="вопрос-ответ" fetchUrl="/api/faq/camp" />
-        <WayToCamp />
+        <CampLocation />
       </main>
       <Footer />
     </>

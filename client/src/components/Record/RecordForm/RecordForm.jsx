@@ -6,7 +6,7 @@ import Select from '@generic/Select/Select'
 import Textarea from '@generic/Textarea/Textarea'
 import Button from '@generic/Button/Button'
 
-const options = ['1-й поток с 01.06 по 07.06', '2-й поток с 08.06 по 15.06']
+const options = ['1-й поток с 05.08 по 15.08']
 const messangers = ['Telegram', 'Viber', 'WhatsUp']
 
 const RecordForm = ({ isCamp, hasTextarea }) => {

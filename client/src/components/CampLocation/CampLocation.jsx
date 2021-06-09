@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import RecordButton from '@generic/RecordButton/RecordButton'
 import Modal from '@components/Modal/Modal'
-import mapJpg from '@assets/img/Camp/8.jpg'
+import MyMap from '@components/MyMap/MyMap'
 
-const WayToCamp = () => {
+const CampLocation = () => {
   const [modalIsOpen, setIsOpen] = useState(false)
 
   const openModal = () => {
@@ -15,7 +15,7 @@ const WayToCamp = () => {
   }
 
   return (
-    <section className="way-to-camp">
+    <section className="camp-location">
       <div className="wrapper-w100-pl">
         <div className="flex align-center gap2">
           <div>
@@ -34,11 +34,13 @@ const WayToCamp = () => {
               isCamp
             />
           </div>
-          <img src={mapJpg} alt="Карта" />
+          <div className="camp-location__map">
+            <MyMap latitude={54.69995} longitude={90.189227} zoom={12} />
+          </div>
         </div>
       </div>
     </section>
   )
 }
 
-export default WayToCamp
+export default CampLocation
