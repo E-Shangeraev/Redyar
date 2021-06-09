@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Markup } from 'interweave'
 
 const FAQItem = ({ question, answer }) => {
   const [toggleQuestion, setToggleQuestion] = useState(false)
@@ -25,7 +26,9 @@ const FAQItem = ({ question, answer }) => {
         type="button"
         className="faq__question"
         onClick={onToggleQuestion}>
-        <span>{question}</span>
+        <span className={classNames({ active: toggleQuestion })}>
+          {question}
+        </span>
         <div
           className={classNames('faq__arrow', {
             'faq__arrow--rotated': toggleQuestion,
@@ -46,7 +49,7 @@ const FAQItem = ({ question, answer }) => {
         </div>
       </button>
       <div className="faq__answer" ref={faqAnswerRef}>
-        <p>{answer}</p>
+        <Markup content={answer} />
       </div>
     </li>
   )

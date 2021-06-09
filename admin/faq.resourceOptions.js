@@ -2,11 +2,16 @@ const AdminBro = require('admin-bro')
 
 /** @type {AdminBro.ResourceOtions} */
 const options = {
-  listProperties: ['question', 'answer'],
-  editProperties: ['question', 'answer'],
+  listProperties: ['number', 'question', 'answer'],
+  editProperties: ['number', 'question', 'answer'],
   parent: {
     name: 'FAQ',
     icon: 'Help',
+  },
+  properties: {
+    answer: {
+      type: 'richtext',
+    },
   },
 }
 

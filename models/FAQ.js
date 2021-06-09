@@ -9,6 +9,10 @@ const FAQ = new Schema({
     type: String,
     required: true,
   },
+  number: {
+    type: Number,
+    unique: true,
+  },
 })
 
 const FAQCamp = model('FAQCamp', FAQ)

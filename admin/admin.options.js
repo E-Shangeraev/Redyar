@@ -167,12 +167,14 @@ const options = {
         },
         FAQCamp: {
           properties: {
+            number: 'Порядковый номер',
             question: 'Вопрос',
             answer: 'Ответ',
           },
         },
         FAQBeginners: {
           properties: {
+            number: 'Порядковый номер',
             question: 'Вопрос',
             answer: 'Ответ',
           },
