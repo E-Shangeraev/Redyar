@@ -37,3 +37,25 @@
     width: 50%;
   }
 }
+.modal__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 0;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
