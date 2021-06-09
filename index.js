@@ -30,6 +30,10 @@ const app = express()
 const admin = new AdminBro(options)
 const adminRouter = buildAdminRouter(admin)
 
+// ==== Middlewares ====
+// app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ extended: true }))
+
 // ==== API ====
 app.use(admin.options.rootPath, adminRouter)
 app.use('/api/merch', merchRouter)

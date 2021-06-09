@@ -24,4 +24,6 @@ const Blog = new Schema({
   },
 })
 
+Blog.index({ title: 'text', text: 'text' }, { default_language: 'russian' })
+
 module.exports = model('Articles', Blog)

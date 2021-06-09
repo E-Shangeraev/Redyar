@@ -43,6 +43,32 @@ class BlogController extends Request {
       throw err
     }
   }
+  findArticles = async (req, res) => {
+    try {
+      const { category } = req.query
+
+      const items = category
+        ? await this.model
+            .find(
+              {
+                $text: { $search: req.body.request },
+                [`category.cat${category}`]: true,
+              },
+              { score: { $meta: 'textScore' } }
+            )
+            .sort({ score: { $meta: 'textScore' } })
+        : await this.model.find(
+            {
+              $text: { $search: req.body.request },
+            },
+            { score: { $meta: 'textScore' } }
+          )
+      res.status(200).json(items)
+    } catch (err) {
+      res.status(500)
+      throw err
+    }
+  }
 }
 
 module.exports = new BlogController(Blog)

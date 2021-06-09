@@ -47,3 +47,12 @@ export const getArticleById = (id, request) => async dispatch => {
 
   dispatch(setArticleById(item))
 }
+
+export const findArticles = (value, category, request) => async dispatch => {
+  dispatch(setLoaded(false))
+
+  const params = category !== null ? `?category=${category}` : ''
+  const items = await request(`/blog${params}`, 'POST', value)
+
+  dispatch(setArticles(items))
+}
