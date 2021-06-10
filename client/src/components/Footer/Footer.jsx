@@ -18,15 +18,13 @@ const Footer = () => (
             />
           </Link>
           <nav className="footer__nav">
-            <Link to="/">О нас</Link>
-            <Link to="/price">Расписание</Link>
-            <Link to="/">Галерея</Link>
-            <Link to="/awards">Заслуги</Link>
             <Link to="/team">Команда</Link>
-            <Link to="/">Контакты</Link>
-            <Link to="/beginners">Новичкам</Link>
-            <Link to="/camp">Лагерь</Link>
             <Link to="/competitions">Соревнования</Link>
+            <Link to="/beginners">Новичкам</Link>
+            <Link to="/price">Стоимость</Link>
+            <Link to="/camp">Лагерь</Link>
+            <Link to="/awards">Заслуги</Link>
+            <Link to="/blog">Блог</Link>
           </nav>
           <span className="footer__copyright">
             CrossFit RedYar {year}. Все права защищены.

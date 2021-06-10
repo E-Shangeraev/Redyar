@@ -9,10 +9,10 @@ const Header = () => (
     </Link>
     <div>
       <nav className="header__nav">
-        <Link to="/">О нас</Link>
-        <Link to="/price">Расписание</Link>
-        <Link to="/">Галерея</Link>
-        <Link to="/">Контакты</Link>
+        <Link to="/team">Команда</Link>
+        <Link to="/competitions">Соревнования</Link>
+        <Link to="/beginners">Новичкам</Link>
+        <Link to="/price">Стоимость</Link>
       </nav>
       <a className="header__phone" href="tel:+7 (999) 898-99-99">
         +7 (999) 898-99-99
