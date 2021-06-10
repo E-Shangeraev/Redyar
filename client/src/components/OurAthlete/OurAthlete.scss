@@ -2,16 +2,14 @@
   padding: 35px;
   margin-right: 1.5em;
   background-color: $gray;
-
-  // .flex div {
-  //   display: inline;
-  // }
 }
 .our-athlete__photo {
+  flex-shrink: 0;
   width: 135px;
   height: 135px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top;
   background-color: $l-gray-2;
 }
 .our-athlete__name {
