@@ -23,6 +23,13 @@
 }
 .founder__description p {
   @include text;
+  text-align: justify;
   column-count: 2;
+  column-gap: 2em;
   color: #f2f2f2;
+}
+
+@media (max-width: 1366px) {
+  .founder__description {
+  }
 }

@@ -19,13 +19,24 @@
   padding-bottom: 0;
 }
 .slider__component {
-  width: 100%;
-
   & > div > div {
     height: 100%;
   }
 }
 .slider__component--outer-right {
+  position: relative;
+  overflow: hidden;
   padding-right: 0;
-  width: 110%;
+
+  .slick-list {
+    width: 110%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .slider__component--outer-right {
+    .slick-list {
+      width: 120%;
+    }
+  }
 }

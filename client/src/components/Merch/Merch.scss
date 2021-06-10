@@ -9,15 +9,14 @@
 
   b {
     margin-bottom: 5px;
+    @include big-text;
     font-family: $formular-m;
-    font-size: 24px;
     line-height: 110%;
     color: #f2f2f2;
   }
   span {
     margin-bottom: 35px;
-    font-family: $formular-r;
-    font-size: 18px;
+    @include medium-text;
     line-height: 110%;
     opacity: 0.5;
   }
@@ -54,5 +53,31 @@
     &:hover {
       border: 1px solid $orange;
     }
+  }
+}
+
+@media (max-width: 1600px) {
+  .merch {
+    padding: 30px;
+  }
+  .merch__photo {
+    max-height: 260px;
+  }
+}
+@media (max-width: 1366px) {
+  .merch {
+    padding: 25px;
+  }
+  .merch__photo {
+    margin-bottom: 20px;
+    max-height: 220px;
+  }
+}
+@media (max-width: 1366px) {
+  .merch {
+    padding: 20px;
+  }
+  .merch__photo {
+    max-height: 200px;
   }
 }

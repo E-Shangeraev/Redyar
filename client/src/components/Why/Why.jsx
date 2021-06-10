@@ -14,7 +14,7 @@ const Why = () => {
   }
 
   return (
-    <section className="why mb5">
+    <section className="why">
       <div className="wrapper">
         <div className="why__flex">
           <h2 className="title">
@@ -23,7 +23,7 @@ const Why = () => {
             <span>к нам</span>
           </h2>
           <div>
-            <p className="mb2">
+            <p className="mb1">
               CrossFit - не просто тренировки и фитнес. Для нас - это образ
               жизни. Мы любим менять людей и помогаем им становится лучше.
             </p>

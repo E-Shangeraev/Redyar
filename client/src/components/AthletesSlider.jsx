@@ -28,7 +28,12 @@ AthletesSlider.propTypes = {
   render: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   settings: PropTypes.objectOf(
-    PropTypes.oneOfType([PropTypes.number, PropTypes.bool, PropTypes.string])
+    PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.bool,
+      PropTypes.string,
+      PropTypes.array,
+    ])
   ).isRequired,
   outerRight: PropTypes.bool.isRequired,
 }

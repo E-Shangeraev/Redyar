@@ -7,10 +7,11 @@
   border-radius: 40px;
 
   span {
-    margin-right: 2em;
+    margin-right: 5%;
     flex-shrink: 0;
   }
   input {
+    padding: 0;
     flex-grow: 1;
     color: $l-gray-2;
     background-color: transparent;

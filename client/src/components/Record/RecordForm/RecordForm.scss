@@ -5,3 +5,8 @@
   width: 40%;
   flex-shrink: 0;
 }
+@media (max-width: 1280px) {
+  .record__form {
+    width: 50%;
+  }
+}

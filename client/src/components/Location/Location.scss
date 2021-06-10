@@ -17,10 +17,44 @@
   }
 }
 .location__map {
-  margin-bottom: 70px;
-  min-height: 400px;
+  margin-bottom: 5em;
+  height: 500px;
   background-image: url('../../assets/img/map.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+}
+
+@media (max-width: 1600px) {
+  .location__map {
+    margin-bottom: 3em;
+    height: 450px;
+  }
+}
+@media (max-width: 1366px) {
+  .location__map {
+    height: 400px;
+  }
+  .location__address {
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+    span {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .location .flex {
+    display: block !important;
+
+    .title {
+      margin-bottom: 30px;
+    }
+  }
+  .location__map {
+    height: 300px;
+  }
 }

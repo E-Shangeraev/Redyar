@@ -10,7 +10,7 @@ const MyMap = ({ latitude, longitude, zoom }) => (
     }}>
     <Map
       defaultState={{ center: [latitude, longitude], zoom }}
-      style={{ width: '100%', height: '500px' }}>
+      style={{ width: '100%', height: '100%' }}>
       <Placemark
         geometry={[latitude, longitude]}
         properties={{}}

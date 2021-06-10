@@ -65,3 +65,16 @@
     transform: rotate(-45deg);
   }
 }
+
+@media (max-width: 1600px) {
+  .modal {
+    padding: 80px 60px;
+    // max-width: 80vw;
+  }
+}
+@media (max-width: 1366px) {
+  .modal {
+    padding: 60px 80px;
+    max-width: 80vw;
+  }
+}

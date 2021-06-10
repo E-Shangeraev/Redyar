@@ -15,7 +15,7 @@ const Worker = ({ photo, name, post, achievements, addition, socials }) => {
   return (
     <div className="worker">
       <img className="worker__photo" src={photo} alt={name} />
-      <div>
+      <div className="flex column space-between">
         <p>
           <span className="worker__name">{name}</span>
           <span className="worker__post">{post}</span>

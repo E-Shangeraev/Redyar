@@ -2,6 +2,36 @@
   font-family: $formular-r;
   font-size: 16px;
   line-height: 160%;
+
+  @media (max-width: 1366px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 12px;
+  }
+}
+@mixin medium-text {
+  font-family: $formular-r;
+  font-size: 18px;
+  line-height: 160%;
+
+  @media (max-width: 1366px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 14px;
+  }
+}
+@mixin big-text {
+  font-family: $druk;
+  font-size: 24px;
+
+  @media (max-width: 1366px) {
+    font-size: 20px;
+  }
+  @media (max-width: 1280px) {
+    font-size: 18px;
+  }
 }
 
 @mixin background-before($image, $top: -100%, $height: 200%) {
@@ -19,5 +49,11 @@
     background-size: cover;
     background-position: 0 0;
     z-index: -1;
+  }
+  @media (max-width: 1366px) {
+    &::before {
+      top: calc(#{$top} / 2);
+      height: calc(#{$height} / 1.2);
+    }
   }
 }
