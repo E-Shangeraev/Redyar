@@ -12,7 +12,7 @@ export const getArticles = (category, request) => async dispatch => {
   dispatch(setLoaded(false))
 
   const params = category !== null ? `?category=${category}` : ''
-  const items = await request(`/blog${params}`)
+  const items = await request(`/api/blog${params}`)
 
   dispatch(setArticles(items))
 }
@@ -30,7 +30,7 @@ export const getSimilarArticles =
       category !== null
         ? `?category=${category}&skip=${skip}&=limit${limit}`
         : `?skip=${skip}&=limit${limit}`
-    const items = await request(`/blog/similar${params}`)
+    const items = await request(`/api/blog/similar${params}`)
 
     dispatch(setSimilarArticles(items))
   }
@@ -52,7 +52,7 @@ export const findArticles = (value, category, request) => async dispatch => {
   dispatch(setLoaded(false))
 
   const params = category !== null ? `?category=${category}` : ''
-  const items = await request(`/blog${params}`, 'POST', value)
+  const items = await request(`/api/blog${params}`, 'POST', value)
 
   dispatch(setArticles(items))
 }
