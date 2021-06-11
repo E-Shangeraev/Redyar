@@ -81,3 +81,32 @@
     object-fit: cover;
   }
 }
+@media (max-width: 767px) {
+  .worker {
+    margin: 0 2px;
+  }
+}
+@media (max-width: 500px) {
+  .worker {
+    flex-direction: column;
+    padding: 0 15px 25px 15px;
+  }
+  .worker__photo {
+    max-width: 100%;
+    object-position: top center;
+    background: linear-gradient(to top, $gray 10%, transparent 10%) right bottom
+      100%/50% no-repeat;
+  }
+  .worker__name {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  .worker__post {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .worker__achievements {
+    margin: 15px 0;
+  }
+}

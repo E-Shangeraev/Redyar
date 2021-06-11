@@ -12,3 +12,33 @@
 .double-slider__component:nth-last-child(1) {
   margin-bottom: 30px;
 }
+
+@media (max-width: 500px) {
+  .double-slider {
+    position: relative;
+    padding-bottom: 45px;
+
+    .slick-slide {
+      margin: 0;
+    }
+  }
+  .double-slider .wrapper > .flex {
+    display: block !important;
+    margin-bottom: 20px !important;
+
+    .title {
+      width: 100%;
+    }
+  }
+  .double-slider__arrows {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
+    right: 0;
+    justify-content: space-between !important;
+    z-index: 100;
+  }
+  .double-slider__component {
+    margin-bottom: 0 !important;
+  }
+}

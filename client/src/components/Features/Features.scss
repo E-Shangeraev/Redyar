@@ -35,3 +35,26 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .features__list li {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .features__list li {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .subtitle {
+      margin-bottom: 15px;
+    }
+    p {
+      justify-content: space-between;
+    }
+    span:last-of-type {
+      text-align: right;
+    }
+  }
+}

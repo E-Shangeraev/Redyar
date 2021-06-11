@@ -44,9 +44,15 @@ const Promo = ({ slides, schedule }) => {
         {slides &&
           slides.map(slide => (
             <div className="slide" key={uuidv4()}>
-              <div
-                className="slide__content"
-                style={{ backgroundImage: `url(${slide.img})` }}>
+              <div className="slide__content">
+                <picture className="promo__image">
+                  <source srcSet={slide.imgPhone} media="(max-width: 500px)" />
+                  <source
+                    srcSet={slide.imgTablet}
+                    media="(max-width: 1024px)"
+                  />
+                  <img src={slide.img} alt="Фото с тренировок" />
+                </picture>
                 <h2 className="title slide__title">{slide.title}</h2>
                 <p>{slide.text}</p>
               </div>

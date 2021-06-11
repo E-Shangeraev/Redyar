@@ -25,24 +25,24 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
   if (hasTextarea) {
     return (
       <Form>
-        <div className="flex gap2">
-          <div className="flex column gap2">
-            <Input type="name" placeholder="Иван" label="Ваше имя" />
-            <Input
-              type="tel"
-              placeholder="+7 (___)-___-__-__"
-              label="Номер телефона"
-              mask="+7\ (999)-999-99-99"
-            />
-            <Select
-              activeItem={selectedMessanger}
-              onClickItem={selectMessanger}
-              items={messangers}
-              label="Выберите мессенджер для связи"
-              outline
-            />
-            <Button type="submit">Записаться</Button>
-          </div>
+        <div className="form__container">
+          {/* <div className="flex column gap2"> */}
+          <Input type="name" placeholder="Иван" label="Ваше имя" />
+          <Input
+            type="tel"
+            placeholder="+7 (___)-___-__-__"
+            label="Номер телефона"
+            mask="+7\ (999)-999-99-99"
+          />
+          <Select
+            activeItem={selectedMessanger}
+            onClickItem={selectMessanger}
+            items={messangers}
+            label="Выберите мессенджер для связи"
+            outline
+          />
+          <Button type="submit">Записаться</Button>
+          {/* </div> */}
           <Textarea name="text" placeholder="Введите ваш вопрос" />
         </div>
       </Form>

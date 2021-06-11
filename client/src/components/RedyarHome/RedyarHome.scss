@@ -1,4 +1,5 @@
 .redyar-home {
+  padding: 100px 0;
   background-image: url('../../assets/img/redyar-home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -6,11 +7,10 @@
   background-attachment: fixed;
 }
 .redyar-home__content {
-  width: 40%;
+  width: 50%;
 
   p {
     @include medium-text;
-    // font-size: 18px;
     margin-bottom: 35px;
   }
   ul {
@@ -20,7 +20,6 @@
 
     li {
       position: relative;
-      // font-size: 18px;
       @include medium-text;
       line-height: 120%;
       color: #f2f2f2;
@@ -46,5 +45,27 @@
 @media (max-width: 1600px) {
   .redyar-home__content {
     width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  .redyar-home {
+    padding: 0;
+    background-attachment: unset;
+  }
+  .redyar-home__content {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .redyar-home {
+    background-position: 70%;
+  }
+  .redyar-home__content ul {
+    flex-direction: column;
+    gap: 2em;
+
+    li {
+      width: fit-content;
+    }
   }
 }

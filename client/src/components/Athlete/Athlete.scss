@@ -29,7 +29,7 @@
     max-height: 360px;
   }
 }
-@media (max-width: 1366px) {
+@media (max-width: 1365px) {
   .athlete__photo {
     max-height: 330px;
   }
@@ -37,8 +37,32 @@
 @media (max-width: 1280px) {
   .athlete__photo {
     max-height: 300px;
+    object-position: top center;
   }
   .athlete__rank {
     font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .athlete {
+    text-align: center;
+  }
+  .athlete__rank {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .athlete__photo {
+    object-fit: scale-down;
+  }
+}
+@media (max-width: 500px) {
+  .athlete__name {
+    font-size: 16px;
+  }
+  .athlete__rank {
+    max-width: 100%;
+  }
+  .athlete__photo {
+    object-fit: cover;
   }
 }

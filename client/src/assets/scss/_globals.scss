@@ -264,3 +264,54 @@ input:-webkit-autofill:active {
     margin-bottom: 3em !important;
   }
 }
+@media (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .wrapper {
+    padding: 60px 40px;
+  }
+  .wrapper-w100 {
+    padding: 60px 0;
+  }
+  .wrapper-w100-pl {
+    padding: 60px 0 60px 40px;
+  }
+  .pl {
+    padding-left: 40px;
+  }
+  .pr {
+    padding-right: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 21px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 45px 20px;
+  }
+  .wrapper-w100 {
+    padding: 45px 0;
+  }
+  .wrapper-w100-pl {
+    padding: 45px 0 45px 20px;
+  }
+  .pl {
+    padding-left: 20px;
+  }
+  .pr {
+    padding-right: 20px;
+  }
+}

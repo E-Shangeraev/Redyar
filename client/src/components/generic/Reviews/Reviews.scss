@@ -52,3 +52,36 @@
     grid-column-gap: 20px;
   }
 }
+@media (max-width: 1024px) {
+  .reviews__list {
+    display: block;
+  }
+  .review__author {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .review {
+    gap: 15px;
+
+    p {
+      line-height: 140%;
+    }
+  }
+  .review__grade svg {
+    width: 15px;
+    height: 15px;
+  }
+  .review__photo {
+    width: 70px;
+    height: 70px;
+  }
+  .review__author {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .reviews__list {
+    margin-bottom: 0;
+  }
+}

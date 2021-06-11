@@ -40,6 +40,7 @@
 @media (max-width: 1280px) {
   .features-blocks {
     margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 
     li {
@@ -48,6 +49,15 @@
     }
     li:last-child {
       transform: translateX(50%);
+    }
+  }
+}
+@media (max-width: 767px) {
+  .features-blocks {
+    grid-template-columns: 1fr;
+
+    li:last-child {
+      transform: translateX(0);
     }
   }
 }

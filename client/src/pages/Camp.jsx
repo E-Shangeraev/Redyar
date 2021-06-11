@@ -12,8 +12,14 @@ import CampLocation from '@components/CampLocation/CampLocation'
 import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/3.jpg'
+import imgTablet1 from '@assets/img/Main/Promo/3_tablet.jpg'
+import imgPhone1 from '@assets/img/Main/Promo/3_phone.jpg'
 import img2 from '@assets/img/Main/Promo/4.jpg'
+import imgTablet2 from '@assets/img/Main/Promo/4_tablet.jpg'
+import imgPhone2 from '@assets/img/Main/Promo/4_phone.jpg'
 import img3 from '@assets/img/Main/Promo/5.jpg'
+import imgTablet3 from '@assets/img/Main/Promo/5_tablet.jpg'
+import imgPhone3 from '@assets/img/Main/Promo/5_phone.jpg'
 
 import aboutImageJpg from '@assets/img/Camp/1.jpg'
 import aboutImageWebp from '@assets/img/Camp/1.webp'
@@ -25,18 +31,24 @@ const Camp = () => {
   const promoSlides = [
     {
       img: img1,
+      imgTablet: imgTablet1,
+      imgPhone: imgPhone1,
       title: 'RedYar “лагерь”',
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },
     {
       img: img2,
+      imgTablet: imgTablet2,
+      imgPhone: imgPhone2,
       title: 'RedYar “лагерь”',
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },
     {
       img: img3,
+      imgTablet: imgTablet3,
+      imgPhone: imgPhone3,
       title: 'RedYar “лагерь”',
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',

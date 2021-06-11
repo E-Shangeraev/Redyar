@@ -16,3 +16,19 @@
     vertical-align: middle;
   }
 }
+
+@media (max-width: 500px) {
+  .slider-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+
+    svg {
+      width: 12px;
+
+      path {
+        fill: $orange;
+      }
+    }
+  }
+}

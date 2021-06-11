@@ -76,3 +76,21 @@
     width: 90px;
   }
 }
+@media (max-width: 768px) {
+  .header__nav,
+  .header__phone {
+    display: none;
+  }
+  .header__menu-button {
+    margin-left: auto;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .header__logo {
+    width: 54px;
+    left: 20px;
+  }
+}

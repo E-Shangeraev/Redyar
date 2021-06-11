@@ -106,3 +106,32 @@
     grid-row-gap: 45px;
   }
 }
+@media (max-width: 1024px) {
+  .footer .flex {
+    column-gap: 15px;
+  }
+  .footer__email {
+    a {
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer .flex {
+    flex-direction: column-reverse;
+    gap: 5em;
+  }
+  .footer__column {
+    width: 100%;
+    grid-row-gap: 30px;
+  }
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .footer__copyright,
+  .footer__policy {
+    font-size: 12px;
+  }
+}

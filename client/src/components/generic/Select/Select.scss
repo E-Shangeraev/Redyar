@@ -67,6 +67,7 @@
     row-gap: 1em;
   }
   button {
+    @include text;
     cursor: pointer;
     transition: ease 0.15s;
   }

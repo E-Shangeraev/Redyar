@@ -58,3 +58,17 @@
     height: 300px;
   }
 }
+@media (max-width: 500px) {
+  .location__address {
+    img {
+      max-width: 32px;
+    }
+    span {
+      padding: 1em;
+      font-size: 10px;
+    }
+  }
+  .location__map {
+    height: 200px;
+  }
+}
