@@ -21,7 +21,11 @@ $padding: 2em;
   cursor: pointer;
 
   span {
+    display: inline-block;
+    margin-right: 5%;
+    @include big-text;
     font-size: 22px;
+    text-align: left;
     line-height: 120%;
     font-weight: 500;
   }
@@ -37,11 +41,13 @@ $padding: 2em;
 
   * {
     margin: 0;
+    @include text;
     color: #fff !important;
   }
   ul,
   p {
     padding-bottom: $padding;
+    text-align: justify;
   }
   a {
     text-decoration: underline;
@@ -65,11 +71,11 @@ $padding: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background: $gray;
-
   transition: ease 0.15s;
 
   &:hover {
@@ -78,5 +84,31 @@ $padding: 2em;
   &--rotated {
     transform: rotate(90deg);
     background-color: $orange;
+  }
+}
+
+@media (max-width: 1279px) {
+  .faq__question {
+    @include medium-text;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+  }
+}
+@media (max-width: 500px) {
+  .faq__arrow {
+    width: 30px;
+    height: 30px;
+
+    svg {
+      width: 12px;
+    }
+  }
+  .faq__answer p {
+    text-align: justify;
+  }
+}
+@media (max-width: 350px) {
+  .faq__question span {
+    font-size: 14px;
   }
 }
