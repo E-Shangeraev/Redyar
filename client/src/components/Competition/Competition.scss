@@ -12,22 +12,41 @@
 .competition__name {
   display: inline-block;
   margin-bottom: 15px;
+  @include big-text;
   font-weight: 500;
-  font-size: 24px;
 }
 .competition__text {
   margin-bottom: 30px;
-  font-size: 18px;
+  @include medium-text;
   line-height: 120%;
   color: $l-gray-2;
 }
 .competition__complexity {
   margin-bottom: 35px;
-  font-size: 18px;
+  @include medium-text;
   line-height: 120%;
   color: $l-gray-2;
 
   b {
     color: $orange;
+  }
+}
+
+@media (max-width: 1366px) {
+  .competition {
+    margin-right: 15px;
+
+    & > div {
+      padding: 25px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .competition {
+    margin: 0 5px;
+
+    & > div {
+      padding: 1.5rem;
+    }
   }
 }
