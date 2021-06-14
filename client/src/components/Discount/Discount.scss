@@ -5,6 +5,7 @@
   span {
     position: relative;
     line-height: 130%;
+    white-space: nowrap;
   }
   span:nth-of-type(2) {
     left: 25%;
@@ -12,13 +13,32 @@
   }
 }
 .discount__for {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
 
   li {
-    max-width: 15%;
     @include text;
+    text-align: center;
     line-height: 150%;
     color: #f2f2f2;
+  }
+}
+@media (max-width: 800px) {
+  .discount .flex {
+    position: relative;
+  }
+  .discount__image {
+    position: absolute;
+    right: 0;
+    flex-shrink: 0;
+    width: 50%;
+    z-index: -1;
+  }
+}
+@media (max-width: 620px) {
+  .discount__image {
+    // top: -25%;
+    opacity: 0.4;
   }
 }

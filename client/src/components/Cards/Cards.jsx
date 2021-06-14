@@ -28,7 +28,7 @@ const Cards = ({
   return (
     <section className={classNames('cards', { 'cards--bg': withBackground })}>
       <div className="wrapper">
-        <div className="flex space-between align-center mb3">
+        <div className="cards__top mb3">
           <h2 className="title">{title}</h2>
           <p className="cards__footnote">{footnote}</p>
         </div>

@@ -41,7 +41,7 @@ const Price = () => {
           Заполните форму и мы ответим Вам в ближайшее время"
           withBackground
         />
-        <div className="pl pr" style={{ position: 'relative', zIndex: '1' }}>
+        <div className="wrapper" style={{ position: 'relative', zIndex: '1' }}>
           <picture>
             <source
               srcSet={imageWebpSmall}

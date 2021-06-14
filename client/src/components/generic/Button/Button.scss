@@ -1,6 +1,7 @@
 .button {
   @include text;
   padding: 13px 80px;
+  height: fit-content;
   text-align: center;
   border: 1px solid $orange;
   border-radius: 40px;

@@ -62,4 +62,10 @@
       height: calc(#{$height} / 1.2);
     }
   }
+  @media (max-width: 768px) {
+    &::before {
+      top: calc(#{$top} / 2);
+      height: calc(#{$height} / 2);
+    }
+  }
 }
