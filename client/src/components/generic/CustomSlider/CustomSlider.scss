@@ -77,7 +77,8 @@
   }
   .slider__arrows {
     position: absolute;
-    top: calc(50% - 15px);
+    // top: calc(50% - 15px);
+    top: 50%;
     left: 0;
     right: 0;
     justify-content: space-between !important;

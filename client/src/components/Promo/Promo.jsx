@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick'
 import ReactModal from 'react-modal'
 import Modal from '@components/Modal/Modal'
@@ -37,6 +37,19 @@ const Promo = ({ slides, schedule }) => {
     accessibility: true,
     arrows: false,
   }
+
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01
+    // Then we set the value in the --vh custom property to the root
+    // of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
+  }, [])
 
   return (
     <section className="promo">

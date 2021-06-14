@@ -1,6 +1,7 @@
 .promo__slider {
   .slide {
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
   }
   .slide__content {
     position: relative;
