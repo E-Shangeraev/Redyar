@@ -4,11 +4,11 @@ import classNames from 'classnames'
 import RecordForm from './RecordForm/RecordForm'
 
 const RecordBlock = ({ title, text, isCamp, hasTextarea }) => (
-  <div className={classNames('record__block', { 'flex gap2': !hasTextarea })}>
+  <div className={classNames('record__block', { flex: !hasTextarea })}>
     <div
       className={classNames('flex', {
         'column space-around': !hasTextarea,
-        'align-center mb2 gap2': hasTextarea,
+        'align-center mb2': hasTextarea,
       })}>
       <h3 className="title">
         {title && title.map(item => <span key={item}>{item}</span>)}

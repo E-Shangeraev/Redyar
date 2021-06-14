@@ -4,6 +4,10 @@
 .double-slider {
   .slick-slide {
     margin: 0 5px;
+
+    img {
+      height: 100%;
+    }
   }
 }
 .double-slider__component:nth-last-child(2) {
@@ -11,6 +15,14 @@
 }
 .double-slider__component:nth-last-child(1) {
   margin-bottom: 30px;
+}
+.double-slider__arrows {
+  display: flex;
+  align-items: center;
+
+  button:first-of-type {
+    margin-right: 1em;
+  }
 }
 
 @media (max-width: 500px) {
@@ -20,6 +32,9 @@
 
     .slick-slide {
       margin: 0;
+    }
+    .slick-track:first-child {
+      margin-bottom: 5px !important;
     }
   }
   .double-slider .wrapper > .flex {

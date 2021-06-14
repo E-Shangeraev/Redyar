@@ -40,7 +40,7 @@ const Article = () => {
                 {new Intl.DateTimeFormat().format(new Date(item.publishedAt))}
               </time>
             </div>
-            <div className="flex gap2">
+            <div className="flex">
               <div className="article__content">
                 <img
                   className="article__img"
@@ -52,7 +52,7 @@ const Article = () => {
                 </div>
                 <div className="article__share">
                   <span>Поделиться:</span>
-                  <ul className="flex gap1">
+                  <ul className="flex">
                     <li>
                       <VKShareButton
                         title={item.title}
@@ -82,7 +82,7 @@ const Article = () => {
                   Подписывайтесь на наши соцсети и следите за всеми нашими
                   новостями
                 </p>
-                <ul className="flex gap1">
+                <ul className="flex">
                   <li>
                     <SocialLink
                       link="https://vk.com/crossfitredyar"

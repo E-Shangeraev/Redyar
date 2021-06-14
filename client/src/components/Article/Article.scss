@@ -17,6 +17,7 @@
   opacity: 0.4;
 }
 .article__content {
+  margin-right: 2em;
   width: 70%;
   flex-shrink: 0;
 }
@@ -60,6 +61,10 @@
       }
     }
   }
+
+  ul li:not(:last-child) {
+    margin-right: 1em;
+  }
 }
 .subscribe {
   display: flex;
@@ -69,6 +74,10 @@
   height: fit-content;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+
+  ul li:not(:last-child) {
+    margin-right: 1em;
+  }
 }
 .subscribe__logo {
   width: 100px;

@@ -34,8 +34,10 @@
 .merch__sizes {
   display: flex;
   margin-bottom: 30px;
-  gap: 5px;
 
+  li:not(:last-of-type) {
+    margin-right: 5px;
+  }
   button {
     display: flex;
     justify-content: center;

@@ -31,7 +31,12 @@
     p {
       @include text;
       display: flex;
-      gap: 30px;
+      span {
+        display: inline-block;
+        &:not(:last-of-type) {
+          margin-right: 30px;
+        }
+      }
     }
   }
 }

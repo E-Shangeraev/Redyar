@@ -56,10 +56,12 @@
 }
 .worker__socials {
   display: flex;
-  gap: 15px;
 
   li {
     max-width: 30px;
+  }
+  li:not(:last-of-type) {
+    margin-right: 15px;
   }
 }
 

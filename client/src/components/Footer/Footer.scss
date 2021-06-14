@@ -38,7 +38,10 @@
 }
 .footer__socials {
   display: flex;
-  gap: 15px;
+
+  li:not(:last-of-type) {
+    margin-right: 15px;
+  }
 }
 .footer__phone {
   a {
@@ -119,7 +122,10 @@
 @media (max-width: 767px) {
   .footer .flex {
     flex-direction: column-reverse;
-    gap: 5em;
+
+    .footer__column:not(:first-child) {
+      margin-bottom: 5em;
+    }
   }
   .footer__column {
     width: 100%;

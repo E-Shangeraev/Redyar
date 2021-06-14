@@ -23,14 +23,17 @@
 .select__label {
   display: flex;
   align-items: center;
-  gap: 5%;
   width: 100%;
   font-family: $formular-r;
   font-size: 22px;
   line-height: 120%;
   cursor: pointer;
 
+  & > *:not(:last-child) {
+    margin-right: 5%;
+  }
   span {
+    display: inline-block;
     @include text;
     flex-shrink: 0;
   }

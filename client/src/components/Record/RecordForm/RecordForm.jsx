@@ -26,7 +26,6 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
     return (
       <Form>
         <div className="form__container">
-          {/* <div className="flex column gap2"> */}
           <Input type="name" placeholder="Иван" label="Ваше имя" />
           <Input
             type="tel"

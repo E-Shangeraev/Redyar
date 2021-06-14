@@ -20,6 +20,7 @@ const DoubleSlider = ({ title, settings, items }) => {
     dots: false,
     accessibility: true,
     arrows: false,
+    swipe: false,
     responsive: [
       {
         breakpoint: 1025,
@@ -50,7 +51,7 @@ const DoubleSlider = ({ title, settings, items }) => {
       <div className="wrapper double-slider__wrapper">
         <div className="flex space-between align-center mb5">
           <h2 className="title">{title}</h2>
-          <div className="double-slider__arrows flex align-center gap1">
+          <div className="double-slider__arrows">
             <SliderArrow type="prev" onClickHandle={prev} />
             <SliderArrow type="next" onClickHandle={next} />
           </div>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const OurAthlete = ({ photo, name, rank, achievements }) => (
   <div className="our-athlete">
-    <div className="flex align-center gap3 mb2">
+    <div className="flex align-center mb2">
       <img className="our-athlete__photo" src={photo} alt={name} />
       <div>
         <span className="our-athlete__name">{name}</span>

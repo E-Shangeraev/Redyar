@@ -12,6 +12,9 @@
   button:hover .title {
     color: #fff;
   }
+  button:not(:last-of-type) {
+    margin-right: 3em;
+  }
   .title {
     color: $l-gray-2;
     transition: ease 0.15s;

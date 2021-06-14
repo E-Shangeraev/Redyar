@@ -6,9 +6,6 @@
   .flex > div {
     width: 50%;
   }
-  .flex {
-    gap: 5%;
-  }
   &::after {
     position: absolute;
     content: url('../../assets/img/dust-5.png');
@@ -16,8 +13,11 @@
     bottom: -50%;
   }
 }
-.about__image img {
-  max-height: 700px;
+.about__image {
+  margin-right: 5%;
+  img {
+    max-height: 700px;
+  }
 }
 .about__text {
   font-size: 18px;

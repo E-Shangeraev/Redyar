@@ -45,6 +45,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #131718 inset !important;
+  box-shadow: 0 0 0 30px #131718 inset !important;
   -webkit-text-fill-color: $l-gray-2 !important;
   -webkit-padding-start: 0 !important;
 }
@@ -164,26 +165,6 @@ input:-webkit-autofill:active {
 }
 .mt5 {
   margin-top: 5em !important;
-}
-.gap1 {
-  column-gap: 1em !important;
-  row-gap: 1em !important;
-}
-.gap2 {
-  column-gap: 2em !important;
-  row-gap: 2em !important;
-}
-.gap3 {
-  column-gap: 3em !important;
-  row-gap: 3em !important;
-}
-.gap4 {
-  column-gap: 4em !important;
-  row-gap: 4em !important;
-}
-.gap5 {
-  column-gap: 5em !important;
-  row-gap: 5em !important;
 }
 
 @media (max-width: 1600px) {

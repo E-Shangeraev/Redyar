@@ -22,6 +22,14 @@
   p {
     @include medium-text;
   }
+  .align-center .title {
+    margin-right: 2em;
+  }
+}
+.record__block.flex {
+  & > div:first-of-type {
+    margin-right: 2em;
+  }
 }
 
 @media (max-width: 1280px) {

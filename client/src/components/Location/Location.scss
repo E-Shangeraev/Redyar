@@ -7,8 +7,10 @@
 .location__address {
   display: flex;
   align-items: center;
-  gap: 15px;
 
+  img {
+    margin-right: 15px;
+  }
   span {
     padding: 12px 20px;
     @include text;

@@ -1,7 +1,7 @@
 .promo__slider {
   .slide {
     min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
+    // min-height: calc(var(--vh, 1vh) * 100);
   }
   .slide__content {
     position: relative;
@@ -118,7 +118,10 @@
 }
 .promo__arrows {
   margin-right: 30px;
-  gap: 15px;
+
+  button:not(:last-of-type) {
+    margin-right: 15px;
+  }
 }
 .promo__arrow {
   cursor: pointer;
@@ -205,6 +208,9 @@
 }
 @media (max-width: 500px) {
   .promo__slider {
+    .slide {
+      min-height: 500px;
+    }
     .slide__content {
       padding-top: 0;
       padding-bottom: 0;

@@ -21,7 +21,7 @@ const AwardsTabs = () => {
   return (
     <section className="awards">
       <div className="wrapper">
-        <div className="flex gap3 mb3">
+        <div className="flex mb3">
           <button
             type="button"
             className={classNames({ active: activeTab === 1 })}

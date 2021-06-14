@@ -25,7 +25,7 @@ const CustomSlider = ({ title, settings, items, outerRight }) => {
       <div className="wrapper slider__wrapper">
         <div className="flex space-between align-center mb5">
           <h2 className="title">{title}</h2>
-          <div className="slider__arrows flex align-center gap1">
+          <div className="slider__arrows">
             <SliderArrow type="prev" onClickHandle={prev} />
             <SliderArrow type="next" onClickHandle={next} />
           </div>

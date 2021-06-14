@@ -10,7 +10,6 @@
 }
 .review {
   display: flex;
-  gap: 3em;
   margin-bottom: 3em;
 
   p {
@@ -19,6 +18,7 @@
     opacity: 0.5;
   }
 }
+
 .review__author {
   font-family: $formular-m;
   font-size: 20px;
@@ -30,8 +30,8 @@
   .reviews__list {
     margin-bottom: 2em;
   }
-  .review {
-    gap: 2em;
+  .review__photo {
+    margin-right: 2em;
   }
   .review__photo {
     max-width: 120px;
@@ -61,18 +61,15 @@
   }
 }
 @media (max-width: 500px) {
-  .review {
-    gap: 15px;
-
-    p {
-      line-height: 140%;
-    }
+  .review p {
+    line-height: 140%;
   }
   .review__grade svg {
     width: 15px;
     height: 15px;
   }
   .review__photo {
+    margin-right: 15px;
     width: 70px;
     height: 70px;
   }

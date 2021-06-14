@@ -39,7 +39,7 @@ const WorkersSlider = ({ dust }) => {
       <div className="wrapper workers__wrapper">
         <div className="flex space-between align-center mb5">
           <h2 className="title">наша команда</h2>
-          <div className="flex align-center gap1">
+          <div className="slider__arrows">
             <SliderArrow type="prev" onClickHandle={prev} />
             <SliderArrow type="next" onClickHandle={next} />
           </div>

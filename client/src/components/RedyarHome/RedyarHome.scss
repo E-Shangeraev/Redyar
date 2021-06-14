@@ -62,10 +62,12 @@
   }
   .redyar-home__content ul {
     flex-direction: column;
-    gap: 2em;
 
     li {
       width: fit-content;
+    }
+    li:not(:last-of-type) {
+      margin-bottom: 2em;
     }
   }
 }

@@ -17,7 +17,7 @@ const CampLocation = () => {
   return (
     <section className="camp-location">
       <div className="wrapper-w100-pl">
-        <div className="flex align-center gap2">
+        <div className="flex align-center">
           <div>
             <h2 className="title mb1">как добраться</h2>
             <p className="mb2">
