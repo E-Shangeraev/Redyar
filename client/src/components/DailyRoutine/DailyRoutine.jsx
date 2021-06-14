@@ -10,7 +10,7 @@ const DailyRoutine = () => (
     <div className="wrapper-w100">
       <h2 className="title pl">распорядок дня</h2>
 
-      <div className="flex">
+      <div className="routine__container">
         <picture className="routine__image">
           <source
             srcSet={imageWebpSmall}

@@ -22,8 +22,7 @@
     margin-left: auto;
   }
   p {
-    @include text;
-    font-size: 18px;
+    @include medium-text;
   }
 }
 .why__features {

@@ -5,3 +5,11 @@
     margin-bottom: 200px;
   }
 }
+
+@media (max-width: 500px) {
+  .video-report {
+    .video {
+      margin-bottom: 60px;
+    }
+  }
+}
