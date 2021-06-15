@@ -8,7 +8,7 @@ import Main from './pages/Main'
 // import Awards from './pages/Awards'
 // import Price from './pages/Price'
 // import Blog from './pages/Blog'
-// import Article from './pages/Article'
+import Article from './pages/Article'
 // import Shop from './pages/Shop/Shop'
 
 import '@assets/scss/App.scss'
@@ -21,7 +21,6 @@ const Beginners = React.lazy(() => import('./pages/Beginners'))
 const Awards = React.lazy(() => import('./pages/Awards'))
 const Price = React.lazy(() => import('./pages/Price'))
 const Blog = React.lazy(() => import('./pages/Blog'))
-const Article = React.lazy(() => import('./pages/Article'))
 const Shop = React.lazy(() => import('./pages/Shop/Shop'))
 
 const App = () => (

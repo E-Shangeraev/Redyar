@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import Record from '@components/Record/Record'
 import About from '@components/About/About'
-import CampPhotoSlider from '@components/CampPhotoSlider'
 import DailyRoutine from '@components/DailyRoutine/DailyRoutine'
 import Besides from '@components/Besides/Besides'
 import VideoReport from '@components/VideoReport/VideoReport'
@@ -26,6 +25,8 @@ import aboutImageWebp from '@assets/img/Camp/1.webp'
 import aboutImageJpgSmall from '@assets/img/Camp/1_small.jpg'
 import aboutImageWebpSmall from '@assets/img/Camp/1_small.webp'
 import aboutBg from '@assets/img/Camp/bg.png'
+
+const CampPhotoSlider = React.lazy(() => import('@components/CampPhotoSlider'))
 
 const Camp = () => {
   const promoSlides = [
@@ -81,7 +82,9 @@ const Camp = () => {
           items={['21 тренер', '2 недели', '40 человек', '29 испытаний']}
           background={aboutBg}
         />
-        <CampPhotoSlider />
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <CampPhotoSlider />
+        </Suspense>
         <DailyRoutine />
         <Besides />
         <VideoReport />

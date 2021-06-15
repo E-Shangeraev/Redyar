@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
@@ -12,7 +12,6 @@ import Athlete from '@components/Athlete/Athlete'
 import Schedule from '@components/Schedule/Schedule'
 
 import MerchSlider from '@components/MerchSlider'
-import ReportSlider from '@components/ReportSlider'
 import Location from '@components/Location/Location'
 import RedyarHome from '@components/RedyarHome/RedyarHome'
 import Footer from '@components/Footer/Footer'
@@ -26,6 +25,8 @@ import imgPhone2 from '@assets/img/Main/Promo/2_phone.jpg'
 import img3 from '@assets/img/Main/Promo/3.jpg'
 import imgTablet3 from '@assets/img/Main/Promo/3_tablet.jpg'
 import imgPhone3 from '@assets/img/Main/Promo/3_phone.jpg'
+
+const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
 
 const Main = () => {
   const promoSlides = [
@@ -122,7 +123,9 @@ const Main = () => {
         />
         <Schedule />
         <MerchSlider />
-        <ReportSlider />
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <ReportSlider />
+        </Suspense>
         <Location />
         <RedyarHome />
       </main>

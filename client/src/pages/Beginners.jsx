@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import Record from '@components/Record/Record'
 import About from '@components/About/About'
 import FeaturesBlocks from '@generic/FeaturesBlocks/FeaturesBlocks'
-import ReportSlider from '@components/ReportSlider'
 import Founder from '@components/Founder/Founder'
 import FAQ from '@components/FAQ/FAQ'
 import Location from '@components/Location/Location'
@@ -25,6 +24,8 @@ import aboutImageWebp from '@assets/img/Beginners/1.webp'
 import aboutImageJpgSmall from '@assets/img/Beginners/1_small.jpg'
 import aboutImageWebpSmall from '@assets/img/Beginners/1_small.webp'
 import aboutBg from '@assets/img/Beginners/bg.png'
+
+const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
 
 const Beginners = () => {
   const promoSlides = [
@@ -83,8 +84,9 @@ const Beginners = () => {
             ]}
           />
         </About>
-
-        <ReportSlider />
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <ReportSlider />
+        </Suspense>
         <Founder
           title="Основатель о кроссфите"
           channel="custom"

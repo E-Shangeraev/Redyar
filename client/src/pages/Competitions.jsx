@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import CompetitionSlider from '@components/CompetitionSlider'
-import ReportSlider from '@components/ReportSlider'
 import Footer from '@components/Footer/Footer'
 
 import img1 from '@assets/img/Main/Promo/2.jpg'
@@ -14,6 +13,8 @@ import imgPhone2 from '@assets/img/Main/Promo/3_phone.jpg'
 import img3 from '@assets/img/Main/Promo/4.jpg'
 import imgTablet3 from '@assets/img/Main/Promo/4_tablet.jpg'
 import imgPhone3 from '@assets/img/Main/Promo/4_phone.jpg'
+
+const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
 
 const Competitions = () => {
   const promoSlides = [
@@ -53,7 +54,9 @@ const Competitions = () => {
           schedule="Смотреть расписание соревнований"
         />
         <CompetitionSlider />
-        <ReportSlider />
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <ReportSlider />
+        </Suspense>
       </main>
       <Footer />
     </>

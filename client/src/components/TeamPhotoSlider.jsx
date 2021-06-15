@@ -27,7 +27,6 @@ const TeamPhotoSlider = () => {
           src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
           alt="Фото команды"
           key={uuidv4()}
-          loading="lazy"
         />
       ))
     : []
