@@ -1,5 +1,6 @@
 .categories {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 2em;
   margin-bottom: 70px;
 
@@ -19,5 +20,12 @@
       background-color: $orange;
       border: 1px solid $orange;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .categories {
+    margin-bottom: 30px;
+    column-gap: 1em;
   }
 }

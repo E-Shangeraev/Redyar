@@ -3,3 +3,19 @@
   min-height: 120vh;
   @include background-before('../../assets/img/bg-3.jpg', 0%, 100%);
 }
+
+@media (max-width: 1024px) {
+  .blog .wrapper > .flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+
+    .title {
+      margin-bottom: 1em;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .blog {
+    margin-top: 50px;
+  }
+}
