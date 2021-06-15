@@ -23,7 +23,6 @@ const {
   awardsRouter,
   priceRouter,
   blogRouter,
-  articleRouter,
 } = require('./routes')
 
 const app = express()
@@ -49,7 +48,6 @@ app.use('/api/faq', faqRouter)
 app.use('/api/awards', awardsRouter)
 app.use('/api/price', priceRouter)
 app.use('/api/blog', blogRouter)
-app.use('/blog', articleRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))

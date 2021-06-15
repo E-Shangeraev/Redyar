@@ -43,7 +43,7 @@ export const setArticleById = item => ({
 export const getArticleById = (id, request) => async dispatch => {
   dispatch(setLoaded(false))
 
-  const item = await request(`/blog/${id}`)
+  const item = await request(`/api/blog/${id}`)
 
   dispatch(setArticleById(item))
 }
