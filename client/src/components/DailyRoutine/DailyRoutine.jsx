@@ -19,7 +19,7 @@ const DailyRoutine = () => (
           />
           <source srcSet={imageJpgSmall} media="(max-width: 560px)" />
           <source srcSet={imageWebp} type="image/webp" />
-          <img src={imageJpg} alt="Фото с тренировки" />
+          <img src={imageJpg} alt="Фото с тренировки" loading="lazy" />
         </picture>
         <ul className="routine__schedule">
           <li>

@@ -14,7 +14,7 @@ const Discount = () => (
         </h2>
         <picture className="discount__image">
           <source srcSet={imageWebp} type="image/webp" />
-          <img src={imagePng} alt="10% скидка" />
+          <img src={imagePng} alt="10% скидка" loading="lazy" />
         </picture>
       </div>
       <ul className="discount__for">

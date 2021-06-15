@@ -18,7 +18,7 @@ const Merch = ({ img, name, price, sizes }) => {
 
   return (
     <div className="merch">
-      <img src={img} alt={name} className="merch__photo" />
+      <img src={img} alt={name} className="merch__photo" loading="lazy" />
       <div className="flex column">
         {availableSizes}
         <b>{price} руб</b>

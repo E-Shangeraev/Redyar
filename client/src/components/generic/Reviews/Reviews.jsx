@@ -43,6 +43,7 @@ const Reviews = () => {
                 className="review__photo"
                 src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
                 alt="{item.name}"
+                loading="lazy"
               />
               <div className="flex column space-between">
                 <div className="review__grade">

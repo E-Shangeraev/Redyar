@@ -14,7 +14,7 @@ const Worker = ({ photo, name, post, achievements, addition, socials }) => {
 
   return (
     <div className="worker">
-      <img className="worker__photo" src={photo} alt={name} />
+      <img className="worker__photo" src={photo} alt={name} loading="lazy" />
       <div className="flex column space-between">
         <p>
           <span className="worker__name">{name}</span>
@@ -27,14 +27,14 @@ const Worker = ({ photo, name, post, achievements, addition, socials }) => {
             {socials.vk ? (
               <li>
                 <a href={socials.vk} target="_blank" rel="noreferrer">
-                  <img src={vkIcon} alt="vk" />
+                  <img src={vkIcon} alt="vk" loading="lazy" />
                 </a>
               </li>
             ) : null}
             {socials.instagram ? (
               <li>
                 <a href={socials.instagram} target="_blank" rel="noreferrer">
-                  <img src={instIcon} alt="instagram" />
+                  <img src={instIcon} alt="instagram" loading="lazy" />
                 </a>
               </li>
             ) : null}

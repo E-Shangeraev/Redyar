@@ -15,6 +15,7 @@ const Footer = () => (
               className="footer__logo"
               src={logo}
               alt="Логотип Crossfit Redyar"
+              loading="lazy"
             />
           </Link>
           <nav className="footer__nav">

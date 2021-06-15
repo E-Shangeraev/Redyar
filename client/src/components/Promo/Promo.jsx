@@ -62,7 +62,7 @@ const Promo = ({ slides, schedule }) => {
                     srcSet={slide.imgTablet}
                     media="(max-width: 1024px)"
                   />
-                  <img src={slide.img} alt="Фото с тренировок" />
+                  <img src={slide.img} alt="Фото с тренировок" loading="lazy" />
                 </picture>
                 <h2 className="title slide__title">{slide.title}</h2>
                 <p>{slide.text}</p>

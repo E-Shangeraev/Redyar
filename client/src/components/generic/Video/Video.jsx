@@ -6,7 +6,7 @@ const Video = ({ preview, alt, channel, url, videoId }) => {
   const [isOpen, setOpen] = useState(false)
   return (
     <div className="video">
-      <img src={preview} alt={alt} />
+      <img src={preview} alt={alt} loading="lazy" />
       <ModalVideo
         channel={channel}
         autoplay

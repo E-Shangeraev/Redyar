@@ -14,7 +14,7 @@ const About = ({ image, alt, text, items, background, children }) => (
           />
           <source srcSet={image.jpgSmall} media="(max-width: 560px)" />
           <source srcSet={image.webp} type="image/webp" />
-          <img src={image.jpg} alt={alt} />
+          <img src={image.jpg} alt={alt} loading="lazy" />
         </picture>
         <div>
           <p className="about__text mb5">{text}</p>

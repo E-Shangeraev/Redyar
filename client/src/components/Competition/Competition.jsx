@@ -5,7 +5,7 @@ import Button from '@generic/Button/Button'
 const Competition = ({ img, name, text, complexity, openModalHandler }) => (
   <div>
     <div className="competition">
-      <img src={img} alt={name} className="competition__photo" />
+      <img src={img} alt={name} className="competition__photo" loading="lazy" />
       <div className="flex column">
         <span className="competition__name">{name}</span>
         <p className="competition__text">{text}</p>

@@ -51,7 +51,7 @@ const WorkersSlider = ({ dust }) => {
         {...settings}>
         <div>
           <div className="workers__slide">
-            <img className="workers__photo" src={img1} alt="" />
+            <img className="workers__photo" src={img1} alt="" loading="lazy" />
             <div>
               <p>
                 <span className="workers__name">Мосолов Игорь</span>

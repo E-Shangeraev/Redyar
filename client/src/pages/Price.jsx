@@ -54,6 +54,7 @@ const Price = () => {
               src={imageJpg}
               alt="6 занятий on ramp с тренером по 199 рублей"
               style={{ width: '100%', borderRadius: '15px' }}
+              loading="lazy"
             />
           </picture>
         </div>

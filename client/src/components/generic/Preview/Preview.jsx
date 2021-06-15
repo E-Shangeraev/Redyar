@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Preview = ({ img, category, title, date, id }) => (
   <figure className="preview">
-    <img src={img} alt={title} />
+    <img src={img} alt={title} loading="lazy" />
     <figcaption>
       <b className="category">{category}</b>
       <span className="preview__title">{title}</span>

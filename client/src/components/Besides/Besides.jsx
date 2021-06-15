@@ -19,7 +19,12 @@ const Besides = () => (
       </div>
       <ul className="besides__pastime">
         <li>
-          <img className="routine__image" src={img1} alt="походы" />
+          <img
+            className="routine__image"
+            src={img1}
+            alt="походы"
+            loading="lazy"
+          />
           <b>походы</b>
           <p>
             Походы на гору Чалпан, поездки в заповедник Сундуки и Туимский
@@ -27,17 +32,32 @@ const Besides = () => (
           </p>
         </li>
         <li>
-          <img className="routine__image" src={img2} alt="Воллейбол" />
+          <img
+            className="routine__image"
+            src={img2}
+            alt="Воллейбол"
+            loading="lazy"
+          />
           <b>Воллейбол</b>
           <p>Собреите команду из учатсников лагеря и сыграйте в воллейбол</p>
         </li>
         <li>
-          <img className="routine__image" src={img3} alt="Йога" />
+          <img
+            className="routine__image"
+            src={img3}
+            alt="Вечеринки"
+            loading="lazy"
+          />
           <b>вечеринки</b>
           <p>Устраиваем вечеринки</p>
         </li>
         <li>
-          <img className="routine__image" src={img4} alt="Футбол" />
+          <img
+            className="routine__image"
+            src={img4}
+            alt="Футбол"
+            loading="lazy"
+          />
           <b>Футбол</b>
           <p>Сыграйте в футбол с товарищами по лагерю на песчаном поле</p>
         </li>

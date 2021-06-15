@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import RecordButton from '@generic/RecordButton/RecordButton'
 import Modal from '@components/Modal/Modal'
-import MyMap from '@components/MyMap/MyMap'
+
+const MyMap = React.lazy(() => import('@components/MyMap/MyMap'))
 
 const CampLocation = () => {
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -35,7 +36,9 @@ const CampLocation = () => {
             />
           </div>
           <div className="camp-location__map">
-            <MyMap latitude={54.69995} longitude={90.189227} zoom={12} />
+            <Suspense fallback={<div>Загрузка...</div>}>
+              <MyMap latitude={54.69995} longitude={90.189227} zoom={12} />
+            </Suspense>
           </div>
         </div>
       </div>

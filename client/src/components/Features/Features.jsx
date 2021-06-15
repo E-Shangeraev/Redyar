@@ -12,7 +12,7 @@ const Features = () => (
       <li className="pl pr">
         <picture className="about__image">
           <source srcSet={imageWebp1} type="image/webp" />
-          <img src={imageJpg1} alt="новый спротивный зал" />
+          <img src={imageJpg1} alt="новый спротивный зал" loading="lazy" />
         </picture>
         <h3 className="subtitle">новый спротивный зал</h3>
         <p>
@@ -23,7 +23,11 @@ const Features = () => (
       <li className="pl pr">
         <picture className="about__image">
           <source srcSet={imageWebp2} type="image/webp" />
-          <img src={imageJpg2} alt="профессиональное оборудование" />
+          <img
+            src={imageJpg2}
+            alt="профессиональное оборудование"
+            loading="lazy"
+          />
         </picture>
         <h3 className="subtitle">профессиональное оборудование</h3>
         <p>
@@ -34,7 +38,7 @@ const Features = () => (
       <li className="pl pr">
         <picture className="about__image">
           <source srcSet={imageWebp3} type="image/webp" />
-          <img src={imageJpg3} alt="квалифицированные тренеры" />
+          <img src={imageJpg3} alt="квалифицированные тренеры" loading="lazy" />
         </picture>
         <h3 className="subtitle">квалифицированные тренеры</h3>
         <p>

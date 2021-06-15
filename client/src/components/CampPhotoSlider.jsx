@@ -27,6 +27,7 @@ const CampPhotoSlider = () => {
           src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
           alt="фото с “лагеря”"
           key={uuidv4()}
+          loading="lazy"
         />
       ))
     : []
