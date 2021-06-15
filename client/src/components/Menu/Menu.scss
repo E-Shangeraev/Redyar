@@ -1,0 +1,134 @@
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 115px);
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: $d-gray;
+  transition: ease-in-out 0.7s 0.7s;
+  z-index: -1;
+
+  .title,
+  .menu__nav,
+  .menu__decorate {
+    transition: opacity ease-in-out 0.7s 0s;
+    opacity: 0;
+  }
+}
+.menu__nav {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column-gap: 5%;
+  }
+  li {
+    padding: 1.5em 0;
+    font-family: $formular-r;
+    font-size: 32px;
+    border-bottom: 2px solid $l-gray;
+  }
+  span {
+    color: rgba(255, 255, 255, 0.1);
+  }
+  a {
+    padding: 0 1.5em;
+    transition: ease 0.15s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+.menu__decorate {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: $druk;
+  font-size: 164px;
+  font-weight: bold;
+  line-height: 0.7;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.05);
+}
+.menu--opened {
+  transform: scaleY(1);
+
+  .title,
+  .menu__nav,
+  .menu__decorate {
+    transition-delay: 1.4s;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1440px) {
+  .menu__nav {
+    li {
+      padding: 6% 0;
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 1366px) {
+  .menu__nav {
+    li {
+      padding: 1em 0;
+      font-size: 28px;
+    }
+  }
+  .menu__decorate {
+    font-size: 156px;
+  }
+}
+@media (max-width: 1024px) {
+  .menu__nav {
+    li {
+      padding: 1em 0;
+      font-size: 24px;
+    }
+  }
+  .menu__decorate {
+    font-size: 140px;
+  }
+}
+@media (max-width: 800px) {
+  .menu {
+    .title {
+      display: none;
+    }
+    .wrapper {
+      padding-top: 0;
+    }
+  }
+  .menu__nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      padding: 0.7em 0;
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .menu {
+    height: calc(100vh - 50px);
+
+    .title {
+      display: none;
+    }
+    .wrapper {
+      padding-top: 5%;
+    }
+  }
+  .menu__nav {
+    li {
+      padding: 5% 0;
+      font-size: 20px;
+    }
+  }
+  .menu__decorate {
+    display: none;
+  }
+}

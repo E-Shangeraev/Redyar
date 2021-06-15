@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Header from '@components/Header/Header'
+import Menu from '@components/Menu/Menu'
 import Promo from '@components/Promo/Promo'
 import Record from '@components/Record/Record'
 import Features from '@components/Features/Features'
@@ -103,6 +104,7 @@ const Main = () => {
   return (
     <>
       <Header />
+      {/* <Menu /> */}
       <main>
         <h1 className="visually-hidden">Главная страница</h1>
         <Promo slides={promoSlides} schedule="Смотреть расписание тренировок" />

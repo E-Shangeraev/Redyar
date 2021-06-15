@@ -1,18 +1,24 @@
 .header {
   position: absolute;
   top: 0;
-  padding: 50px 60px 50px 35%;
   width: 100%;
   z-index: 9999;
+}
+.header__container {
+  height: 115px;
+  padding: 50px 60px 50px 35%;
+  transition: background-color ease-in-out 0.5s 1.4s;
 
-  div {
+  & > div:first-of-type {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    & > *:not(:last-child) {
-      margin-right: 5%;
-    }
+  }
+  .header__phone {
+    margin-left: auto;
+    margin-right: 15%;
+  }
+  .header__nav {
+    transition: opacity ease-in-out 0.5s;
   }
 }
 .header__logo {
@@ -45,8 +51,9 @@
   padding: 0;
   position: relative;
   width: 100px;
+  height: 18px;
   @include text;
-  line-height: 100%;
+  line-height: 120%;
   text-align: left;
   background-color: transparent;
   border: none;
@@ -60,17 +67,56 @@
     width: 30px;
     height: 2px;
     background-color: #fff;
+    transition: ease-in 0.2s;
+    transform-origin: center;
+    transform: rotate(0);
   }
   &::before {
-    top: 0;
+    top: 5%;
   }
   &::after {
-    bottom: 0;
+    bottom: 5%;
+  }
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $orange;
+    }
+    &::after {
+      right: -10px;
+    }
+  }
+}
+.header__container--dark {
+  padding-right: 82px;
+  background-color: $d-gray;
+  transition-delay: 0s;
+
+  .header__nav {
+    opacity: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+  .header__menu-button {
+    &::before {
+      top: 8px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 8px;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      right: 0;
+    }
   }
 }
 
 @media (max-width: 1280px) {
-  .header {
+  .header__container {
     padding-left: 25%;
   }
   .header__logo {
@@ -78,6 +124,11 @@
   }
   .header__menu-button {
     width: 90px;
+  }
+}
+@media (max-width: 1024px) {
+  .header__container--dark {
+    padding-right: 60px;
   }
 }
 @media (max-width: 768px) {
@@ -90,8 +141,11 @@
   }
 }
 @media (max-width: 500px) {
-  .header {
-    padding: 15px 20px;
+  .header__container {
+    height: 50px;
+  }
+  .header__container {
+    padding: 15px 20px !important;
   }
   .header__logo {
     width: 54px;

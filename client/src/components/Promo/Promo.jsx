@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import ReactModal from 'react-modal'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import Modal from '@components/Modal/Modal'
 import { v4 as uuidv4 } from 'uuid'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
@@ -39,16 +40,6 @@ const Promo = ({ slides, schedule }) => {
     swipe: false,
   }
 
-  // useEffect(() => {
-  //   let vh = window.innerHeight * 0.01
-  //   document.documentElement.style.setProperty('--vh', `${vh}px`)
-
-  //   window.addEventListener('resize', () => {
-  //     vh = window.innerHeight * 0.01
-  //     document.documentElement.style.setProperty('--vh', `${vh}px`)
-  //   })
-  // }, [])
-
   return (
     <section className="promo">
       <Slider ref={promoSliderRef} className="promo__slider" {...settings}>
@@ -78,9 +69,9 @@ const Promo = ({ slides, schedule }) => {
           <span>Листайте вниз</span>
         </div>
         <div>
-          <a className="promo__schedule" href="#schedule">
+          <Link to="schedule" smooth className="promo__schedule">
             {schedule}
-          </a>
+          </Link>
           <div>
             <div className="promo__arrows">
               <PromoPrevArrow onClickHandle={prev} />
