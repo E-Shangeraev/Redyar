@@ -1,7 +1,11 @@
 .awards {
-  @include background-before('../../assets/img/bg-2.jpg', -50%);
-  min-height: 100vh;
+  @include background-before('../../assets/img/bg-2.jpg', -60%, 250%);
+  // min-height: 100vh;
+  background-position: center;
 
+  .flex {
+    flex-wrap: wrap;
+  }
   button {
     cursor: pointer;
   }
@@ -17,16 +21,17 @@
   }
   .title {
     color: $l-gray-2;
+    line-height: 130%;
     transition: ease 0.15s;
   }
 }
 .awards__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 1.5em;
+  grid-gap: 1.5em;
 
   li {
-    padding: 60px 80px;
+    padding: 10% 10%;
     background-color: $l-gray;
 
     * {
@@ -41,8 +46,7 @@
 }
 .awards__title {
   margin-bottom: 15px;
-  font-weight: 500;
-  font-size: 24px;
+  @include big-text;
   line-height: 120%;
   color: #f2f2f2;
 }
@@ -50,4 +54,7 @@
   @include text;
   line-height: 120%;
   color: $l-gray-2;
+}
+
+@media (max-width: 1366px) {
 }
