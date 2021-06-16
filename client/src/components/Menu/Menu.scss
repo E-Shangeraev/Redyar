@@ -114,14 +114,15 @@
 }
 @media (max-width: 500px) {
   .menu {
-    height: calc(100vh - 50px);
-
     .title {
       display: none;
     }
     .wrapper {
       padding-top: 5%;
     }
+  }
+  .menu--opened {
+    height: calc(100vh - 50px);
   }
   .menu__nav {
     li {

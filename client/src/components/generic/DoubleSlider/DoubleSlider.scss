@@ -32,6 +32,12 @@
 
     .slick-slide {
       margin: 0;
+      max-height: 38vh;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+      }
     }
     .slick-track:first-child {
       margin-bottom: 5px !important;

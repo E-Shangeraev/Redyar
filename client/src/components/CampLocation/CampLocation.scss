@@ -1,6 +1,33 @@
+.camp-location {
+  @include medium-text;
+}
 .camp-location__map {
   margin-left: 2em;
+  flex-shrink: 0;
   width: 50%;
-  height: 100%;
+  height: 300px;
+  // max-height: 300px;
   background-image: url('../../assets/img/Camp/8.jpg');
+}
+
+@media (max-width: 768px) {
+  .camp-location .flex {
+    flex-direction: column;
+
+    div:first-of-type {
+      margin-bottom: 15px;
+    }
+    p {
+      width: 60%;
+    }
+  }
+  .camp-location__map {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .camp-location__map {
+    margin-right: 20px;
+  }
 }
