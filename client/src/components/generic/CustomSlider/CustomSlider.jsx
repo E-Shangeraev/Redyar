@@ -17,6 +17,7 @@ const CustomSlider = ({ title, settings, items, outerRight }) => {
   const defaultSettings = {
     dots: false,
     accessibility: true,
+    lazyLoad: true,
     arrows: false,
   }
 

@@ -76,6 +76,7 @@ const Main = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    initialSlide: 1,
     responsive: [
       {
         breakpoint: 1601,
