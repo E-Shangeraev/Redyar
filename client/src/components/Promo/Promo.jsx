@@ -63,13 +63,13 @@ const Promo = ({ slides, schedule }) => {
       </Slider>
       <div className="promo__bottom">
         <div className="promo__mouse">
-          <object type="image/svg+xml" data={mouseSvg}>
+          <object type="image/svg+xml" data={mouseSvg} tabIndex="-1">
             Your browser does not support SVG
           </object>
           <span>Листайте вниз</span>
         </div>
         <div>
-          <Link to="schedule" smooth className="promo__schedule">
+          <Link to="schedule" smooth className="promo__schedule" tabIndex="0">
             {schedule}
           </Link>
           <div>

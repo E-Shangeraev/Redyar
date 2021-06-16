@@ -4,10 +4,13 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const Menu = ({ isOpened }) => (
-  <div className={classNames('menu', { 'menu--opened': isOpened })}>
+  <div
+    className={classNames('menu', { 'menu--opened': isOpened })}
+    aria-hidden={isOpened ? 'false' : 'true'}
+    role="menu">
     <div className="wrapper">
       <h2 className="title">Меню</h2>
-      <nav className="menu__nav">
+      <nav className="menu__nav" role="navigation">
         <ul>
           <li>
             <span>01</span>

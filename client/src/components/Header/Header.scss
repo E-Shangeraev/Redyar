@@ -53,7 +53,7 @@
   width: 100px;
   height: 18px;
   @include text;
-  line-height: 120%;
+  line-height: 110%;
   text-align: left;
   background-color: transparent;
   border: none;
@@ -75,7 +75,7 @@
     top: 5%;
   }
   &::after {
-    bottom: 5%;
+    bottom: 6%;
   }
   &:hover {
     &::before,

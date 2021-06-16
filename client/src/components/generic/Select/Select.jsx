@@ -47,7 +47,7 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
       })}
       onFocus={onFocusHandle}
       onBlur={e => onBlurHandle(e)}>
-      <label className="select__label" htmlFor={id}>
+      <label className="select__label" htmlFor={id} aria-haspopup="true">
         <span>{label}</span>
         <input
           id={id}
@@ -67,11 +67,12 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
       </label>
       {visiblePopup && (
         <div className="select__popup">
-          <ul>
+          <ul role="menu">
             {items.map(item => (
-              <li key={uuidv4()}>
+              <li key={uuidv4()} role="none">
                 <button
                   type="button"
+                  role="menuitem"
                   className={activeItem === item ? 'active' : ''}
                   onClick={() => onSelectItem(item)}>
                   {item}

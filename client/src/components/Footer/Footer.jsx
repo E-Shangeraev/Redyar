@@ -10,13 +10,8 @@ const Footer = () => (
     <div className="wrapper footer__wrapper">
       <div className="flex">
         <div className="footer__column">
-          <Link to="/">
-            <img
-              className="footer__logo"
-              src={logo}
-              alt="Логотип Crossfit Redyar"
-              loading="lazy"
-            />
+          <Link to="/" className="footer__logo">
+            <img src={logo} alt="Логотип Crossfit Redyar" loading="lazy" />
           </Link>
           <nav className="footer__nav">
             <Link to="/team">Команда</Link>

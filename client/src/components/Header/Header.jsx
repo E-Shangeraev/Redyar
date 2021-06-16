@@ -13,21 +13,23 @@ const Header = () => {
     document.body.style.overflow = toggleMenu ? 'hidden' : ''
   }, [toggleMenu])
 
+  useEffect(() => {
+    document.body.addEventListener('keydown', e =>
+      e.keyCode === 27 ? setToggleMenu(false) : null
+    )
+  }, [])
+
   return (
     <header className="header">
       <div
         className={classNames('header__container', {
           'header__container--dark': toggleMenu,
         })}>
-        <Link to="/">
-          <img
-            className="header__logo"
-            src={logo}
-            alt="Логотип Crossfit Redyar"
-          />
+        <Link to="/" className="header__logo">
+          <img src={logo} alt="Логотип Crossfit Redyar" />
         </Link>
         <div>
-          <nav className="header__nav">
+          <nav className="header__nav" role="navigation">
             <Link to="/team">Команда</Link>
             <Link to="/competitions">Соревнования</Link>
             <Link to="/beginners">Новичкам</Link>
@@ -39,6 +41,7 @@ const Header = () => {
           <button
             className="header__menu-button"
             type="button"
+            aria-haspopup="true"
             onClick={btnMenuClickHandler}>
             {toggleMenu ? 'Закрыть' : 'Меню'}
           </button>
