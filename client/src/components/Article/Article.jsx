@@ -57,7 +57,7 @@ const Article = () => {
                       <VKShareButton
                         title={item.title}
                         image={item.uploadedFile.path}
-                        url={location.pathname}
+                        url={`cfry.ru${location.pathname}`}
                         noVkLinks>
                         <SocialIcon name="vk" />
                       </VKShareButton>
@@ -65,7 +65,7 @@ const Article = () => {
                     <li>
                       <InstapaperShareButton
                         title={item.title}
-                        url={location.pathname}>
+                        url={`cfry.ru${location.pathname}`}>
                         <SocialIcon name="instagram" />
                       </InstapaperShareButton>
                     </li>
