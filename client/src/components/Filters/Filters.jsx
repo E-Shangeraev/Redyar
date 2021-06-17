@@ -1,9 +1,8 @@
 import React from 'react'
 
 const Filters = () => {
-  const onChangeValue = event => {
-    console.log(event.target.value)
-  }
+  const onChangeValue = event => event.target.value
+  // console.log(event.target.value)
 
   return (
     <aside className="filters">

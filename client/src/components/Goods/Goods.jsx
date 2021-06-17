@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from 'uuid'
 import { getMerch } from '@redux/actions/merch'
 import useHttp from '@hooks/http.hook'
 import Merch from '@components/Merch/Merch'
-import PropTypes from 'prop-types'
 
 const Goods = () => {
   const dispatch = useDispatch()

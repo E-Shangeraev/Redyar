@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import ReactModal from 'react-modal'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import Modal from '@components/Modal/Modal'
 import { v4 as uuidv4 } from 'uuid'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
