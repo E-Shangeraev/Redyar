@@ -1,5 +1,4 @@
 .article {
-  // min-height: 120vh;
   @include background-before('../../assets/img/bg-3.jpg', -10%, 100%);
   margin-top: 100px;
 }
@@ -130,6 +129,9 @@
   }
 }
 @media (max-width: 500px) {
+  .article {
+    margin-top: 50px;
+  }
   .article__title {
     font-size: 20px;
   }
