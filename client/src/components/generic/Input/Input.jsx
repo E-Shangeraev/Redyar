@@ -24,13 +24,7 @@ const Input = ({ type, label, placeholder, mask, changeHandler }) => {
           onFocus={onFocusHandle}
           onBlur={onBlurHandle}>
           {() => (
-            <input
-              type={type}
-              name={type}
-              id={id}
-              placeholder={placeholder}
-              required
-            />
+            <input type={type} name={type} id={id} placeholder={placeholder} />
           )}
         </InputMask>
       ) : (
@@ -42,7 +36,6 @@ const Input = ({ type, label, placeholder, mask, changeHandler }) => {
           onChange={changeHandler}
           onFocus={onFocusHandle}
           onBlur={onBlurHandle}
-          required
         />
       )}
     </label>

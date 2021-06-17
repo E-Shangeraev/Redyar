@@ -12,8 +12,8 @@ const messangers = ['Telegram', 'Viber', 'WhatsUp']
 
 const RecordForm = ({ isCamp, hasTextarea }) => {
   const { request } = useHttp()
-  const [isDisabled, setIsDisabled] = useState(true)
-  const [error, setError] = useState(null)
+  const [isValid, setIsValid] = useState(false)
+  const [error, setError] = useState('')
   const [formValue, setFormValue] = useState({
     name: null,
     tel: null,
@@ -23,6 +23,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
   })
 
   const onSelect = useCallback((key, selectedItem) => {
+    setError('')
     setFormValue(prev => ({
       ...prev,
       [key]: selectedItem,
@@ -30,6 +31,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
   })
 
   const onChangeForm = useCallback(e => {
+    setError('')
     setFormValue(prev => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -38,31 +40,29 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
 
   const validateForm = inputs => {
     inputs.forEach(inputValue => {
-      if (!inputValue) {
-        setError('Необходимо заполнить все поля')
-        return setIsDisabled(true)
+      console.log(inputValue.length)
+
+      if (inputValue.length === 0) {
+        return setIsValid(false)
       }
-      setError(null)
-      return setIsDisabled(false)
+      return setIsValid(true)
     })
   }
 
   const onSubmitForm = async e => {
     e.preventDefault()
 
-    console.log(formValue)
+    if (isValid) {
+      console.log(formValue)
+    } else {
+      setError('*Необходимо заполнить все поля')
+    }
 
     // const { message } = await request('/api/mail', 'POST', formValue)
 
     // if (message === 'ok') {
     //   console.log('Успешно!')
     // }
-  }
-
-  const handleError = () => {
-    if (error) {
-      console.log(error)
-    }
   }
 
   useEffect(() => {
@@ -82,6 +82,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
   if (hasTextarea) {
     return (
       <Form onSubmit={onSubmitForm}>
+        {error && <p className="error">{error}</p>}
         <div className="form__container">
           <Input
             type="name"
@@ -104,12 +105,8 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
             label="Выберите мессенджер для связи"
             outline
           />
-          <Button
-            type="submit"
-            disabled={isDisabled}
-            onClickHandler={handleError}>
-            Записаться
-          </Button>
+
+          <Button type="submit">Записаться</Button>
           <Textarea
             name="text"
             placeholder="Введите ваш вопрос"
@@ -152,9 +149,8 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
           outline
         />
       ) : null}
-      <Button type="submit" disabled={isDisabled} onClickHandler={handleError}>
-        Записаться
-      </Button>
+      {error && <p className="error">{error}</p>}
+      <Button type="submit">Записаться</Button>
     </Form>
   )
 }
