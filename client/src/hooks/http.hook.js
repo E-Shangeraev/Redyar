@@ -36,9 +36,8 @@ const useHttp = () => {
     },
     []
   )
-  const clearError = () => setError(null)
 
-  return { loading, request, error, clearError }
+  return { loading, request, error }
 }
 
 export default useHttp

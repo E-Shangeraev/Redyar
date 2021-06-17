@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-const Select = ({ label, activeItem, onClickItem, items, outline }) => {
+const Select = ({ label, name, activeItem, onClickItem, items, outline }) => {
   const selectRef = useRef()
   const [visiblePopup, setVisiblePopup] = useState(false)
   const [focus, setFocus] = useState(false)
@@ -20,8 +20,8 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
 
   const toggleVisiblePopup = () => setVisiblePopup(!visiblePopup)
 
-  const onSelectItem = item => {
-    onClickItem(item)
+  const onSelectItem = (key, item) => {
+    onClickItem(key, item)
     setFocus(false)
     setVisiblePopup(false)
   }
@@ -54,6 +54,7 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
           type="button"
           onClick={toggleVisiblePopup}
           value={activeItem || ''}
+          required
         />
         <svg
           className={visiblePopup ? 'rotated' : ''}
@@ -74,7 +75,7 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
                   type="button"
                   role="menuitem"
                   className={activeItem === item ? 'active' : ''}
-                  onClick={() => onSelectItem(item)}>
+                  onClick={() => onSelectItem(name, item)}>
                   {item}
                 </button>
               </li>
@@ -88,6 +89,7 @@ const Select = ({ label, activeItem, onClickItem, items, outline }) => {
 
 Select.propTypes = {
   activeItem: PropTypes.string,
+  name: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClickItem: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
@@ -97,6 +99,7 @@ Select.propTypes = {
 Select.defaultProps = {
   activeItem: null,
   outline: false,
+  name: '',
 }
 
 export default Select
