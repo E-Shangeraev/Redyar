@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import ModalVideo from 'react-modal-video'
 
 const Video = ({ preview, alt, channel, url, videoId }) => {
   const [isOpen, setOpen] = useState(false)
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+  }, [isOpen])
+
   return (
     <div className="video">
       <img src={preview} alt={alt} loading="lazy" />

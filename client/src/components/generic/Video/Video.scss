@@ -7,6 +7,9 @@
     width: 100%;
   }
 }
+.modal-video {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .video__play-button {
   position: absolute;
   left: calc(50% - 152px / 2);

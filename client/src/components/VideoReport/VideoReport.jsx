@@ -10,8 +10,8 @@ const VideoReport = () => (
       <Video
         preview={preview}
         channel="youtube"
-        videoId="90EwfyGRVN4"
-        alt="Видео с основателем Crossfit Redyar"
+        videoId="qhxIl6NtlSQ"
+        alt="Видео с лагеря Crossfit Redyar"
       />
       <div className="pr">
         <Reviews />
