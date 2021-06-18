@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import RecordForm from './RecordForm/RecordForm'
 
-const RecordBlock = ({ title, text, isCamp, hasTextarea }) => (
+const RecordBlock = ({ title, text, isCamp, hasTextarea, onSubmit }) => (
   <div className={classNames('record__block', { flex: !hasTextarea })}>
     <div
       className={classNames('flex', {
@@ -15,7 +15,7 @@ const RecordBlock = ({ title, text, isCamp, hasTextarea }) => (
       </h3>
       <p className={classNames({ modal__text: hasTextarea })}>{text}</p>
     </div>
-    <RecordForm isCamp={isCamp} hasTextarea={hasTextarea} />
+    <RecordForm isCamp={isCamp} hasTextarea={hasTextarea} onSubmit={onSubmit} />
   </div>
 )
 
@@ -24,6 +24,7 @@ RecordBlock.propTypes = {
   text: PropTypes.string.isRequired,
   isCamp: PropTypes.bool,
   hasTextarea: PropTypes.bool,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 RecordBlock.defaultProps = {

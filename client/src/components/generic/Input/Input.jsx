@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { v4 as uuidv4 } from 'uuid'
 
-const Input = ({ type, label, placeholder, mask, changeHandler }) => {
+const Input = ({ type, value, label, placeholder, mask, changeHandler }) => {
   const [focus, setFocus] = useState(false)
 
   const onFocusHandle = () => setFocus(true)
@@ -20,6 +20,7 @@ const Input = ({ type, label, placeholder, mask, changeHandler }) => {
       {mask ? (
         <InputMask
           mask={mask}
+          value={value}
           onChange={changeHandler}
           onFocus={onFocusHandle}
           onBlur={onBlurHandle}>
@@ -48,11 +49,13 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   mask: PropTypes.string,
   changeHandler: PropTypes.func.isRequired,
+  value: PropTypes.string,
 }
 
 Input.defaultProps = {
   placeholder: 'Текст',
   mask: '',
+  value: '',
 }
 
 export default Input

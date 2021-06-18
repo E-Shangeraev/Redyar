@@ -112,6 +112,7 @@ const Main = () => {
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие, заполнив
           форму и получите приветственный бонус от нас"
+          isFirst
         />
         <Features />
         <Founder title="Основатель" videoId="B0HNWZarxcc" channel="youtube" />

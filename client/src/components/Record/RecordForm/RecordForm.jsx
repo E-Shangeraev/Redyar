@@ -10,7 +10,7 @@ import useHttp from '@hooks/http.hook'
 const options = ['1-й поток с 05.08 по 15.08']
 const messangers = ['Telegram', 'Viber', 'WhatsUp']
 
-const RecordForm = ({ isCamp, hasTextarea }) => {
+const RecordForm = ({ isCamp, hasTextarea, onSubmit }) => {
   const { request } = useHttp()
   const formRef = useRef()
   const [isValid, setIsValid] = useState(false)
@@ -73,6 +73,15 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
       // if (message === 'ok') {
       //   console.log('Успешно!')
       formRef.current.reset()
+      setFormValue(prev => ({
+        ...prev,
+        tel: '',
+        messanger: '',
+        option: '',
+      }))
+      onSubmit()
+      setIsValid(false)
+      setError('')
       // }
     } else {
       setError('*Необходимо заполнить все поля')
@@ -109,6 +118,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
             placeholder="+7 (___)-___-__-__"
             label="Номер телефона"
             mask="+7\ (999)-999-99-99"
+            value={formValue.tel}
             changeHandler={onChangeForm}
           />
           <Select
@@ -116,7 +126,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
             onClickItem={onSelect}
             items={messangers}
             name="messanger"
-            label="Выберите мессенджер для связи"
+            label="Мессенджер для связи"
             outline
           />
 
@@ -131,7 +141,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
     )
   }
   return (
-    <Form className="record__form" onSubmit={onSubmitForm}>
+    <Form className="record__form" onSubmit={onSubmitForm} ref={formRef}>
       <Input
         type="name"
         placeholder="Иван"
@@ -143,6 +153,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
         placeholder="+7 (___)-___-__-__"
         label="Номер телефона"
         mask="+7\ (999)-999-99-99"
+        value={formValue.tel}
         changeHandler={onChangeForm}
       />
       <Select
@@ -150,7 +161,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
         onClickItem={onSelect}
         items={messangers}
         name="messanger"
-        label="Выберите мессенджер для связи"
+        label="Мессенджер для связи"
         outline
       />
       {isCamp ? (
@@ -172,6 +183,7 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
 RecordForm.propTypes = {
   isCamp: PropTypes.bool,
   hasTextarea: PropTypes.bool,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 RecordForm.defaultProps = {
