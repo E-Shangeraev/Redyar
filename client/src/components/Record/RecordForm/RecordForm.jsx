@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import Form from '@generic/Form/Form'
 import Input from '@generic/Input/Input'
@@ -12,14 +12,15 @@ const messangers = ['Telegram', 'Viber', 'WhatsUp']
 
 const RecordForm = ({ isCamp, hasTextarea }) => {
   const { request } = useHttp()
+  const formRef = useRef()
   const [isValid, setIsValid] = useState(false)
   const [error, setError] = useState('')
   const [formValue, setFormValue] = useState({
-    name: null,
-    tel: null,
-    text: null,
-    messanger: null,
-    option: null,
+    name: '',
+    tel: '',
+    text: '',
+    messanger: '',
+    option: '',
   })
 
   const onSelect = useCallback((key, selectedItem) => {
@@ -38,15 +39,27 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
     }))
   })
 
-  const validateForm = inputs => {
-    inputs.forEach(inputValue => {
-      console.log(inputValue.length)
+  const checkEmptyInputs = inputs =>
+    inputs.find(input => input.length === 0) === undefined
 
-      if (inputValue.length === 0) {
-        return setIsValid(false)
-      }
-      return setIsValid(true)
-    })
+  const checkName = name => {
+    const has = name.match(/[a-яА-ЯЁё]/g)
+    return has ? has.length >= 2 && has.length <= 20 : false
+  }
+
+  const checkTel = tel => {
+    const has = tel.match(/\d/g)
+    return has ? has.length === 11 : false
+  }
+
+  const validateForm = obj => {
+    const inputs = Object.values(obj)
+
+    if (checkEmptyInputs(inputs) && checkName(obj.name) && checkTel(obj.tel)) {
+      setIsValid(true)
+    } else {
+      setIsValid(false)
+    }
   }
 
   const onSubmitForm = async e => {
@@ -54,34 +67,35 @@ const RecordForm = ({ isCamp, hasTextarea }) => {
 
     if (isValid) {
       console.log(formValue)
+
+      // const { message } = await request('/api/mail', 'POST', formValue)
+
+      // if (message === 'ok') {
+      //   console.log('Успешно!')
+      formRef.current.reset()
+      // }
     } else {
       setError('*Необходимо заполнить все поля')
     }
-
-    // const { message } = await request('/api/mail', 'POST', formValue)
-
-    // if (message === 'ok') {
-    //   console.log('Успешно!')
-    // }
   }
 
   useEffect(() => {
     const { name, tel, text, messanger, option } = formValue
 
     if (hasTextarea && text) {
-      validateForm([name, tel, messanger, text])
+      validateForm({ name, tel, messanger, text })
     }
     if (isCamp && option) {
-      validateForm([name, tel, messanger, option])
+      validateForm({ name, tel, messanger, option })
     }
     if (!hasTextarea && !isCamp) {
-      validateForm([name, tel, messanger])
+      validateForm({ name, tel, messanger })
     }
   }, [formValue])
 
   if (hasTextarea) {
     return (
-      <Form onSubmit={onSubmitForm}>
+      <Form onSubmit={onSubmitForm} ref={formRef}>
         {error && <p className="error">{error}</p>}
         <div className="form__container">
           <Input
