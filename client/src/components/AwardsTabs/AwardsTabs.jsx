@@ -19,7 +19,7 @@ const AwardsTabs = () => {
   }, [])
 
   return (
-    <section className="awards">
+    <section className="awards" id="awards">
       <div className="wrapper">
         <div className="flex mb3">
           <button

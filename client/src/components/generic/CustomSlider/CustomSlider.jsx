@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
 import classNames from 'classnames'
 
-const CustomSlider = ({ title, settings, items, outerRight }) => {
+const CustomSlider = ({ title, settings, items, outerRight, id }) => {
   const sliderRef = useRef()
 
   const next = () => {
@@ -22,7 +22,7 @@ const CustomSlider = ({ title, settings, items, outerRight }) => {
   }
 
   return (
-    <section className="slider">
+    <section className="slider" id={id}>
       <div className="wrapper slider__wrapper">
         <div className="flex space-between align-center mb5">
           <h2 className="title">{title}</h2>
@@ -51,10 +51,12 @@ CustomSlider.propTypes = {
   settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),
   outerRight: PropTypes.bool,
+  id: PropTypes.string,
 }
 
 CustomSlider.defaultProps = {
   items: [],
+  id: null,
   outerRight: false,
 }
 

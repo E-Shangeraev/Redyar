@@ -6,7 +6,7 @@ import imageWebp from '@assets/img/Camp/2.webp'
 import imageWebpSmall from '@assets/img/Camp/2_small.webp'
 
 const DailyRoutine = () => (
-  <section className="routine">
+  <section className="routine" id="routine">
     <div className="wrapper-w100">
       <h2 className="title pl">распорядок дня</h2>
 

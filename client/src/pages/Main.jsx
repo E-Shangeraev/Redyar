@@ -107,7 +107,11 @@ const Main = () => {
       {/* <Menu /> */}
       <main>
         <h1 className="visually-hidden">Главная страница</h1>
-        <Promo slides={promoSlides} schedule="Смотреть расписание тренировок" />
+        <Promo
+          slides={promoSlides}
+          schedule="Смотреть расписание тренировок"
+          scrollTo="schedule"
+        />
         <Record
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие, заполнив

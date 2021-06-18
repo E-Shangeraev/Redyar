@@ -60,7 +60,11 @@ const Beginners = () => {
       <Header />
       <main>
         <h1 className="visually-hidden">Новичкам</h1>
-        <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
+        <Promo
+          slides={promoSlides}
+          schedule="Часто задаваемые вопросы"
+          scrollTo="faq"
+        />
         <About
           image={{
             jpg: aboutImageJpg,
@@ -98,6 +102,7 @@ const Beginners = () => {
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие, заполнив
           форму и получите приветственный бонус от нас"
+          isFirst
         />
       </main>
       <Footer />

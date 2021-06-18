@@ -51,7 +51,8 @@ const Competitions = () => {
         <h1 className="visually-hidden">Соревнования</h1>
         <Promo
           slides={promoSlides}
-          schedule="Смотреть расписание соревнований"
+          schedule="Смотреть виды соревнований"
+          scrollTo="competitions"
         />
         <CompetitionSlider />
         <Suspense fallback={<div>Загрузка...</div>}>

@@ -82,7 +82,11 @@ const Beginners = () => {
       <Header />
       <main>
         <h1 className="visually-hidden">Награды Crossfit Redyar</h1>
-        <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
+        <Promo
+          slides={promoSlides}
+          schedule="Смотреть наши заслуги"
+          scrollTo="awards"
+        />
         <AwardsTabs />
         <AthletesSlider
           render={renderAthletes}
@@ -94,6 +98,7 @@ const Beginners = () => {
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие, заполнив
           форму и получите приветственный бонус от нас"
+          isFirst
         />
       </main>
       <Footer />

@@ -69,6 +69,7 @@ const CompetitionSlider = () => {
         title="Виды соревнований"
         settings={settings}
         items={[...competitions, ...competitions]}
+        id="competitions"
       />
       <ModalCompetition isOpen={modalIsOpen} onRequestClose={closeModal} />
     </>

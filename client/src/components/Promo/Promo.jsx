@@ -10,7 +10,7 @@ import mouseSvg from './mouse.svg'
 
 ReactModal.setAppElement('#root')
 
-const Promo = ({ slides, schedule }) => {
+const Promo = ({ slides, schedule, scrollTo }) => {
   const promoSliderRef = useRef()
   const [modalIsOpen, setIsOpen] = useState(false)
 
@@ -69,7 +69,7 @@ const Promo = ({ slides, schedule }) => {
           <span>Листайте вниз</span>
         </div>
         <div>
-          <Link to="schedule" smooth className="promo__schedule" tabIndex="0">
+          <Link to={scrollTo} smooth className="promo__schedule" tabIndex="0">
             {schedule}
           </Link>
           <div>

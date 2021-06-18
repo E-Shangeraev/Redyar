@@ -49,7 +49,11 @@ const Main = () => {
       <Header />
       <main>
         <h1 className="visually-hidden">Команда</h1>
-        <Promo slides={promoSlides} schedule="Смотреть расписание лагеря" />
+        <Promo
+          slides={promoSlides}
+          schedule="Познакомиться с командой"
+          scrollTo="team"
+        />
         <TeamSlider />
         <TeamPhotoSlider />
         <Record

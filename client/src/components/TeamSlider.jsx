@@ -56,6 +56,7 @@ const MerchSlider = () => {
       title="Наша команда"
       settings={settings}
       items={[...teammates, ...teammates]}
+      id="team"
       outerRight
     />
   )

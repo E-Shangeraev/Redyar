@@ -14,7 +14,7 @@ const FAQ = ({ title, fetchUrl }) => {
   }, [])
 
   return (
-    <section className="faq">
+    <section className="faq" id="faq">
       <div className="wrapper">
         <h2 className="title">{title}</h2>
         <ul className="faq__list">
