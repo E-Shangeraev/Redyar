@@ -25,8 +25,9 @@ import aboutImageWebp from '@assets/img/Camp/1.webp'
 import aboutImageJpgSmall from '@assets/img/Camp/1_small.jpg'
 import aboutImageWebpSmall from '@assets/img/Camp/1_small.webp'
 import aboutBg from '@assets/img/Camp/bg.png'
-
-const CampPhotoSlider = React.lazy(() => import('@components/CampPhotoSlider'))
+import CampPhotoSlider from '@components/CampPhotoSlider'
+// eslint-disable-next-line max-len
+// const CampPhotoSlider = React.lazy(() => import('@components/CampPhotoSlider'))
 
 const Camp = () => {
   const promoSlides = [

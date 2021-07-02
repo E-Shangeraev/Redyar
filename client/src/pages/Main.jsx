@@ -25,8 +25,7 @@ import imgPhone2 from '@assets/img/Main/Promo/2_phone.jpg'
 import img3 from '@assets/img/Main/Promo/3.jpg'
 import imgTablet3 from '@assets/img/Main/Promo/3_tablet.jpg'
 import imgPhone3 from '@assets/img/Main/Promo/3_phone.jpg'
-
-const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
+import ReportSlider from '@components/ReportSlider'
 
 const Main = () => {
   const promoSlides = [
@@ -104,7 +103,6 @@ const Main = () => {
   return (
     <>
       <Header />
-      {/* <Menu /> */}
       <main>
         <h1 className="visually-hidden">Главная страница</h1>
         <Promo

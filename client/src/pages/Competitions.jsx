@@ -13,8 +13,8 @@ import imgPhone2 from '@assets/img/Main/Promo/3_phone.jpg'
 import img3 from '@assets/img/Main/Promo/4.jpg'
 import imgTablet3 from '@assets/img/Main/Promo/4_tablet.jpg'
 import imgPhone3 from '@assets/img/Main/Promo/4_phone.jpg'
-
-const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
+import ReportSlider from '@components/ReportSlider'
+// const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
 
 const Competitions = () => {
   const promoSlides = [

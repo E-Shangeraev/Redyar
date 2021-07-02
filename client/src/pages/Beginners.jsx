@@ -24,8 +24,8 @@ import aboutImageWebp from '@assets/img/Beginners/1.webp'
 import aboutImageJpgSmall from '@assets/img/Beginners/1_small.jpg'
 import aboutImageWebpSmall from '@assets/img/Beginners/1_small.webp'
 import aboutBg from '@assets/img/Beginners/bg.png'
-
-const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
+import ReportSlider from '@components/ReportSlider'
+// const ReportSlider = React.lazy(() => import('@components/ReportSlider'))
 
 const Beginners = () => {
   const promoSlides = [
