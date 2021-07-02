@@ -31,9 +31,12 @@ const ReportSlider = () => {
       ))
     : []
 
-  return (
-    <DoubleSlider title="Фотоотчет" settings={settings} items={photoReport} />
-  )
+  if (photoReport.length) {
+    return (
+      <DoubleSlider title="Фотоотчет" settings={settings} items={photoReport} />
+    )
+  }
+  return null
 }
 
 export default ReportSlider
