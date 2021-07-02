@@ -1,6 +1,5 @@
 .awards {
-  @include background-before('../../assets/img/bg-2.jpg', -60%, 250%);
-  // min-height: 100vh;
+  @include background-before('../../assets/img/bg-2.jpg', -30%, 200%);
   background-position: center;
 
   .flex {
@@ -20,7 +19,8 @@
     margin-right: 3em;
   }
   .title {
-    color: $l-gray-2;
+    // color: $l-gray-2;
+    color: #fff;
     line-height: 130%;
     transition: ease 0.15s;
   }
@@ -41,6 +41,7 @@
 }
 .awards__img {
   max-width: 300px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
 }

@@ -16,6 +16,7 @@ const ModalCompetition = ({ isOpen, onRequestClose }) => (
         title={['запись', 'на соревнование']}
         text="Чтобы продолжить, заполните форму и мы ответим
           Вам в ближайшее время"
+        onSubmit={() => {}}
       />
     </Modal>
   </div>

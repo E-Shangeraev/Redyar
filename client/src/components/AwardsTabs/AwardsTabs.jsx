@@ -24,16 +24,16 @@ const AwardsTabs = () => {
         <div className="flex mb3">
           <button
             type="button"
-            className={classNames({ active: activeTab === 1 })}
+            // className={classNames({ active: activeTab === 1 })}
             onClick={() => setActiveTab(1)}>
             <b className="title">награды клуба</b>
           </button>
-          <button
+          {/* <button
             type="button"
             className={classNames({ active: activeTab === 2 })}
             onClick={() => setActiveTab(2)}>
             <b className="title">награды атлетов</b>
-          </button>
+          </button> */}
         </div>
         {activeTab === 1 ? (
           <div className="awards__tab">

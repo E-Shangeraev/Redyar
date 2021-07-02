@@ -45,6 +45,15 @@
   &--orange {
     color: $orange;
   }
+  &--green {
+    color: #38aa16;
+  }
+  &--red {
+    color: #a60c13;
+  }
+  &--lime {
+    color: #a8bf12;
+  }
 }
 .schedule__descrition {
   font-family: $formular-r;

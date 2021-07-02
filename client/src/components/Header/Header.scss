@@ -46,6 +46,11 @@
   line-height: 100%;
   white-space: nowrap;
   color: $orange;
+  transition: ease 0.25s;
+
+  &:hover {
+    color: #fff;
+  }
 }
 .header__menu-button {
   padding: 0;

@@ -35,9 +35,27 @@ const Schedule = () => {
                 {n}
               </span>
             )
-          case 'CFRY Junior':
+          case 'CFRY Team':
             return (
               <span key={uuidv4()} className="schedule__name--purple">
+                {n}
+              </span>
+            )
+          case 'Gymnastics':
+            return (
+              <span key={uuidv4()} className="schedule__name--green">
+                {n}
+              </span>
+            )
+          case 'Heavy Day':
+            return (
+              <span key={uuidv4()} className="schedule__name--red">
+                {n}
+              </span>
+            )
+          case 'Stretching':
+            return (
+              <span key={uuidv4()} className="schedule__name--lime">
                 {n}
               </span>
             )
