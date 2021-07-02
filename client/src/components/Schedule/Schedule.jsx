@@ -21,7 +21,7 @@ const Schedule = () => {
   const [scheduleItems, setScheduleItems] = useState([])
   const [day, setDay] = useState(weekDays[dayIndex])
 
-  const selectDay = useCallback(selectedDay => setDay(selectedDay), [])
+  const selectDay = useCallback((_, selectedDay) => setDay(selectedDay), [])
 
   const getColoredName = name =>
     name
@@ -69,6 +69,7 @@ const Schedule = () => {
             onClickItem={selectDay}
             items={weekDays}
             label="День недели:"
+            name={day}
             id="select-stream"
           />
         </div>
