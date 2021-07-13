@@ -26,7 +26,7 @@ const Header = () => {
           'header__container--dark': toggleMenu,
         })}>
         <Link to="/" className="header__logo">
-          <img src={logo} alt="Логотип Crossfit Redyar" />
+          <img src={logo} alt="Логотип CrossFit Redyar" />
         </Link>
         <div>
           <nav className="header__nav" role="navigation">

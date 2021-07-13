@@ -13,12 +13,12 @@ const Founder = ({ title, channel, url, videoId }) => (
         channel={channel}
         videoId={videoId || null}
         url={url || null}
-        alt="Видео с основателем Crossfit Redyar"
+        alt="Видео с основателем CrossFit Redyar"
       />
       <div className="founder__description pr">
         <span className="founder__name">Мосолов Андрей</span>
         <span className="founder__post">
-          Основатель и главный тренер CrossFit RedYar
+          Основатель и главный тренер CrossFit Redyar
         </span>
         <p>
           Почему именно CrossFit? Это самая эффективная из всех существующих

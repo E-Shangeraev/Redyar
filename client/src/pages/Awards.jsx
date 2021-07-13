@@ -24,7 +24,7 @@ const Beginners = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'награды crossfit redyar',
+      title: 'награды CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
@@ -32,7 +32,7 @@ const Beginners = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'награды crossfit redyar',
+      title: 'награды CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
@@ -40,7 +40,7 @@ const Beginners = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'награды crossfit redyar',
+      title: 'награды CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
@@ -81,7 +81,7 @@ const Beginners = () => {
     <>
       <Header />
       <main>
-        <h1 className="visually-hidden">Награды Crossfit Redyar</h1>
+        <h1 className="visually-hidden">Награды CrossFit Redyar</h1>
         <Promo
           slides={promoSlides}
           schedule="Смотреть наши заслуги"

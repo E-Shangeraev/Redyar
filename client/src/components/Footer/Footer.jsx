@@ -11,7 +11,7 @@ const Footer = () => (
       <div className="flex">
         <div className="footer__column">
           <Link to="/" className="footer__logo">
-            <img src={logo} alt="Логотип Crossfit Redyar" loading="lazy" />
+            <img src={logo} alt="Логотип CrossFit Redyar" loading="lazy" />
           </Link>
           <nav className="footer__nav">
             <Link to="/team">Команда</Link>
@@ -29,23 +29,23 @@ const Footer = () => (
         <div className="footer__column">
           <ul className="footer__socials">
             <li>
-              <SocialLink link="https://vk.com/crossfitredyar" name="vk" />
+              <SocialLink link="https://vk.com/CrossFitredyar" name="vk" />
             </li>
             <li>
               <SocialLink
-                link="https://www.instagram.com/crossfitredyar/"
+                link="https://www.instagram.com/CrossFitredyar/"
                 name="instagram"
               />
             </li>
           </ul>
           <p className="footer__phone">
-            <a href="tel:7 (999) 898-99-99">7 (999) 898-99-99</a>
+            <a href="tel:+7 (391) 232-10-47">+7 (391) 232-10-47</a>
             <span>08:00 - 21:00</span>
           </p>
-          <p className="footer__email">
+          {/* <p className="footer__email">
             <span>email</span>
             <a href="mailto:info@redyar.com">info@redyar.com</a>
-          </p>
+          </p> */}
           <span className="footer__address">
             Красноярск, Белинского 8, ТЦ КОМСОМОЛЛ, 4 эт.
           </span>

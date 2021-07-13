@@ -24,7 +24,7 @@ const Why = () => {
           </h2>
           <div>
             <p className="mb1">
-              CrossFit - не просто тренировки и фитнес. Для нас - это образ
+              CrossFit — не просто тренировки и фитнес. Для нас — это образ
               жизни. Мы любим менять людей и помогаем им становится лучше.
             </p>
             <RecordButton onClickHandle={openModal}>Записаться</RecordButton>

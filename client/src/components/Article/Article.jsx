@@ -76,7 +76,7 @@ const Article = () => {
                 <img
                   className="subscribe__logo"
                   src={logo}
-                  alt="Логотип Crossfit Redyar"
+                  alt="Логотип CrossFit Redyar"
                 />
                 <p className="subscribe__text">
                   Подписывайтесь на наши соцсети и следите за всеми нашими
@@ -85,13 +85,13 @@ const Article = () => {
                 <ul className="flex">
                   <li>
                     <SocialLink
-                      link="https://vk.com/crossfitredyar"
+                      link="https://vk.com/CrossFitredyar"
                       name="vk"
                     />
                   </li>
                   <li>
                     <SocialLink
-                      link="https://www.instagram.com/crossfitredyar/"
+                      link="https://www.instagram.com/CrossFitredyar/"
                       name="instagram"
                     />
                   </li>

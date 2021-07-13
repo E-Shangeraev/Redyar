@@ -26,7 +26,7 @@ class Mail {
     let mailOption = {
       from: `<eldar@mygang.ru>`,
       to: 'eldar@mygang.ru',
-      subject: 'Crossfit Redyar',
+      subject: 'CrossFit Redyar',
       html: data,
     }
 
@@ -92,7 +92,7 @@ class Mail {
                 >
                   <img
                     src="http://cfry.ru/logo192.png"
-                    alt="Логотип Crossfit Redyar"
+                    alt="Логотип CrossFit Redyar"
                     style="
                       outline: none;
                       text-decoration: none;
@@ -118,7 +118,7 @@ class Mail {
                     color: #dbdbdb;
                   "
                 >
-                  Crossfit Redyar
+                  CrossFit Redyar
                 </h2>
                 <p style="margin: 15px 0; color: #dbdbdb">
                   Новая заявка с сайта

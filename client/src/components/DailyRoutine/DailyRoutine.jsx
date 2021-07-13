@@ -48,7 +48,7 @@ const DailyRoutine = () => (
             <b className="schedule__time">16:30–18:00</b>
             <div>
               <span className="schedule__name schedule__name--orange">
-                Crossfit
+                CrossFit
               </span>
               <p className="schedule__descrition">Третья тренировка</p>
             </div>

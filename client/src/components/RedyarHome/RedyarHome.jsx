@@ -15,7 +15,7 @@ const RedyarHome = () => (
           <li>Бесплатно</li>
         </ul>
         <a
-          href="https://www.instagram.com/crossfitredyar/"
+          href="https://www.instagram.com/CrossFitredyar/"
           className="button"
           target="_blank"
           rel="noreferrer">

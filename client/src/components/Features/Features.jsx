@@ -14,10 +14,11 @@ const Features = () => (
           <source srcSet={imageWebp1} type="image/webp" />
           <img src={imageJpg1} alt="новый спротивный зал" loading="lazy" />
         </picture>
-        <h3 className="subtitle">новый спротивный зал</h3>
+        <h3 className="subtitle">спортивный зал</h3>
         <p>
-          <span>Плошадь - 250м2</span>
-          <span>Вместимость - 100 чел</span>
+          <span>
+            Площадь - 250 м<sup>2</sup>
+          </span>
         </p>
       </li>
       <li className="pl pr">
@@ -31,7 +32,7 @@ const Features = () => (
         </picture>
         <h3 className="subtitle">профессиональное оборудование</h3>
         <p>
-          <span>87 тренажеров</span>
+          <span>самый оборудованный кроссфит-зал в Красноярске</span>
           <span>Все необходимые принадлежности</span>
         </p>
       </li>
@@ -40,7 +41,7 @@ const Features = () => (
           <source srcSet={imageWebp3} type="image/webp" />
           <img src={imageJpg3} alt="квалифицированные тренеры" loading="lazy" />
         </picture>
-        <h3 className="subtitle">квалифицированные тренеры</h3>
+        <h3 className="subtitle">«сертифицированные тренеры</h3>
         <p>
           <span>15 тренеров</span>
           <span>11 человек персонал</span>

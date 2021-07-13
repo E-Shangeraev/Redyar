@@ -305,7 +305,7 @@ const options = {
     },
   ],
   branding: {
-    companyName: 'Crossfit Redyar',
+    companyName: 'CrossFit Redyar',
     logo: '',
     softwareBrothers: false,
   },

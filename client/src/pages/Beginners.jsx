@@ -33,7 +33,7 @@ const Beginners = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'новичкам crossfit redyar',
+      title: 'новичкам CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Эту страницу мы подготовили для новичков в кроссфите. Вы узнаете, что такое кроссфит, его особенности и получите ответы на самые популярные вопросы.',
     },
@@ -41,7 +41,7 @@ const Beginners = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'новичкам crossfit redyar',
+      title: 'новичкам CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Эту страницу мы подготовили для новичков в кроссфите. Вы узнаете, что такое кроссфит, его особенности и получите ответы на самые популярные вопросы.',
     },
@@ -49,7 +49,7 @@ const Beginners = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'новичкам crossfit redyar',
+      title: 'новичкам CrossFit redyar',
       // eslint-disable-next-line max-len
       text: 'Эту страницу мы подготовили для новичков в кроссфите. Вы узнаете, что такое кроссфит, его особенности и получите ответы на самые популярные вопросы.',
     },
