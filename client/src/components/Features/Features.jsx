@@ -42,10 +42,6 @@ const Features = () => (
           <img src={imageJpg3} alt="квалифицированные тренеры" loading="lazy" />
         </picture>
         <h3 className="subtitle">«сертифицированные тренеры</h3>
-        <p>
-          <span>15 тренеров</span>
-          <span>11 человек персонал</span>
-        </p>
       </li>
     </ul>
   </section>

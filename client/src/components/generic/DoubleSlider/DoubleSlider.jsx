@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
@@ -16,35 +16,39 @@ const DoubleSlider = ({ title, settings, items }) => {
     secondSliderRef.current.slickNext()
   }
 
-  const defaultSettings = {
-    dots: false,
-    accessibility: true,
-    arrows: false,
-    swipe: false,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+  let defaultSettings
+
+  useEffect(() => {
+    defaultSettings = {
+      dots: false,
+      accessibility: true,
+      arrows: false,
+      swipe: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-      {
-        breakpoint: 501,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+        {
+          breakpoint: 501,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  }
+      ],
+    }
+  }, [items])
 
   return (
     <section className="double-slider">

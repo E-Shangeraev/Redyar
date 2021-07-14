@@ -10,6 +10,9 @@
   &--instagram {
     mask: url('../../../assets/icons/instagram.svg') center no-repeat;
   }
+  &--youtube {
+    mask: url('../../../assets/icons/youtube.svg') center no-repeat;
+  }
   &:hover {
     background-color: $orange;
   }

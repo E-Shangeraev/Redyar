@@ -23,7 +23,7 @@ const Footer = () => (
             <Link to="/blog">Блог</Link>
           </nav>
           <span className="footer__copyright">
-            CrossFit RedYar {year}. Все права защищены.
+            CrossFit Redyar {year}. Все права защищены.
           </span>
         </div>
         <div className="footer__column">
@@ -37,15 +37,27 @@ const Footer = () => (
                 name="instagram"
               />
             </li>
+            <li>
+              <SocialLink
+                link="https://www.youtube.com/c/crossfitredyar/featured"
+                name="youtube"
+              />
+            </li>
+            <li>
+              <SocialLink
+                link="https://www.youtube.com/channel/UCVYz1O-TqEYYH6mAX7LofXw"
+                name="youtube"
+              />
+            </li>
           </ul>
           <p className="footer__phone">
             <a href="tel:+7 (391) 232-10-47">+7 (391) 232-10-47</a>
             <span>08:00 - 21:00</span>
           </p>
-          {/* <p className="footer__email">
+          <p className="footer__email">
             <span>email</span>
-            <a href="mailto:info@redyar.com">info@redyar.com</a>
-          </p> */}
+            <a href="mailto:hello@crossfitredyar.ru">hello@crossfitredyar.ru</a>
+          </p>
           <span className="footer__address">
             Красноярск, Белинского 8, ТЦ КОМСОМОЛЛ, 4 эт.
           </span>

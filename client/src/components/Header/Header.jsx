@@ -35,8 +35,8 @@ const Header = () => {
             <Link to="/beginners">Новичкам</Link>
             <Link to="/price">Стоимость</Link>
           </nav>
-          <a className="header__phone" href="tel:+7 (999) 898-99-99">
-            +7 (999) 898-99-99
+          <a className="header__phone" href="tel:+7 (391) 232-10-47">
+            +7 (391) 232-10-47
           </a>
           <button
             className="header__menu-button"
