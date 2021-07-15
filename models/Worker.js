@@ -1,6 +1,7 @@
 const { Schema, model, Types } = require('mongoose')
 
 const Worker = new Schema({
+  order: Number,
   uploadedFile: JSON,
   name: {
     type: String,

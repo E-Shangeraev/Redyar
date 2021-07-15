@@ -11,7 +11,7 @@ import AthletesSlider from '@components/AthletesSlider'
 import Athlete from '@components/Athlete/Athlete'
 import Schedule from '@components/Schedule/Schedule'
 
-import MerchSlider from '@components/MerchSlider'
+// import MerchSlider from '@components/MerchSlider'
 import Location from '@components/Location/Location'
 import RedyarHome from '@components/RedyarHome/RedyarHome'
 import Footer from '@components/Footer/Footer'
@@ -113,7 +113,8 @@ const Main = () => {
         <Record
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие,
-          заполнив форму, и получите приветственный бонус от нас"
+          заполнив форму,
+          и&nbsp;получите&nbsp;приветственный&nbsp;бонус&nbsp;от&nbsp;нас"
           isFirst
         />
         <Features />
@@ -131,7 +132,7 @@ const Main = () => {
           outerRight
         />
         <Schedule />
-        <MerchSlider />
+        {/* <MerchSlider /> */}
         <Suspense fallback={<div>Загрузка...</div>}>
           <ReportSlider />
         </Suspense>

@@ -64,6 +64,7 @@ const DoubleSlider = ({ title, settings, items }) => {
       <Slider
         ref={firstSliderRef}
         className="double-slider__component"
+        arrows={false}
         {...defaultSettings}
         {...settings}>
         {items}
@@ -71,6 +72,7 @@ const DoubleSlider = ({ title, settings, items }) => {
       <Slider
         ref={secondSliderRef}
         className="double-slider__component"
+        arrows={false}
         {...defaultSettings}
         {...settings}>
         {[...items].reverse()}

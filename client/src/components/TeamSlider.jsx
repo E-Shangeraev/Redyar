@@ -5,7 +5,7 @@ import CustomSlider from '@generic/CustomSlider/CustomSlider'
 import Worker from '@components/Worker/Worker'
 
 const MerchSlider = () => {
-  const [workers, setWorkers] = useState([])
+  const [workers, setWorkers] = useState(null)
   const { request } = useHttp()
 
   useEffect(async () => {
@@ -22,6 +22,7 @@ const MerchSlider = () => {
       {
         breakpoint: 1601,
         settings: {
+          initialSlide: 0,
           slidesToShow: 2,
           slidesToScroll: 1,
         },
@@ -29,6 +30,7 @@ const MerchSlider = () => {
       {
         breakpoint: 1024,
         settings: {
+          initialSlide: 0,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -36,29 +38,27 @@ const MerchSlider = () => {
     ],
   }
 
-  const teammates = workers.length
-    ? workers.map(item => (
-        <Worker
-          key={uuidv4()}
-          // eslint-disable-next-line max-len
-          photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-          name={item.name}
-          post={item.post}
-          achievements={item.achievements}
-          addition={item.addition}
-          socials={item.socials}
-        />
-      ))
-    : []
-
   return (
     <CustomSlider
       title="Наша команда"
       settings={settings}
-      items={[...teammates, ...teammates]}
+      // items={[...teammates, ...teammates]}
       id="team"
-      outerRight
-    />
+      outerRight>
+      {workers &&
+        workers.map(item => (
+          <Worker
+            key={uuidv4()}
+            // eslint-disable-next-line max-len
+            photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+            name={item.name}
+            post={item.post}
+            achievements={item.achievements}
+            addition={item.addition}
+            socials={item.socials}
+          />
+        ))}
+    </CustomSlider>
   )
 }
 

@@ -128,6 +128,7 @@ const options = {
             'socials.telegram': 'Telegram',
             'socials.instagram': 'Instagram',
             'socials.youtube': 'YouTube',
+            order: 'Порядковый номер',
           },
         },
         Athletes: {

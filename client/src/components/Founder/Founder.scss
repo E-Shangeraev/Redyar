@@ -21,19 +21,20 @@
   line-height: 120%;
   color: $orange;
 }
-.founder__description p {
-  @include text;
-  text-align: justify;
-  column-count: 2;
-  column-gap: 2em;
-  color: #f2f2f2;
-}
+.founder__cite {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2em;
 
+  p {
+    @include text;
+    text-align: justify;
+    color: #f2f2f2;
+  }
+}
 @media (max-width: 1024px) {
-  .founder__description {
-    p {
-      column-count: 1;
-    }
+  .founder__cite {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 500px) {

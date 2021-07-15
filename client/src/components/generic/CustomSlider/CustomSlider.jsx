@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
 import classNames from 'classnames'
 
-const CustomSlider = ({ title, settings, items, outerRight, id }) => {
+const CustomSlider = ({ title, settings, items, children, outerRight, id }) => {
   const sliderRef = useRef()
 
   const next = () => {
@@ -38,7 +38,7 @@ const CustomSlider = ({ title, settings, items, outerRight, id }) => {
         })}
         {...defaultSettings}
         {...settings}>
-        {items}
+        {children}
       </Slider>
     </section>
   )
@@ -49,12 +49,14 @@ CustomSlider.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),
+  children: PropTypes.node,
   outerRight: PropTypes.bool,
   id: PropTypes.string,
 }
 
 CustomSlider.defaultProps = {
   items: [],
+  children: null,
   id: null,
   outerRight: false,
 }

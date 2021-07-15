@@ -10,6 +10,7 @@ const options = {
     'addition',
     'socials',
     'uploadedFile',
+    'order',
   ],
   parent: {
     name: 'Главная',

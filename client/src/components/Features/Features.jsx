@@ -17,7 +17,7 @@ const Features = () => (
         <h3 className="subtitle">спортивный зал</h3>
         <p>
           <span>
-            Площадь - 250 м<sup>2</sup>
+            Площадь — 250 м<sup>2</sup>
           </span>
         </p>
       </li>
@@ -32,7 +32,7 @@ const Features = () => (
         </picture>
         <h3 className="subtitle">профессиональное оборудование</h3>
         <p>
-          <span>самый оборудованный кроссфит-зал в Красноярске</span>
+          <span>Самый оборудованный кроссфит-зал в Красноярске</span>
           <span>Все необходимые принадлежности</span>
         </p>
       </li>
@@ -41,7 +41,7 @@ const Features = () => (
           <source srcSet={imageWebp3} type="image/webp" />
           <img src={imageJpg3} alt="квалифицированные тренеры" loading="lazy" />
         </picture>
-        <h3 className="subtitle">«сертифицированные тренеры</h3>
+        <h3 className="subtitle">сертифицированные тренеры</h3>
       </li>
     </ul>
   </section>
