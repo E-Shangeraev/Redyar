@@ -46,26 +46,31 @@ const MerchSlider = () => {
     ],
   }
 
-  const merch = isLoaded
-    ? items.map(item => (
-        <Merch
-          key={uuidv4()}
-          // eslint-disable-next-line max-len
-          img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-          name={item.name}
-          price={item.price}
-          sizes={item.sizes}
-        />
-      ))
-    : []
-
   return (
-    <CustomSlider
-      title="Мерч"
-      settings={settings}
-      items={[...merch, ...merch]}
-      outerRight
-    />
+    <CustomSlider title="Мерч" settings={settings} outerRight>
+      {isLoaded && [
+        ...items.map(item => (
+          <Merch
+            key={uuidv4()}
+            // eslint-disable-next-line max-len
+            img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+            name={item.name}
+            price={item.price}
+            sizes={item.sizes}
+          />
+        )),
+        ...items.map(item => (
+          <Merch
+            key={uuidv4()}
+            // eslint-disable-next-line max-len
+            img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+            name={item.name}
+            price={item.price}
+            sizes={item.sizes}
+          />
+        )),
+      ]}
+    </CustomSlider>
   )
 }
 

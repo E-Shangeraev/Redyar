@@ -49,28 +49,37 @@ const CompetitionSlider = () => {
     ],
   }
 
-  const competitions = isLoaded
-    ? items.map(item => (
-        <Competition
-          key={uuidv4()}
-          // eslint-disable-next-line max-len
-          img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-          name={item.name}
-          text={item.text}
-          complexity={item.complexity}
-          openModalHandler={openModal}
-        />
-      ))
-    : []
-
   return (
     <>
       <CustomSlider
         title="Виды соревнований"
         settings={settings}
-        items={[...competitions, ...competitions]}
-        id="competitions"
-      />
+        id="competitions">
+        {isLoaded && [
+          ...items.map(item => (
+            <Competition
+              key={uuidv4()}
+              // eslint-disable-next-line max-len
+              img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+              name={item.name}
+              text={item.text}
+              complexity={item.complexity}
+              openModalHandler={openModal}
+            />
+          )),
+          ...items.map(item => (
+            <Competition
+              key={uuidv4()}
+              // eslint-disable-next-line max-len
+              img={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+              name={item.name}
+              text={item.text}
+              complexity={item.complexity}
+              openModalHandler={openModal}
+            />
+          )),
+        ]}
+      </CustomSlider>
       <ModalCompetition isOpen={modalIsOpen} onRequestClose={closeModal} />
     </>
   )

@@ -15,12 +15,9 @@ const AthletesSlider = ({ title, settings, render, outerRight }) => {
   const athletesArray = render(athletes)
 
   return (
-    <CustomSlider
-      title={title}
-      settings={settings}
-      items={athletesArray}
-      outerRight={outerRight}
-    />
+    <CustomSlider title={title} settings={settings} outerRight={outerRight}>
+      {athletesArray}
+    </CustomSlider>
   )
 }
 
