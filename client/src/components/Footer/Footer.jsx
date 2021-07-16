@@ -14,13 +14,13 @@ const Footer = () => (
             <img src={logo} alt="Логотип CrossFit Redyar" loading="lazy" />
           </Link>
           <nav className="footer__nav">
-            <Link to="/team">Команда</Link>
-            <Link to="/competitions">Соревнования</Link>
-            <Link to="/beginners">Новичкам</Link>
-            <Link to="/price">Стоимость</Link>
-            <Link to="/camp">Лагерь</Link>
-            <Link to="/awards">Заслуги</Link>
-            <Link to="/blog">Блог</Link>
+            <Link to="/">Команда</Link>
+            <Link to="/">Соревнования</Link>
+            <Link to="/">Новичкам</Link>
+            <Link to="/">Стоимость</Link>
+            <Link to="/">Лагерь</Link>
+            <Link to="/">Заслуги</Link>
+            <Link to="/">Блог</Link>
           </nav>
           <span className="footer__copyright">
             CrossFit Redyar {year}. Все права защищены.

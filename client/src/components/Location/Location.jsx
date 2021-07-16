@@ -19,7 +19,7 @@ const Location = () => (
           <MyMap latitude={56.020315} longitude={92.902046} zoom={15.16} />
         </Suspense>
       </div>
-      <Reviews />
+      {/* <Reviews /> */}
     </div>
   </section>
 )

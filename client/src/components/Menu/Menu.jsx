@@ -18,31 +18,31 @@ const Menu = ({ isOpened }) => (
           </li>
           <li>
             <span>02</span>
-            <Link to="/team">Команда</Link>
+            <Link to="/">Команда</Link>
           </li>
           <li>
             <span>03</span>
-            <Link to="/competitions">Соревнования</Link>
+            <Link to="/">Соревнования</Link>
           </li>
           <li>
             <span>04</span>
-            <Link to="/beginners">Новичкам</Link>
+            <Link to="/">Новичкам</Link>
           </li>
           <li>
             <span>05</span>
-            <Link to="/price">Стоимость</Link>
+            <Link to="/">Стоимость</Link>
           </li>
           <li>
             <span>06</span>
-            <Link to="/camp">Лагерь</Link>
+            <Link to="/">Лагерь</Link>
           </li>
           <li>
             <span>07</span>
-            <Link to="/awards">Заслуги</Link>
+            <Link to="/">Заслуги</Link>
           </li>
           <li>
             <span>08</span>
-            <Link to="/blog">Блог</Link>
+            <Link to="/">Блог</Link>
           </li>
         </ul>
       </nav>

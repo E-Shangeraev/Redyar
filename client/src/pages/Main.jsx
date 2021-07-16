@@ -10,7 +10,6 @@ import TeamSlider from '@components/TeamSlider'
 import AthletesSlider from '@components/AthletesSlider'
 import Athlete from '@components/Athlete/Athlete'
 import Schedule from '@components/Schedule/Schedule'
-
 // import MerchSlider from '@components/MerchSlider'
 import Location from '@components/Location/Location'
 import RedyarHome from '@components/RedyarHome/RedyarHome'

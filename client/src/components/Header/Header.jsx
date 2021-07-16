@@ -30,10 +30,10 @@ const Header = () => {
         </Link>
         <div>
           <nav className="header__nav" role="navigation">
-            <Link to="/team">Команда</Link>
-            <Link to="/competitions">Соревнования</Link>
-            <Link to="/beginners">Новичкам</Link>
-            <Link to="/price">Стоимость</Link>
+            <Link to="/">Команда</Link>
+            <Link to="/">Соревнования</Link>
+            <Link to="/">Новичкам</Link>
+            <Link to="/">Стоимость</Link>
           </nav>
           <a className="header__phone" href="tel:+7 (391) 232-10-47">
             +7 (391) 232-10-47
