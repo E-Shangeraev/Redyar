@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Title from '@generic/Title/Title'
 import RecordButton from '@generic/RecordButton/RecordButton'
 import Modal from '@components/Modal/Modal'
 
@@ -17,11 +18,11 @@ const Why = () => {
     <section className="why">
       <div className="wrapper">
         <div className="why__flex">
-          <h2 className="title">
+          <Title className="why__title">
             <span>Зачем</span>
             <span>приходить</span>
             <span>к нам</span>
-          </h2>
+          </Title>
           <div>
             <p className="mb1">
               CrossFit — не просто тренировки и фитнес. Для нас — это образ

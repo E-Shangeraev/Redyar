@@ -1,0 +1,60 @@
+.title {
+  margin: 0;
+  margin-bottom: 45px;
+  font-family: $druk;
+  font-size: 44px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  span,
+  div {
+    position: relative;
+    display: block;
+    width: fit-content;
+  }
+  span:nth-of-type(2),
+  div:nth-of-type(2) {
+    left: 15%;
+  }
+  span:nth-of-type(3),
+  div:nth-of-type(3) {
+    left: 30%;
+  }
+  b {
+    font-weight: bold;
+    color: $orange;
+  }
+}
+
+@media (max-width: 1366px) {
+  .title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1280px) {
+  .title {
+    font-size: 38px;
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 28px;
+
+    span:nth-of-type(2) {
+      left: 5%;
+    }
+    span:nth-of-type(3) {
+      left: 10%;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 21px;
+  }
+}

@@ -8,22 +8,22 @@
   background-attachment: fixed;
 }
 .record__block {
-  .title {
-    span {
-      white-space: nowrap;
-    }
-    span:nth-of-type(2) {
-      margin-left: 20%;
-    }
-    span:nth-of-type(3) {
-      margin-left: 10%;
-    }
-  }
   p {
     @include medium-text;
   }
   .align-center .title {
     margin-right: 2em;
+  }
+}
+.record__title {
+  span {
+    white-space: nowrap;
+  }
+  span:nth-of-type(2) {
+    left: 25%;
+  }
+  span:nth-of-type(3) {
+    left: 10%;
   }
 }
 .record__block.flex {
@@ -48,6 +48,16 @@
   }
   .record__form {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .record__title {
+    span:nth-of-type(2) {
+      left: 15%;
+    }
+    span:nth-of-type(3) {
+      left: 10%;
+    }
   }
 }
 @media (max-width: 500px) {

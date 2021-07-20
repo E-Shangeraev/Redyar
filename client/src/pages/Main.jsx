@@ -32,7 +32,7 @@ const Main = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'Первое занятие бесплатно',
+      title: ['Первое', 'занятие', 'бесплатно'],
       // eslint-disable-next-line max-len
       text: 'CrossFit использует постоянно варьируемые, высокоинтенсивные функциональные движения. Попробуйте и вы забудете о том, что такое обычный фитнес-клуб',
     },
@@ -40,7 +40,7 @@ const Main = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'Первое занятие бесплатно',
+      title: ['Первое', 'занятие', 'бесплатно'],
       // eslint-disable-next-line max-len
       text: 'CrossFit использует постоянно варьируемые, высокоинтенсивные функциональные движения. Попробуйте и вы забудете о том, что такое обычный фитнес-клуб',
     },
@@ -48,7 +48,7 @@ const Main = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'Первое занятие бесплатно',
+      title: ['Первое', 'занятие', 'бесплатно'],
       // eslint-disable-next-line max-len
       text: 'CrossFit использует постоянно варьируемые, высокоинтенсивные функциональные движения. Попробуйте и вы забудете о том, что такое обычный фитнес-клуб',
     },
@@ -90,7 +90,7 @@ const Main = () => {
         },
       },
       {
-        breakpoint: 769,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -126,7 +126,11 @@ const Main = () => {
         <TeamSlider />
         <AthletesSlider
           render={renderAthletes}
-          title="Известные атлеты"
+          title={[
+            'Известные атлеты,',
+            'проходившие подготовку',
+            'в <b>CrossFit Redyar</b>',
+          ]}
           settings={athletesSettings}
           outerRight
         />

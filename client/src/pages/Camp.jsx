@@ -35,7 +35,7 @@ const Camp = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'RedYar “лагерь”',
+      title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },
@@ -43,7 +43,7 @@ const Camp = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'RedYar “лагерь”',
+      title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },
@@ -51,7 +51,7 @@ const Camp = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'RedYar “лагерь”',
+      title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
       // eslint-disable-next-line max-len
       text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },

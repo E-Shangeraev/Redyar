@@ -22,7 +22,7 @@ const Main = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'команда CrossFit redyar',
+      title: ['команда CrossFit Redyar'],
       // eslint-disable-next-line max-len
       text: 'В команде CrossFit Redyar только настоящие профессионалы своего дела. Лучшие квалифицированные тренеры города, а также администраторы сделают ваши тренировки особенными.',
     },
@@ -30,7 +30,7 @@ const Main = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'команда CrossFit redyar',
+      title: ['команда CrossFit Redyar'],
       // eslint-disable-next-line max-len
       text: 'В команде CrossFit Redyar только настоящие профессионалы своего дела. Лучшие квалифицированные тренеры города, а также администраторы сделают ваши тренировки особенными.',
     },
@@ -38,7 +38,7 @@ const Main = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'команда CrossFit redyar',
+      title: ['команда CrossFit Redyar'],
       // eslint-disable-next-line max-len
       text: 'В команде CrossFit Redyar только настоящие профессионалы своего дела. Лучшие квалифицированные тренеры города, а также администраторы сделают ваши тренировки особенными.',
     },

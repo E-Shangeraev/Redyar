@@ -29,7 +29,9 @@ const ReportSlider = () => {
   }
 
   if (photos) {
-    return <DoubleSlider title="Галерея" settings={settings} items={photos} />
+    return (
+      <DoubleSlider title={['Галерея']} settings={settings} items={photos} />
+    )
   }
   return null
 }

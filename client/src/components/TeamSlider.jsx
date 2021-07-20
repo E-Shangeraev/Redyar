@@ -16,7 +16,7 @@ const MerchSlider = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
       {
@@ -28,7 +28,7 @@ const MerchSlider = () => {
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           initialSlide: 0,
           slidesToShow: 1,
@@ -40,7 +40,7 @@ const MerchSlider = () => {
 
   return (
     <CustomSlider
-      title="Наша команда"
+      title={['Наша команда']}
       settings={settings}
       // items={[...teammates, ...teammates]}
       id="team"

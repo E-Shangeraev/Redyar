@@ -52,7 +52,7 @@ const CompetitionSlider = () => {
   return (
     <>
       <CustomSlider
-        title="Виды соревнований"
+        title={['Виды соревнований']}
         settings={settings}
         id="competitions">
         {isLoaded && [

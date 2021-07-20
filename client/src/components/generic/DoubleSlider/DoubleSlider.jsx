@@ -18,6 +18,30 @@ const DoubleSlider = ({ title, settings, items }) => {
 
   let defaultSettings
 
+  const responsive = [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 501,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ]
+
   useEffect(() => {
     defaultSettings = {
       dots: false,
@@ -65,6 +89,7 @@ const DoubleSlider = ({ title, settings, items }) => {
         ref={firstSliderRef}
         className="double-slider__component"
         arrows={false}
+        {...{ responsive }}
         {...defaultSettings}
         {...settings}>
         {items}
@@ -73,6 +98,7 @@ const DoubleSlider = ({ title, settings, items }) => {
         ref={secondSliderRef}
         className="double-slider__component"
         arrows={false}
+        {...{ responsive }}
         {...defaultSettings}
         {...settings}>
         {[...items].reverse()}
@@ -82,7 +108,7 @@ const DoubleSlider = ({ title, settings, items }) => {
 }
 
 DoubleSlider.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.arrayOf(PropTypes.string).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),

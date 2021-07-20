@@ -1,9 +1,12 @@
+/* eslint-disable max-len */
 import React from 'react'
 import PropTypes from 'prop-types'
 
 const Athlete = ({ photo, name, rank }) => (
   <div className="athlete">
-    <img className="athlete__photo" src={photo} alt={name} loading="lazy" />
+    <div className="athlete__photo">
+      <img src={photo} alt={name} loading="lazy" />
+    </div>
     <span className="athlete__name">{name}</span>
     <p className="athlete__rank">{rank}</p>
   </div>

@@ -121,10 +121,10 @@
 }
 @media (max-width: 767px) {
   .footer .flex {
-    flex-direction: column-reverse;
+    flex-direction: column;
 
-    .footer__column:not(:first-child) {
-      margin-bottom: 5em;
+    .footer__column:first-child {
+      margin-bottom: 30px;
     }
   }
   .footer__column {

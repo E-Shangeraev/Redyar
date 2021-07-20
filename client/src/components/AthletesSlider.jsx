@@ -23,7 +23,7 @@ const AthletesSlider = ({ title, settings, render, outerRight }) => {
 
 AthletesSlider.propTypes = {
   render: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.arrayOf(PropTypes.string).isRequired,
   settings: PropTypes.objectOf(
     PropTypes.oneOfType([
       PropTypes.number,

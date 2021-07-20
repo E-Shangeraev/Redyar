@@ -22,7 +22,7 @@ const Competitions = () => {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'Соревнования от Redyar',
+      title: ['Соревнования', 'от <b>Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Брось себе вызов - участвуй в соревнованиях от CrossFit Redyar, выигрывай ценные призы.',
     },
@@ -30,7 +30,7 @@ const Competitions = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'Соревнования от Redyar',
+      title: ['Соревнования', 'от <b>Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Брось себе вызов - участвуй в соревнованиях от CrossFit Redyar, выигрывай ценные призы.',
     },
@@ -38,7 +38,7 @@ const Competitions = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'Соревнования от Redyar',
+      title: ['Соревнования', 'от <b>Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Брось себе вызов - участвуй в соревнованиях от CrossFit Redyar, выигрывай ценные призы.',
     },

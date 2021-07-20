@@ -15,6 +15,16 @@
   //     z-index: -1;
   //   }
 }
+.slider__title {
+  margin-bottom: 0;
+
+  span {
+    left: 0 !important;
+  }
+  div {
+    left: 0 !important;
+  }
+}
 .slider__arrows {
   display: flex;
   align-items: center;
@@ -60,7 +70,7 @@
 @media (max-width: 767px) {
   .slider .wrapper > .flex {
     .title {
-      width: 50%;
+      width: 70%;
     }
   }
   .slider__component--outer-right {

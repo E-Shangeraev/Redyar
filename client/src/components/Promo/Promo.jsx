@@ -3,8 +3,10 @@ import React, { useRef, useState } from 'react'
 import Slider from 'react-slick'
 import ReactModal from 'react-modal'
 import { Link } from 'react-scroll'
-import Modal from '@components/Modal/Modal'
 import { v4 as uuidv4 } from 'uuid'
+import { Markup } from 'interweave'
+import Title from '@generic/Title/Title'
+import Modal from '@components/Modal/Modal'
 import { PromoNextArrow, PromoPrevArrow } from './PromoArrows'
 import mouseSvg from './mouse.svg'
 
@@ -55,7 +57,11 @@ const Promo = ({ slides, schedule, scrollTo }) => {
                   />
                   <img src={slide.img} alt="Фото с тренировок" loading="lazy" />
                 </picture>
-                <h2 className="title slide__title">{slide.title}</h2>
+                <Title>
+                  {slide.title.map(item => (
+                    <Markup key={uuidv4()} content={item} />
+                  ))}
+                </Title>
                 <p>{slide.text}</p>
               </div>
             </div>

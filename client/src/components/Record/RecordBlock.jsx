@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import Title from '@generic/Title/Title'
 import RecordForm from './RecordForm/RecordForm'
 
 const RecordBlock = ({ title, text, isCamp, hasTextarea, onSubmit }) => (
@@ -10,9 +11,9 @@ const RecordBlock = ({ title, text, isCamp, hasTextarea, onSubmit }) => (
         'column space-around': !hasTextarea,
         'align-center mb2': hasTextarea,
       })}>
-      <h3 className="title">
+      <Title className="record__title">
         {title && title.map(item => <span key={item}>{item}</span>)}
-      </h3>
+      </Title>
       <p className={classNames({ modal__text: hasTextarea })}>{text}</p>
     </div>
     <RecordForm isCamp={isCamp} hasTextarea={hasTextarea} onSubmit={onSubmit} />

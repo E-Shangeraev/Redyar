@@ -1,7 +1,10 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
+import { v4 as uuidv4 } from 'uuid'
+import { Markup } from 'interweave'
 import SliderArrow from '@generic/SliderArrow/SliderArrow'
+import Title from '@generic/Title/Title'
 import classNames from 'classnames'
 
 const CustomSlider = ({ title, settings, items, children, outerRight, id }) => {
@@ -24,7 +27,10 @@ const CustomSlider = ({ title, settings, items, children, outerRight, id }) => {
     <section className="slider" id={id}>
       <div className="wrapper slider__wrapper">
         <div className="flex space-between align-center mb5">
-          <h2 className="title">{title}</h2>
+          <Title className="slider__title">
+            {title &&
+              title.map(item => <Markup key={uuidv4()} content={item} />)}
+          </Title>
           <div className="slider__arrows">
             <SliderArrow type="prev" onClickHandle={prev} />
             <SliderArrow type="next" onClickHandle={next} />
@@ -45,7 +51,7 @@ const CustomSlider = ({ title, settings, items, children, outerRight, id }) => {
 }
 
 CustomSlider.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.arrayOf(PropTypes.string).isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   settings: PropTypes.object.isRequired,
   items: PropTypes.arrayOf(PropTypes.object),
