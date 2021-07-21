@@ -41,7 +41,8 @@ const Price = () => {
           Заполните форму ниже и мы ответим Вам в ближайшее время"
           withBackground
         />
-        <div className="wrapper" style={{ position: 'relative', zIndex: '1' }}>
+        {/* <div className="wrapper" style={{ position:
+        'relative', zIndex: '1' }}>
           <picture>
             <source
               srcSet={imageWebpSmall}
@@ -57,7 +58,7 @@ const Price = () => {
               loading="lazy"
             />
           </picture>
-        </div>
+        </div> */}
         <Discount />
         {oneTimeVisitCards && (
           <Cards

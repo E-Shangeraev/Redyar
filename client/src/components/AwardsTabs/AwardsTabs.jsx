@@ -16,7 +16,7 @@ const AwardsTabs = () => {
   return (
     <section className="awards" id="awards">
       <div className="wrapper">
-        <Title>награды клуба</Title>
+        <Title>награды атлетов</Title>
         <div className="awards__tab">
           <ul className="awards__list">
             {clubAwards &&

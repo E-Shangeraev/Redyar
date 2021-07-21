@@ -2,11 +2,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import useHttp from '@hooks/http.hook'
 import Button from '@generic/Button/Button'
 import Stars from './Stars'
 
-const Reviews = ({ reviewsFrom }) => {
+const Reviews = ({ reviewsFrom, twoColumns }) => {
   const reviewsRef = useRef()
   const { request } = useHttp()
   const [reviews, setReviews] = useState([])
@@ -39,7 +40,10 @@ const Reviews = ({ reviewsFrom }) => {
   if (reviews) {
     return (
       <div className="reviews" ref={reviewsRef}>
-        <ul className="reviews__list">
+        <ul
+          className={classNames('reviews__list', {
+            'reviews__list--two-columns': twoColumns,
+          })}>
           {reviews.map(item => (
             <li className="review" key={uuidv4()}>
               <div className="review__top">
@@ -74,6 +78,11 @@ const Reviews = ({ reviewsFrom }) => {
 
 Reviews.propTypes = {
   reviewsFrom: PropTypes.string.isRequired,
+  twoColumns: PropTypes.bool,
+}
+
+Reviews.defaultProps = {
+  twoColumns: false,
 }
 
 export default Reviews

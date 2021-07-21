@@ -3,6 +3,7 @@ import Video from '@generic/Video/Video'
 import PropTypes from 'prop-types'
 
 import preview from '@assets/img/Main/2.jpg'
+import photo from './1.png'
 
 const Founder = ({ title, channel, url, videoId }) => (
   <section className="founder">
@@ -15,24 +16,27 @@ const Founder = ({ title, channel, url, videoId }) => (
         url={url || null}
         alt="Видео с основателем CrossFit Redyar"
       />
-      <div className="founder__description pr">
-        <span className="founder__name">Мосолов Андрей</span>
-        <span className="founder__post">
-          Основатель и главный тренер CrossFit Redyar
-        </span>
-        <div className="founder__cite">
-          <p>
+      <div className="founder__container pr">
+        <div className="founder__photo">
+          <img
+            src={photo}
+            alt="Мосолов Андрей — основатель и главный тренер CrossFit Redyar"
+          />
+        </div>
+        <div>
+          <span className="founder__name">Мосолов Андрей</span>
+          <span className="founder__post">
+            Основатель и главный тренер CrossFit Redyar
+          </span>
+          <p className="founder__cite">
             «Почему именно CrossFit? Это самая эффективная из всех существующих
             фитнес-систем. Вы добьётесь результата максимально быстро. Он
             абсолютно безопасен и подходит для людей любого уровня подготовки и
-            возраста.
-          </p>
-          <p>
-            Его можно использовать даже для людей с ограниченными возможностями.
-            CrossFit очень вариативен: он использует много функциональных
-            движений. Вы никогда не устанете от рутины. И, наконец, CrossFit —
-            это комьюнити. Хотите много новых друзей и знакомств — вам в
-            CrossFit Redyar!»
+            возраста. Его можно использовать даже для людей с ограниченными
+            возможностями. CrossFit очень вариативен: он использует много
+            функциональных движений. Вы никогда не устанете от рутины. И,
+            наконец, CrossFit — это комьюнити. Хотите много новых друзей и
+            знакомств — вам в CrossFit Redyar!»
           </p>
         </div>
       </div>

@@ -79,10 +79,12 @@ const Promo = ({ slides, schedule, scrollTo }) => {
             {schedule}
           </Link>
           <div>
-            <div className="promo__arrows">
-              <PromoPrevArrow onClickHandle={prev} />
-              <PromoNextArrow onClickHandle={next} />
-            </div>
+            {slides.length > 1 && (
+              <div className="promo__arrows">
+                <PromoPrevArrow onClickHandle={prev} />
+                <PromoNextArrow onClickHandle={next} />
+              </div>
+            )}
             <button
               className="promo__button-modal"
               type="button"

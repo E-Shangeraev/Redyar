@@ -6,8 +6,9 @@ const RedyarHome = () => (
       <div className="redyar-home__content">
         <h2 className="title">redyar home</h2>
         <p>
-          Нет возможности заниматься в зале? Тогда подписывайся на наш инстаграм
-          и тренируйся с нами по нашей домашней программе!
+          Нет возможности заниматься в зале? <br />
+          Специально для вас тренеры CrossFit Redyar подготовили упражнения
+          для&nbsp;тренировок в домашних условиях
         </p>
         <ul>
           <li>Тренировки в любое время</li>
@@ -15,11 +16,11 @@ const RedyarHome = () => (
           <li>Бесплатно</li>
         </ul>
         <a
-          href="https://www.instagram.com/CrossFitredyar/"
+          href="https://vk.com/videos-59029020?section=album_55114448%5C"
           className="button"
           target="_blank"
           rel="noreferrer">
-          Подписаться
+          Смотреть упражнения
         </a>
       </div>
     </div>

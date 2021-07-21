@@ -8,6 +8,7 @@
   background-attachment: fixed;
 }
 .record__block {
+  justify-content: space-between;
   p {
     @include medium-text;
   }

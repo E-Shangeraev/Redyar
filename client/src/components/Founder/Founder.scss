@@ -22,22 +22,47 @@
   color: $orange;
 }
 .founder__cite {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2em;
+  @include text;
+  text-align: justify;
+  color: #f2f2f2;
+}
+.founder__container {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+.founder__photo {
+  position: relative;
+  width: 50%;
+  padding-right: 5em;
+  flex-shrink: 0;
 
-  p {
-    @include text;
-    text-align: justify;
-    color: #f2f2f2;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 1024px) {
+  .founder__photo {
+    width: 50%;
+    padding: 0;
+  }
   .founder__cite {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .founder__container {
+    flex-direction: column;
+  }
+  .founder__photo {
+    width: 70%;
+  }
+}
 @media (max-width: 500px) {
+  .founder__container {
+    margin-top: 50px;
+  }
   .founder__name {
     font-size: 14px;
     line-height: 150%;

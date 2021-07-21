@@ -37,23 +37,7 @@ const Camp = () => {
       imgPhone: imgPhone1,
       title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
       // eslint-disable-next-line max-len
-      text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
-    },
-    {
-      img: img2,
-      imgTablet: imgTablet2,
-      imgPhone: imgPhone2,
-      title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
-      // eslint-disable-next-line max-len
-      text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
-    },
-    {
-      img: img3,
-      imgTablet: imgTablet3,
-      imgPhone: imgPhone3,
-      title: ['<b>CrossFit Redyar</b>', 'Summer Camp'],
-      // eslint-disable-next-line max-len
-      text: 'В “Лагере” RedYar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
+      text: 'В лагере Redyar ты обретешь единомышленников, вместе с которыми сможешь насладиться насыщенной на активности программой лагеря.',
     },
   ]
 
@@ -68,7 +52,7 @@ const Camp = () => {
           scrollTo="routine"
         />
         <Record
-          title={['запись', 'в лагерь', 'redyar']}
+          title={['запись', 'в лагерь', 'Redyar']}
           text="Запишитесь в лагерь, заполнив форму и получите приветственный
           бонус от нас. Не забудьте выбрать поток в фоме записи"
           isCamp
@@ -92,7 +76,7 @@ const Camp = () => {
         </Suspense>
         <DailyRoutine />
         <Besides />
-        <VideoReport />
+        <VideoReport twoColumns />
         <FAQ title="вопрос-ответ" fetchUrl="/api/faq/camp" />
         <CampLocation />
       </main>
