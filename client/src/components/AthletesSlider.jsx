@@ -14,11 +14,14 @@ const AthletesSlider = ({ title, settings, render, outerRight }) => {
 
   const athletesArray = render(athletes)
 
-  return (
-    <CustomSlider title={title} settings={settings} outerRight={outerRight}>
-      {athletesArray}
-    </CustomSlider>
-  )
+  if (athletesArray.length) {
+    return (
+      <CustomSlider title={title} settings={settings} outerRight={outerRight}>
+        {athletesArray}
+      </CustomSlider>
+    )
+  }
+  return null
 }
 
 AthletesSlider.propTypes = {

@@ -38,28 +38,33 @@ const MerchSlider = () => {
     ],
   }
 
-  return (
-    <CustomSlider
-      title={['Наша команда']}
-      settings={settings}
-      // items={[...teammates, ...teammates]}
-      id="team"
-      outerRight>
-      {workers &&
-        workers.map(item => (
-          <Worker
-            key={uuidv4()}
-            // eslint-disable-next-line max-len
-            photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-            name={item.name}
-            post={item.post}
-            achievements={item.achievements}
-            addition={item.addition}
-            socials={item.socials}
-          />
-        ))}
-    </CustomSlider>
-  )
+  const slides =
+    Array.isArray(workers) &&
+    workers.map(item => (
+      <Worker
+        key={uuidv4()}
+        // eslint-disable-next-line max-len
+        photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+        name={item.name}
+        post={item.post}
+        achievements={item.achievements}
+        addition={item.addition}
+        socials={item.socials}
+      />
+    ))
+
+  if (slides.length) {
+    return (
+      <CustomSlider
+        title={['Наша команда']}
+        settings={settings}
+        id="team"
+        outerRight>
+        {slides}
+      </CustomSlider>
+    )
+  }
+  return null
 }
 
 export default MerchSlider
