@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react'
 import Reviews from '@generic/Reviews/Reviews'
 import locationMark from '@assets/icons/location.png'
+import PropTypes from 'prop-types'
 
 const MyMap = React.lazy(() => import('@components/MyMap/MyMap'))
 
-const Location = () => (
+const Location = ({ reviewsFrom }) => (
   <section className="location">
     <div className="wrapper">
       <div className="flex space-between align-center mb5">
@@ -19,9 +20,13 @@ const Location = () => (
           <MyMap latitude={56.020315} longitude={92.902046} zoom={15.16} />
         </Suspense>
       </div>
-      {/* <Reviews /> */}
+      <Reviews reviewsFrom={reviewsFrom} />
     </div>
   </section>
 )
+
+Location.propTypes = {
+  reviewsFrom: PropTypes.string.isRequired,
+}
 
 export default Location

@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from 'uuid'
 import Header from '@components/Header/Header'
 import Promo from '@components/Promo/Promo'
 import AwardsTabs from '@components/AwardsTabs/AwardsTabs'
-import AthletesSlider from '@components/AthletesSlider'
-import OurAthlete from '@components/OurAthlete/OurAthlete'
+import AthletesCards from '@components/AthletesCards/AthletesCards'
+import CompetingAthletesSlider from '@components/CompetingAthletesSlider'
 import Record from '@components/Record/Record'
 import Footer from '@components/Footer/Footer'
 
@@ -18,13 +18,13 @@ import img3 from '@assets/img/Main/Promo/2.jpg'
 import imgTablet3 from '@assets/img/Main/Promo/2_tablet.jpg'
 import imgPhone3 from '@assets/img/Main/Promo/2_phone.jpg'
 
-const Beginners = () => {
+const Athletes = () => {
   const promoSlides = [
     {
       img: img1,
       imgTablet: imgTablet1,
       imgPhone: imgPhone1,
-      title: 'награды CrossFit redyar',
+      title: ['Соревнующиеся', 'атлеты', '<b>CrossFit Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
@@ -32,7 +32,7 @@ const Beginners = () => {
       img: img2,
       imgTablet: imgTablet2,
       imgPhone: imgPhone2,
-      title: 'награды CrossFit redyar',
+      title: ['Соревнующиеся', 'атлеты', '<b>CrossFit Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
@@ -40,42 +40,11 @@ const Beginners = () => {
       img: img3,
       imgTablet: imgTablet3,
       imgPhone: imgPhone3,
-      title: 'награды CrossFit redyar',
+      title: ['Соревнующиеся', 'атлеты', '<b>CrossFit Redyar</b>'],
       // eslint-disable-next-line max-len
       text: 'Мы завоевали большое количество наград и призов за время существования нашего кроссфита. И хотим поделиться с вами нашими успехами и успехами наших посетителей.',
     },
   ]
-
-  const renderAthletes = athletes =>
-    athletes.length
-      ? athletes.map(item => (
-          <OurAthlete
-            key={uuidv4()}
-            // eslint-disable-next-line max-len
-            photo={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-            name={item.name}
-            rank={item.rank}
-            achievements={item.achievements}
-          />
-        ))
-      : []
-
-  const athletesSettings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
 
   return (
     <>
@@ -87,17 +56,13 @@ const Beginners = () => {
           schedule="Смотреть наши заслуги"
           scrollTo="awards"
         />
+        <AthletesCards />
         <AwardsTabs />
-        <AthletesSlider
-          render={renderAthletes}
-          title="Наши атлеты"
-          settings={athletesSettings}
-          outerRight={false}
-        />
+        <CompetingAthletesSlider />
         <Record
-          title={['запись', 'на первое', 'занятие']}
-          text="Запишитесь на первое бесплатное занятие, заполнив
-          форму и получите приветственный бонус от нас"
+          title={['стать частью', 'команды', 'Redyar']}
+          text="Заполните форму, мы свяжемся с вами и расскажем
+          что для этого нужно"
           isFirst
         />
       </main>
@@ -106,4 +71,4 @@ const Beginners = () => {
   )
 }
 
-export default Beginners
+export default Athletes

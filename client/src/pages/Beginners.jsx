@@ -97,7 +97,7 @@ const Beginners = () => {
           url="https://vk.com/video-59029020_456239162"
         />
         <FAQ title="популярные вопросы" fetchUrl="/api/faq/beginners" />
-        <Location />
+        <Location reviewsFrom="club" />
         <Record
           title={['запись', 'на первое', 'занятие']}
           text="Запишитесь на первое бесплатное занятие, заполнив

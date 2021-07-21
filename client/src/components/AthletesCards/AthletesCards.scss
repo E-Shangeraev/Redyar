@@ -1,0 +1,11 @@
+.athletes-cards__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5em;
+}
+
+@media (max-width: 1024px) {
+  .athletes-cards__list {
+    grid-template-columns: 1fr;
+  }
+}

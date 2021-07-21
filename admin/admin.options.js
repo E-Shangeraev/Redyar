@@ -20,7 +20,7 @@ const TeamPhoto = require('../models/TeamPhoto')
 const TeamPhotoOptions = require('./teamPhoto.resourceOptions')
 const CampPhoto = require('../models/CampPhoto')
 const CampPhotoOptions = require('./campPhoto.resourceOptions')
-const Reviews = require('../models/Review')
+const { Reviews, ReviewsMain } = require('../models/Review')
 const ReviewsOptions = require('./reviews.resourceOptions')
 const { FAQCamp, FAQBeginners } = require('../models/FAQ')
 const FAQOptions = require('./faq.resourceOptions')
@@ -81,7 +81,8 @@ const options = {
         Schedule: 'Расписание занятий',
         TeamPhoto: 'Фото команды',
         CampPhoto: 'Фото с "лагеря"',
-        Reviews: 'Отзывы',
+        Reviews: 'Отзывы (Лагерь)',
+        ReviewsMain: 'Отзывы (Главная)',
         FAQCamp: 'Вопросы (Лагерь)',
         FAQBeginners: 'Вопросы (Новичкам)',
         ClubAwards: 'Награды клуба',
@@ -159,6 +160,14 @@ const options = {
           },
         },
         Reviews: {
+          properties: {
+            uploadedFile: 'Фото',
+            name: 'Имя',
+            review: 'Отзыв',
+            rating: 'Оценка',
+          },
+        },
+        ReviewsMain: {
           properties: {
             uploadedFile: 'Фото',
             name: 'Имя',
@@ -270,6 +279,11 @@ const options = {
     },
     {
       resource: Reviews,
+      options: ReviewsOptions,
+      features,
+    },
+    {
+      resource: ReviewsMain,
       options: ReviewsOptions,
       features,
     },

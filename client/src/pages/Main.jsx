@@ -139,7 +139,7 @@ const Main = () => {
         <Suspense fallback={<div>Загрузка...</div>}>
           <ReportSlider />
         </Suspense>
-        <Location />
+        <Location reviewsFrom="club" />
         <RedyarHome />
       </main>
       <Footer />

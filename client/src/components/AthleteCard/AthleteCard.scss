@@ -1,0 +1,136 @@
+.athlete-card {
+  display: flex;
+  height: 100%;
+  padding: 45px;
+
+  padding-left: 0;
+  background-color: #2a2e30;
+
+  & > div:last-of-type {
+    width: 100%;
+    height: 100%;
+  }
+}
+.athlete-card__photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 60%;
+  max-height: 390px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to top, $gray 20%, transparent 50%);
+  }
+}
+.athlete-card__name {
+  display: block;
+  margin-bottom: 50px;
+  font-family: $formular-m;
+  font-size: 22px;
+  line-height: 24px;
+  color: #f2f2f2;
+}
+.athlete-card__achievements {
+  @include text;
+  font-size: 16px;
+  opacity: 0.5;
+}
+.athlete-card__socials {
+  display: flex;
+
+  li {
+    max-width: 30px;
+  }
+  li:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .athlete-card__photo {
+    max-height: 340px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1440px) {
+  .athlete-card__name {
+    font-size: 20px;
+  }
+  .athlete-card__achievements {
+    font-size: 15px !important;
+  }
+  .athlete-card__photo {
+    max-height: 320px;
+  }
+}
+@media (max-width: 1280px) {
+  .athlete-card__photo {
+    max-height: 340px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1024px) {
+  .athlete-card__photo {
+    max-height: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .athlete-card__name {
+    font-size: 18px;
+  }
+  .athlete-card__achievements {
+    font-size: 14px !important;
+  }
+  .athlete-card__photo {
+    width: 60%;
+    max-height: calc(300px - 30px);
+  }
+}
+@media (max-width: 767px) {
+  .athlete-card {
+    margin: 0 2px;
+  }
+  .athlete-card__photo {
+    max-height: calc(300px - 15px);
+  }
+}
+@media (max-width: 600px) {
+  .athlete-card {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  .athlete-card__photo {
+    max-width: 100%;
+    width: 120%;
+    height: 100%;
+    max-height: 300px;
+    align-self: center;
+    margin-bottom: 15px;
+    object-position: top center;
+  }
+  .athlete-card__name {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  .athlete-card__achievements {
+    margin: 15px 0;
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 500px) {
+  .athlete-card__photo {
+    max-height: 220px;
+  }
+}

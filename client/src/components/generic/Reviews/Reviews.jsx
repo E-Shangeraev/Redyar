@@ -1,11 +1,12 @@
 /* eslint-disable max-len */
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import PropTypes from 'prop-types'
 import useHttp from '@hooks/http.hook'
 import Button from '@generic/Button/Button'
 import Stars from './Stars'
 
-const Reviews = () => {
+const Reviews = ({ reviewsFrom }) => {
   const reviewsRef = useRef()
   const { request } = useHttp()
   const [reviews, setReviews] = useState([])
@@ -14,21 +15,23 @@ const Reviews = () => {
   const [reviewsCount, setReviewsCount] = useState(null)
 
   useEffect(async () => {
-    const itemsCount = await request('/api/reviews/count')
-    const items = await request('/api/reviews?_to=2')
+    const itemsCount = await request(`/api/reviews/${reviewsFrom}/count`)
+    const items = await request(`/api/reviews/${reviewsFrom}?_to=2`)
     setReviews(items)
     setReviewsCount(itemsCount)
   }, [])
 
   const showMoreHandler = useCallback(async () => {
-    const items = await request(`/api/reviews?_from=${count}&_to=${count + 2}`)
+    const items = await request(
+      `/api/reviews/${reviewsFrom}?_from=${count}&_to=${count + 2}`
+    )
     setReviews(prev => [...prev, ...items])
     setCount(prev => prev + 2)
     reviewsRef.current.scrollIntoView({ behavior: 'smooth' })
   }, [count])
 
   useEffect(() => {
-    if (count === reviewsCount) {
+    if (count === reviewsCount || count - 1 === reviewsCount) {
       setVisibleButton(false)
     }
   }, [count])
@@ -65,6 +68,10 @@ const Reviews = () => {
   }
 
   return null
+}
+
+Reviews.propTypes = {
+  reviewsFrom: PropTypes.string.isRequired,
 }
 
 export default Reviews

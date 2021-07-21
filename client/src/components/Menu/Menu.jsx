@@ -38,7 +38,7 @@ const Menu = ({ isOpened }) => (
           </li>
           <li>
             <span>07</span>
-            <Link to="/">Заслуги</Link>
+            <Link to="/">Атлеты</Link>
           </li>
           <li>
             <span>08</span>

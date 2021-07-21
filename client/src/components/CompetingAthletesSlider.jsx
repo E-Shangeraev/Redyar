@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import useHttp from '@hooks/http.hook'
 import DoubleSlider from '@generic/DoubleSlider/DoubleSlider'
 
-const CampPhotoSlider = () => {
+const CompetingAthletesSlider = () => {
   const [photos, setPhotos] = useState([])
   const { request } = useHttp()
 
@@ -20,7 +20,7 @@ const CampPhotoSlider = () => {
     variableWidth: true,
   }
 
-  const campPhotos = photos.length
+  const athletesPhotos = photos.length
     ? photos.map(item => (
         <img
           // eslint-disable-next-line max-len
@@ -33,11 +33,11 @@ const CampPhotoSlider = () => {
 
   return (
     <DoubleSlider
-      title={['фото с “лагеря”']}
+      title={['фотографии с соревнований']}
       settings={settings}
-      items={campPhotos}
+      items={athletesPhotos}
     />
   )
 }
 
-export default CampPhotoSlider
+export default CompetingAthletesSlider

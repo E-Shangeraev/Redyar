@@ -13,4 +13,7 @@ const Review = new Schema({
   },
 })
 
-module.exports = model('Reviews', Review)
+const Reviews = model('Reviews', Review)
+const ReviewsMain = model('ReviewsMain', Review)
+
+module.exports = { Reviews, ReviewsMain }

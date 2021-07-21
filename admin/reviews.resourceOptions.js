@@ -4,7 +4,8 @@ const AdminBro = require('admin-bro')
 const options = {
   listProperties: ['name', 'review', 'rating', 'uploadedFile'],
   editProperties: ['name', 'review', 'rating', 'uploadedFile'],
-  navigation: {
+  parent: {
+    name: 'Отзывы',
     icon: 'StarReview',
   },
 }

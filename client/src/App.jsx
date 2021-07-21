@@ -8,7 +8,7 @@ const Competitions = React.lazy(() => import('./pages/Competitions'))
 const Team = React.lazy(() => import('./pages/Team'))
 const Camp = React.lazy(() => import('./pages/Camp'))
 const Beginners = React.lazy(() => import('./pages/Beginners'))
-const Awards = React.lazy(() => import('./pages/Awards'))
+const Athletes = React.lazy(() => import('./pages/Athletes'))
 const Price = React.lazy(() => import('./pages/Price'))
 const Blog = React.lazy(() => import('./pages/Blog'))
 const Article = React.lazy(() => import('./pages/Article'))
@@ -23,7 +23,7 @@ const App = () => (
         <Route path="/team" exact component={Team} />
         <Route path="/camp" exact component={Camp} />
         <Route path="/beginners" exact component={Beginners} />
-        <Route path="/awards" exact component={Awards} />
+        <Route path="/athletes" exact component={Athletes} />
         <Route path="/price" exact component={Price} />
         <Route path="/blog" exact component={Blog} />
         <Route path="/blog/:id" exact component={Article} />

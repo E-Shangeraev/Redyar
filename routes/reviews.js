@@ -1,8 +1,13 @@
 const { Router } = require('express')
-const ReviewController = require('../controllers/Review')
+const {
+  ReviewController,
+  ReviewMainController,
+} = require('../controllers/Review')
 const router = Router()
 
-router.get('/', ReviewController.getItems)
-router.get('/count', ReviewController.getItemsCount)
+router.get('/camp', ReviewController.getItems)
+router.get('/camp/count', ReviewController.getItemsCount)
+router.get('/club', ReviewMainController.getItems)
+router.get('/club/count', ReviewMainController.getItemsCount)
 
 module.exports = router

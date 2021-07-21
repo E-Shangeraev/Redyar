@@ -1,4 +1,7 @@
-const Review = require('../models/Review')
+const { Reviews, ReviewsMain } = require('../models/Review')
 const Request = require('../core/Request')
 
-module.exports = new Request(Review)
+const ReviewController = new Request(Reviews)
+const ReviewMainController = new Request(ReviewsMain)
+
+module.exports = { ReviewController, ReviewMainController }
