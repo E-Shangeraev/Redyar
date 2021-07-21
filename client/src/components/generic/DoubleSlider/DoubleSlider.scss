@@ -7,6 +7,8 @@
 
     img {
       height: 100%;
+      object-fit: cover;
+      max-height: 340px;
     }
   }
   .title {
@@ -28,6 +30,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .double-slider {
+    .slick-slide {
+      img {
+        max-height: 270px;
+      }
+    }
+  }
+}
 @media (max-width: 500px) {
   .double-slider {
     position: relative;
@@ -38,8 +49,8 @@
       max-height: 38vh;
 
       img {
-        object-fit: cover;
         object-position: center;
+        max-height: 240px;
       }
     }
     .slick-track:first-child {

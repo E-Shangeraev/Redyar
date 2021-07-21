@@ -20,6 +20,8 @@ const TeamPhoto = require('../models/TeamPhoto')
 const TeamPhotoOptions = require('./teamPhoto.resourceOptions')
 const CampPhoto = require('../models/CampPhoto')
 const CampPhotoOptions = require('./campPhoto.resourceOptions')
+const CompetingAthletes = require('../models/CompetingAthletes')
+const CompetingAthletesOptions = require('./competing-athletes.resourceOptions')
 const { Reviews, ReviewsMain } = require('../models/Review')
 const ReviewsOptions = require('./reviews.resourceOptions')
 const { FAQCamp, FAQBeginners } = require('../models/FAQ')
@@ -81,6 +83,7 @@ const options = {
         Schedule: 'Расписание занятий',
         TeamPhoto: 'Фото команды',
         CampPhoto: 'Фото с "лагеря"',
+        CompetingAthletes: 'Фото с соревнований',
         Reviews: 'Отзывы (Лагерь)',
         ReviewsMain: 'Отзывы (Главная)',
         FAQCamp: 'Вопросы (Лагерь)',
@@ -155,6 +158,11 @@ const options = {
           },
         },
         CampPhoto: {
+          properties: {
+            uploadedFile: 'Фото',
+          },
+        },
+        CompetingAthletes: {
           properties: {
             uploadedFile: 'Фото',
           },
@@ -275,6 +283,11 @@ const options = {
     {
       resource: CampPhoto,
       options: CampPhotoOptions,
+      features,
+    },
+    {
+      resource: CompetingAthletes,
+      options: CompetingAthletesOptions,
       features,
     },
     {

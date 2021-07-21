@@ -32,7 +32,11 @@ const TeamPhotoSlider = () => {
     : []
 
   return (
-    <DoubleSlider title="Фото команды" settings={settings} items={teamPhotos} />
+    <DoubleSlider
+      title={['Фото команды']}
+      settings={settings}
+      items={teamPhotos}
+    />
   )
 }
 

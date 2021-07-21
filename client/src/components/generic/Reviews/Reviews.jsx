@@ -27,7 +27,7 @@ const Reviews = ({ reviewsFrom }) => {
     )
     setReviews(prev => [...prev, ...items])
     setCount(prev => prev + 2)
-    reviewsRef.current.scrollIntoView({ behavior: 'smooth' })
+    // reviewsRef.current.scrollIntoView({ behavior: 'smooth' })
   }, [count])
 
   useEffect(() => {
@@ -42,19 +42,21 @@ const Reviews = ({ reviewsFrom }) => {
         <ul className="reviews__list">
           {reviews.map(item => (
             <li className="review" key={uuidv4()}>
-              <img
-                className="review__photo"
-                src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
-                alt="{item.name}"
-                loading="lazy"
-              />
-              <div className="flex column space-between">
-                <div className="review__grade">
-                  <Stars rating={+item.rating} />
+              <div className="review__top">
+                <img
+                  className="review__photo"
+                  src={`https://redyar-images.s3.eu-west-1.amazonaws.com/${item.uploadedFile.path}`}
+                  alt="{item.name}"
+                  loading="lazy"
+                />
+                <div>
+                  <div className="review__grade">
+                    <Stars rating={+item.rating} />
+                  </div>
+                  <b className="review__author">{item.name}</b>
                 </div>
-                <b className="review__author">{item.name}</b>
-                <p>{item.review}</p>
               </div>
+              <p>{item.review}</p>
             </li>
           ))}
         </ul>

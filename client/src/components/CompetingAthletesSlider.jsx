@@ -8,7 +8,7 @@ const CompetingAthletesSlider = () => {
   const { request } = useHttp()
 
   useEffect(async () => {
-    const items = await request('/api/camp-photo')
+    const items = await request('/api/competing-athletes')
     setPhotos(items)
   }, [])
 
@@ -20,7 +20,7 @@ const CompetingAthletesSlider = () => {
     variableWidth: true,
   }
 
-  const athletesPhotos = photos.length
+  const competitionsPhotos = photos.length
     ? photos.map(item => (
         <img
           // eslint-disable-next-line max-len
@@ -35,7 +35,7 @@ const CompetingAthletesSlider = () => {
     <DoubleSlider
       title={['фотографии с соревнований']}
       settings={settings}
-      items={athletesPhotos}
+      items={competitionsPhotos}
     />
   )
 }

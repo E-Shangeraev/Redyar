@@ -14,7 +14,7 @@ const VideoReport = () => (
         alt="Видео с лагеря CrossFit Redyar"
       />
       <div className="pr">
-        <Reviews />
+        <Reviews reviewsFrom="camp" />
       </div>
     </div>
   </section>

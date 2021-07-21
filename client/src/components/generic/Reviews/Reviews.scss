@@ -1,23 +1,23 @@
-.reviews {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .reviews__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-column-gap: 15px;
   margin-bottom: 5em;
 }
 .review {
-  display: flex;
-  margin-bottom: 3em;
-
+  &:not(:last-of-type) {
+    margin-bottom: 3em;
+  }
   p {
     @include text;
     font-size: 14px;
-    opacity: 0.5;
+    color: $l-gray-2;
   }
+}
+.review__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
 }
 .review__photo {
   width: 120px;
@@ -26,6 +26,8 @@
   margin-right: 2em;
 }
 .review__author {
+  display: block;
+  margin-bottom: 0.5em;
   font-family: $formular-m;
   font-size: 20px;
   line-height: 120%;
@@ -83,8 +85,5 @@
     display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  .reviews__list {
-    margin-bottom: 0;
   }
 }

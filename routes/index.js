@@ -7,6 +7,7 @@ const athletesRouter = require('./athletes')
 const scheduleRouter = require('./schedule')
 const teamPhotoRouter = require('./teamPhoto')
 const campPhotoRouter = require('./campPhoto')
+const competingAthletesRouter = require('./competing-athletes')
 const reviewsRouter = require('./reviews')
 const faqRouter = require('./faq')
 const awardsRouter = require('./awards')
@@ -24,6 +25,7 @@ module.exports = {
   scheduleRouter,
   teamPhotoRouter,
   campPhotoRouter,
+  competingAthletesRouter,
   reviewsRouter,
   faqRouter,
   awardsRouter,

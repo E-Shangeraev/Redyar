@@ -18,6 +18,7 @@ const {
   scheduleRouter,
   teamPhotoRouter,
   campPhotoRouter,
+  competingAthletesRouter,
   reviewsRouter,
   faqRouter,
   awardsRouter,
@@ -44,6 +45,7 @@ app.use('/api/athletes', athletesRouter)
 app.use('/api/schedule', scheduleRouter)
 app.use('/api/team-photo', teamPhotoRouter)
 app.use('/api/camp-photo', campPhotoRouter)
+app.use('/api/competing-athletes', competingAthletesRouter)
 app.use('/api/reviews', reviewsRouter)
 app.use('/api/faq', faqRouter)
 app.use('/api/awards', awardsRouter)
