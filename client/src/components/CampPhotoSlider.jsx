@@ -33,7 +33,7 @@ const CampPhotoSlider = () => {
 
   return (
     <DoubleSlider
-      title={['фото с “лагеря”']}
+      title={['фото с лагеря']}
       settings={settings}
       items={campPhotos}
     />
